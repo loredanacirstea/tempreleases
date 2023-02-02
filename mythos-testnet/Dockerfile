@@ -18,7 +18,7 @@ RUN apt-get update -y && \
 # download the binaries and the genesis file
 RUN wget https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && \
     wget https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip && \
-    unzip linux_x86_64.zip && \
+    unzip -j linux_x86_64.zip && \
     rm linux_x86_64.zip
     
 # init mythos and put the genesis file
