@@ -111,7 +111,7 @@ rm -rf bin
 
 ## 8. Compile, Upload & interact with contracts
 
-You can add the chain to Keplr from https://testnet.explorer.provable.dev/wallet/import
+You can add the chain to Keplr from https://testnet.explorer.provable.dev/mythos -> "Connect Wallet"
 
 Or from https://cosmwasm.tools/, with:
 
