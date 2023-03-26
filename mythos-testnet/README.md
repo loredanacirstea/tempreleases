@@ -21,7 +21,8 @@ curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/insta
 ## 1. Download binaries & genesis.json
 
 * for ubuntu, you need >= 20.04 (binary needs GLIBC >= 2.31)
-* `mythos version --long` commit `77d46085085f602058005c2429e0d7dba9909188`
+* `mythos version --long` commit `1ee21713ce57dc39049d9279e4bd0b60921cff79`
+* `sha256sum genesis.json` is `9a4993d4e767d18c575f371a1f47cc165c1b38e761f86040f857bc2eaa697307`
 
 ```shell=
 mkdir mythos && cd mythos
@@ -102,7 +103,7 @@ If you have issues with syncing and get an apphash error, try resetting the stat
 
 Dokia Web Server is running on port `9999`.
 
-_Note: the first testnet 9 executable `mythos` binary exposes the web server on port `80`. The current executable from https://github.com/loredanacirstea/tempreleases/blob/main/mythos-testnet/linux_x86_64.zip, exposes it on port `9999`. Change done in [this commit](https://github.com/loredanacirstea/tempreleases/commit/82e8c75d9cba77a6fd2aeda4ce5dc80dbc3df607)._
+_Note: the first testnet 9 executable `mythos` binary exposes the web server on port `80`. The current executable from https://github.com/loredanacirstea/tempreleases/blob/main/mythos-testnet/linux_x86_64.zip, exposes it on port `9999`. Change done in [this commit](https://github.com/loredanacirstea/tempreleases/commit/82e8c75d9cba77a6fd2aeda4ce5dc80dbc3df607). Upgrading to the new version is optional._
 
 ## 8. Resetting the chain
 
