@@ -98,8 +98,13 @@ mythos tx staking create-validator --amount 100000000000000000000amyt --from myk
 
 If you have issues with syncing and get an apphash error, try resetting the state with `mythos tendermint unsafe-reset-all --home=testnet/node0/mythosd` and then resyncing from scratch.
 
+## 7. Serving the Dokia Web Server
 
-## 7. Resetting the chain
+Dokia Web Server is running on port `9999`.
+
+_Note: the first testnet 9 executable `mythos` binary exposes the web server on port `80`. The current executable from https://github.com/loredanacirstea/tempreleases/blob/main/mythos-testnet/linux_x86_64.zip, exposes it on port `9999`. Change done in [this commit](https://github.com/loredanacirstea/tempreleases/commit/82e8c75d9cba77a6fd2aeda4ce5dc80dbc3df607)._
+
+## 8. Resetting the chain
 
 ```shell=
 cd mythos
@@ -109,7 +114,7 @@ rm -rf bin
 ## repeat point 1
 ```
 
-## 8. Compile, Upload & interact with contracts
+## 9. Compile, Upload & interact with contracts
 
 You can add the chain to Keplr from https://testnet.explorer.provable.dev/mythos -> "Connect Wallet"
 
