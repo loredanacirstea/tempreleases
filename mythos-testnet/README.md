@@ -104,7 +104,7 @@ If you have issues with syncing and get an apphash error, try resetting the stat
 
 ## 7. Serving the Dokia Web Server
 
-Dokia Web Server is running on port `9999`.
+Dokia Web Server is by default enabled and running on port `9999`. You can change this from `app.toml`, under `[websrv]` settings.
 
 ## 8. Resetting the chain
 
@@ -123,7 +123,7 @@ You can add the chain to Keplr from https://testnet.explorer.provable.dev/mythos
 Or from https://cosmwasm.tools/, with:
 
 ```
-mythos-testnet-9
+mythos-testnet-10
 mythos_7000-10
 https://mythos-testnet-rpc.provable.dev
 https://mythos-testnet.provable.dev/rest
