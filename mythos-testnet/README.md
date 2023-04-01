@@ -1,8 +1,8 @@
-# Mythos Testnet 9
+# Mythos Testnet 10
 
 ## Changes!
 
-- chain id changed to `mythos_7000-9`
+- chain id changed to `mythos_7000-10`
 
 ## Public Endpoints
 
@@ -21,8 +21,8 @@ curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/insta
 ## 1. Download binaries & genesis.json
 
 * for ubuntu, you need >= 20.04 (binary needs GLIBC >= 2.31)
-* `mythos version --long` commit `1ee21713ce57dc39049d9279e4bd0b60921cff79`
-* `sha256sum genesis.json` is `9a4993d4e767d18c575f371a1f47cc165c1b38e761f86040f857bc2eaa697307`
+* `mythos version --long` commit `d9668a8f5f958455e40fce5b0d6b37c3a444f574`
+* `sha256sum genesis.json` is `09cd6a8fc9b8b595301d358ba00c0ace649b36df79a07e91a019f161a4a76539`
 
 ```shell=
 mkdir mythos && cd mythos
@@ -30,7 +30,7 @@ wget https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/lin
 ```
 
 ```shell=
-mythos testnet init-files --chain-id=mythos_7000-9 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
+mythos testnet init-files --chain-id=mythos_7000-10 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
 
 ```
 * example service script.
@@ -80,13 +80,16 @@ mythos keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 ```shell=
 vi testnet/node0/mythosd/config/config.toml
 
-# persistent_peers = "6c05c740794459d0bb19865333d0b0cff8e2fac0@62.171.161.250:26656"
+# persistent_peers = "d5bb7acfd1189a530b32d7c503f6a9a8567a2ac7@207.180.200.54:26656,756d0371ae947c36699cfa8bd4d17e0ff4463df0@62.171.161.250:26656"
 ```
 
 ## 5. Start
 
 ```shell=
 mythos start --home=testnet/node0/mythosd
+
+# or start your service
+systemctl start mythos && journalctl -u mythos.service -f -o cat
 ```
 
 ## 6. Create validator
@@ -94,7 +97,7 @@ mythos start --home=testnet/node0/mythosd
 Same as any cosmos chain. First, wait until your node is synced. And then create your validator:
 
 ```shell=
-mythos tx staking create-validator --amount 100000000000000000000amyt --from mykey --pubkey=$(mythos tendermint show-validator --home=testnet/node0/mythosd) --chain-id=mythos_7000-9 --moniker="myvalidator" --commission-rate="0.05" --commission-max-rate="0.20" --commission-max-change-rate="0.05" --min-self-delegation="1000000000000000000" --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4
+mythos tx staking create-validator --amount 100000000000000000000amyt --from mykey --pubkey=$(mythos tendermint show-validator --home=testnet/node0/mythosd) --chain-id=mythos_7000-10 --moniker="myvalidator" --commission-rate="0.05" --commission-max-rate="0.20" --commission-max-change-rate="0.05" --min-self-delegation="1000000000000000000" --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4
 ```
 
 If you have issues with syncing and get an apphash error, try resetting the state with `mythos tendermint unsafe-reset-all --home=testnet/node0/mythosd` and then resyncing from scratch.
@@ -102,8 +105,6 @@ If you have issues with syncing and get an apphash error, try resetting the stat
 ## 7. Serving the Dokia Web Server
 
 Dokia Web Server is running on port `9999`.
-
-_Note: the first testnet 9 executable `mythos` binary exposes the web server on port `80`. The current executable from https://github.com/loredanacirstea/tempreleases/blob/main/mythos-testnet/linux_x86_64.zip, exposes it on port `9999`. Change done in [this commit](https://github.com/loredanacirstea/tempreleases/commit/82e8c75d9cba77a6fd2aeda4ce5dc80dbc3df607). Upgrading to the new version is optional._
 
 ## 8. Resetting the chain
 
@@ -123,7 +124,7 @@ Or from https://cosmwasm.tools/, with:
 
 ```
 mythos-testnet-9
-mythos_7000-9
+mythos_7000-10
 https://mythos-testnet-rpc.provable.dev
 https://mythos-testnet.provable.dev/rest
 mythos
