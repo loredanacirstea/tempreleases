@@ -1,13 +1,17 @@
-# Mythos Testnet 11
+# Mythos Testnet 12
 
 ## Changes!
 
-- chain id changed to `mythos_7000-11`
+- chain id changed to `mythos_7000-12`
 
 ## Public Endpoints
 
   * rpc (26657): https://mythos-testnet-rpc.provable.dev
   * rest (1317): https://mythos-testnet.provable.dev/rest
+
+## Explorers
+
+  * https://testnet.explorer.provable.dev/mythos
 
 ## 0. Install wasmedge library v0.11.2
 
@@ -31,7 +35,7 @@ wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/li
 ```
 
 ```shell=
-mythos testnet init-files --chain-id=mythos_7000-11 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
+mythos testnet init-files --chain-id=mythos_7000-12 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
 
 ```
 * example service script.
@@ -65,7 +69,6 @@ rm ./testnet/node0/mythosd/config/genesis.json
 wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json
 ```
 
-
 ## 3. Setup account
 
 Create your own account and ask for tokens in Mythos Discord. https://discord.gg/f5rbU2bkPz
@@ -81,7 +84,7 @@ mythos keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 ```shell=
 vi testnet/node0/mythosd/config/config.toml
 
-# persistent_peers = "04640f4ced730a4a8c6202047d808eb29541af7f@207.180.200.54:26656,045fca0a90a7f6ed3a2c5eed059a75a179e58c17@62.171.161.250:26656"
+# persistent_peers = "1cf2448bbc423367596cada1401e7db3dd9d3d06@207.180.200.54:26656,6a61744af0bda279d1c2752a3bab721d952a663a@62.171.161.250:26656"
 ```
 
 ## 5. Start
@@ -98,7 +101,7 @@ systemctl start mythos && journalctl -u mythos.service -f -o cat
 Same as any cosmos chain. First, wait until your node is synced. And then create your validator:
 
 ```shell=
-mythos tx staking create-validator --amount 100000000000000000000amyt --from mykey --pubkey=$(mythos tendermint show-validator --home=testnet/node0/mythosd) --chain-id=mythos_7000-11 --moniker="myvalidator" --commission-rate="0.05" --commission-max-rate="0.20" --commission-max-change-rate="0.05" --min-self-delegation="1000000000000000000" --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4
+mythos tx staking create-validator --amount 100000000000000000000amyt --from mykey --pubkey=$(mythos tendermint show-validator --home=testnet/node0/mythosd) --chain-id=mythos_7000-12 --moniker="myvalidator" --commission-rate="0.05" --commission-max-rate="0.20" --commission-max-change-rate="0.05" --min-self-delegation="1000000000000000000" --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4
 ```
 
 If you have issues with syncing and get an apphash error, try resetting the state with `mythos tendermint unsafe-reset-all --home=testnet/node0/mythosd` and then resyncing from scratch.
@@ -124,8 +127,8 @@ You can add the chain to Keplr from https://testnet.explorer.provable.dev/mythos
 Or from https://cosmwasm.tools/, with:
 
 ```
-mythos-testnet-11
-mythos_7000-11
+mythos-testnet-12
+mythos_7000-12
 https://mythos-testnet-rpc.provable.dev
 https://mythos-testnet.provable.dev/rest
 mythos
