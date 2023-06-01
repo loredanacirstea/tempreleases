@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2023-04-17T17:50:07.828102765Z",
-  "chain_id": "mythos_7000-12",
+  "genesis_time": "2023-06-01T17:36:36.39575364Z",
+  "chain_id": "mythos_7000-13",
   "initial_height": "1",
   "consensus_params": {
     "block": {
@@ -33,7 +33,7 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mythos10ykj7xz9gyhnsmuu99ewjjlwsvl35q3sv6lfnh",
+          "address": "mythos1eyq37awxdcc00gtzvtyt5r87suuzyvm7pyxew6",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
@@ -50,7 +50,7 @@
       },
       "balances": [
         {
-          "address": "mythos10ykj7xz9gyhnsmuu99ewjjlwsvl35q3sv6lfnh",
+          "address": "mythos1eyq37awxdcc00gtzvtyt5r87suuzyvm7pyxew6",
           "coins": [
             {
               "denom": "amyt",
@@ -117,11 +117,11 @@
                   "max_change_rate": "1.000000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "mythos10ykj7xz9gyhnsmuu99ewjjlwsvl35q3sv6lfnh",
-                "validator_address": "mythos10ykj7xz9gyhnsmuu99ewjjlwsvl35q3sv6lfnh",
+                "delegator_address": "mythos1eyq37awxdcc00gtzvtyt5r87suuzyvm7pyxew6",
+                "validator_address": "mythos1eyq37awxdcc00gtzvtyt5r87suuzyvm7pyxew6",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "OE2E6SVtzYRzATEpW+ND1qA0sg4mVzyseLTLv6wu0EY="
+                  "key": "GtZQ/Vfa1nEK17tQFwThO0bUomzTXhWTqcODgeyMA7c="
                 },
                 "value": {
                   "denom": "amyt",
@@ -129,7 +129,7 @@
                 }
               }
             ],
-            "memo": "6a61744af0bda279d1c2752a3bab721d952a663a@192.168.0.1:26656",
+            "memo": "7641c2d8e0c2c69abb3a37b4246006d01436a865@192.168.0.1:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -139,7 +139,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "Ar2R77aisieF5jzNbsy01TdHwrIH2vgPL0Q7/f7uCCsr"
+                  "key": "AxAFIktPgPkAmFOqdniB7Wby1py9TEm/bN85pzHNDFx+"
                 },
                 "mode_info": {
                   "single": {
@@ -158,7 +158,7 @@
             "tip": null
           },
           "signatures": [
-            "UgItlhhTedIZeQLjlIzM0y0q7USTyOuZ+tjJ43+eMoYLBaIbroax4Lltpp2oyxvb+3B2RWb5nRrJ/yvpke4ntQ=="
+            "CiN1OLi19rys4D00iJEyos7CEg9lQZW53toREJNaePBuT8BCzPzLL//ty2wqKNBcBQz1chCvlg4EV/Iz738POA=="
           ]
         }
       ]
@@ -267,7 +267,7 @@
     "params": null,
     "slashing": {
       "params": {
-        "signed_blocks_window": "100",
+        "signed_blocks_window": "15000",
         "min_signed_per_window": "0.500000000000000000",
         "downtime_jail_duration": "600s",
         "slash_fraction_double_sign": "0.050000000000000000",
@@ -305,7 +305,7 @@
     "vesting": {},
     "wasmx": {
       "params": {},
-      "bootstrap_account_address": "mythos1hp60td4vsnr930a6n6c6lprjyy5wxd2lj3m5a6qdugy8fgnhajyqukndmt",
+      "bootstrap_account_address": "mythos1z09yrvd4p675m78fr886pfazztqp9mgdz04g4sccdhwua38ezgks669prx",
       "system_contracts": [
         {
           "address": "0x0000000000000000000000000000000000000001",
@@ -314,7 +314,18 @@
             "data": ""
           },
           "pinned": false,
-          "native": true
+          "native": true,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x000000000000000000000000000000000000001f",
@@ -323,7 +334,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000002",
@@ -332,7 +354,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000003",
@@ -341,7 +374,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000004",
@@ -350,7 +394,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000005",
@@ -359,7 +414,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000006",
@@ -368,7 +434,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000007",
@@ -377,7 +454,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000008",
@@ -386,7 +474,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000009",
@@ -395,7 +494,18 @@
             "data": ""
           },
           "pinned": true,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000020",
@@ -404,7 +514,18 @@
             "data": ""
           },
           "pinned": false,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         },
         {
           "address": "0x0000000000000000000000000000000000000021",
@@ -413,7 +534,58 @@
             "data": ""
           },
           "pinned": false,
-          "native": false
+          "native": false,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000022",
+          "label": "secret_sharing",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": true,
+          "role": "",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000023",
+          "label": "interpreter_evm_shanghai",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "interpreter",
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
         }
       ],
       "codes": [],
