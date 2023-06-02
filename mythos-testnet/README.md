@@ -26,7 +26,7 @@ curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/insta
 ## 1. Download binaries & genesis.json
 
 * for ubuntu, you need >= 20.04 (binary needs GLIBC >= 2.31)
-* `mythos version --long` commit `78699914bc8cb6e320ac3e7245628a354bb530e0`
+* `mythos version --long` commit `0ac247a9b44a0b48f672e23eae0c141803ab1230`
 * `sha256sum genesis.json` is `313cac5c697c4e93084b24db18d9f9a6395b72b9c77316fe4d5132cca498a039`
 
 ```shell=
