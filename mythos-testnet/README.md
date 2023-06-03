@@ -26,12 +26,12 @@ curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/insta
 ## 1. Download binaries & genesis.json
 
 * for ubuntu, you need >= 20.04 (binary needs GLIBC >= 2.31)
-* `mythos version --long` commit `0ac247a9b44a0b48f672e23eae0c141803ab1230`
+* `mythos version --long` commit `e7c10d4817d6d3e3496d9fbb62e8787ca8bb9f7f`
 * `sha256sum genesis.json` is `313cac5c697c4e93084b24db18d9f9a6395b72b9c77316fe4d5132cca498a039`
 
 ```shell=
 mkdir mythos && cd mythos
-wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=0ac247a9b44a0b48f672e23eae0c141803ab1230" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythos && cd ..
+wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=e5540101518e243a50865df890ad115a5413a748" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythos && cd ..
 ```
 
 Set up the path for the mythos executable. E.g.
