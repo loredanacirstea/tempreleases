@@ -27,7 +27,7 @@ curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/insta
 
 * for ubuntu, you need >= 20.04 (binary needs GLIBC >= 2.31)
 * `mythos version --long` commit `7fd0640d94165ca7656cc0dd6109db850df46e68`
-* `sha256sum genesis.json` is `0d7140c08f7dc7d9c1f08e05ae4cc5fbee209cd946f921f42361fbe834e2cc69`
+* `sha256sum genesis.json` is `42ba2cc4b85ec0736237bf3b3482990514739aff7b43163bc0d1b7ab733a71d9`
 
 Remove previous mythos folder
 ```shell==
@@ -99,7 +99,7 @@ mythos keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 ```shell=
 vi testnet/node0/mythosd/config/config.toml
 
-# persistent_peers = "56C50CDD904C249890FDD424B9ECD92BE3EE876B@207.180.200.54:26656,6eed5f8f41200bb3fa815dd89efc232eb73fc703@62.171.161.250:26656"
+# persistent_peers = "5f11630a938d6bd8e877bc9b36bf5867555c2b60@207.180.200.54:26656,33c6d2c2e15e1e75f0e63669abea1b12a7505d3a@62.171.161.250:26656"
 ```
 
 ## 5. Start
