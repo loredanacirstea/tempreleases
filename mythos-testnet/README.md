@@ -1,8 +1,8 @@
-# Mythos Testnet 13
+# Mythos Testnet 14
 
 ## Changes!
 
-- chain id changed to `mythos_7000-13`
+- chain id changed to `mythos_7000-14`
 
 ## Public Endpoints
 
@@ -26,12 +26,16 @@ curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/insta
 ## 1. Download binaries & genesis.json
 
 * for ubuntu, you need >= 20.04 (binary needs GLIBC >= 2.31)
-* `mythos version --long` commit `e7c10d4817d6d3e3496d9fbb62e8787ca8bb9f7f`
-* `sha256sum genesis.json` is `313cac5c697c4e93084b24db18d9f9a6395b72b9c77316fe4d5132cca498a039`
+* `mythos version --long` commit `7fd0640d94165ca7656cc0dd6109db850df46e68`
+* `sha256sum genesis.json` is `0d7140c08f7dc7d9c1f08e05ae4cc5fbee209cd946f921f42361fbe834e2cc69`
+
+Remove previous mythos folder
+```shell==
+rm -rf /root/mythos
+```
 
 ```shell=
-mkdir mythos && cd mythos
-wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=e5540101518e243a50865df890ad115a5413a748" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythos && cd ..
+mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=354261c0545d54de9e3d496a7ce41c753ac0dd89" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythos && cd ..
 ```
 
 Set up the path for the mythos executable. E.g.
@@ -46,7 +50,7 @@ source ~/.bashrc
 Check the mythos version. Initialize the chain:
 
 ```shell=
-mythos testnet init-files --chain-id=mythos_7000-13 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
+mythos testnet init-files --chain-id=mythos_7000-14 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
 
 ```
 * example service script.
@@ -95,7 +99,7 @@ mythos keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 ```shell=
 vi testnet/node0/mythosd/config/config.toml
 
-# persistent_peers = "7641c2d8e0c2c69abb3a37b4246006d01436a865@207.180.200.54:26656,6eed5f8f41200bb3fa815dd89efc232eb73fc703@62.171.161.250:26656"
+# persistent_peers = "56C50CDD904C249890FDD424B9ECD92BE3EE876B@207.180.200.54:26656,6eed5f8f41200bb3fa815dd89efc232eb73fc703@62.171.161.250:26656"
 ```
 
 ## 5. Start
@@ -112,7 +116,7 @@ systemctl start mythos && journalctl -u mythos.service -f -o cat
 Same as any cosmos chain. First, wait until your node is synced. And then create your validator:
 
 ```shell=
-mythos tx staking create-validator --amount 100000000000000000000amyt --from mykey --pubkey=$(mythos tendermint show-validator --home=testnet/node0/mythosd) --chain-id=mythos_7000-13 --moniker="myvalidator" --commission-rate="0.05" --commission-max-rate="0.20" --commission-max-change-rate="0.05" --min-self-delegation="1000000000000000000" --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4
+mythos tx staking create-validator --amount 100000000000000000000amyt --from mykey --pubkey=$(mythos tendermint show-validator --home=testnet/node0/mythosd) --chain-id=mythos_7000-14 --moniker="myvalidator" --commission-rate="0.05" --commission-max-rate="0.20" --commission-max-change-rate="0.05" --min-self-delegation="1000000000000000000" --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4
 ```
 
 If you have issues with syncing and get an apphash error, try resetting the state with `mythos tendermint unsafe-reset-all --home=testnet/node0/mythosd` and then resyncing from scratch.
@@ -138,8 +142,8 @@ You can add the chain to Keplr from https://testnet.explorer.provable.dev/mythos
 Or from https://cosmwasm.tools/, with:
 
 ```
-mythos-testnet-13
-mythos_7000-13
+mythos-testnet-14
+mythos_7000-14
 https://mythos-testnet-rpc.provable.dev
 https://mythos-testnet.provable.dev/rest
 mythos
