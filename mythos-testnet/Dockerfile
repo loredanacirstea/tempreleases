@@ -6,7 +6,7 @@ WORKDIR $APP_PATH
 # set up the environment variables
 ENV PATH="$PATH:$APP_PATH"
 ENV LD_LIBRARY_PATH=$APP_PATH
-ENV CHAIN_ID=mythos_7000-14
+ENV CHAIN_ID=mythos_7000-15
 
 # install necessary dependencies
 RUN apt-get update -y && \
