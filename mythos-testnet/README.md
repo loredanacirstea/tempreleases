@@ -30,11 +30,13 @@ curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/insta
 ## 1. Download binaries & genesis.json
 
 * for ubuntu, you need >= 20.04 (binary needs GLIBC >= 2.31)
-* `mythos version --long` commit `b8178d351172f28b2668d9495a096b0ba844f2df`
+* `mythosd version --long` commit `b8178d351172f28b2668d9495a096b0ba844f2df`
 * `sha256sum genesis.json` is `902ae4e289f26b2ff96ac6e770475de417849c5a44b922e4faf47b9078b5a3e3`
 
-Remove previous mythos folder
+Stop and remove previous mythos testnet
 ```shell==
+sudo -S systemctl stop mythos
+
 rm -rf /root/mythos
 ```
 
@@ -86,7 +88,7 @@ systemctl enable mythos.service
 
 ## 2. Replace genesis.json
 
-Replace `testnet/node0/mythosd/config/genesis.json`
+Replace `testnet/node0/mythosd/config/genesis.json`:
 
 ```shell=
 rm ./testnet/node0/mythosd/config/genesis.json
@@ -98,7 +100,7 @@ wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredan
 Create your own account and ask for tokens in Mythos Discord. https://discord.gg/f5rbU2bkPz
 
 ```shell=
-mythos keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
+mythosd keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 ```
 
 ## 4. Persistent peers
@@ -108,13 +110,13 @@ mythos keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 ```shell=
 vi testnet/node0/mythosd/config/config.toml
 
-# persistent_peers = "5f11630a938d6bd8e877bc9b36bf5867555c2b60@207.180.200.54:26656,33c6d2c2e15e1e75f0e63669abea1b12a7505d3a@62.171.161.250:26656"
+# persistent_peers = "53d636a08e1362924c646b9d8acf7d0e930fc288@207.180.200.54:26656,146778a99a7ae6fe68a88b5bdcf939f6eca094dc@62.171.161.250:26656"
 ```
 
 ## 5. Start
 
 ```shell=
-mythos start --home=testnet/node0/mythosd
+mythosd start --home=testnet/node0/mythosd
 
 # or start your service
 systemctl start mythos && journalctl -u mythos.service -f -o cat
@@ -125,10 +127,10 @@ systemctl start mythos && journalctl -u mythos.service -f -o cat
 Same as any cosmos chain. First, wait until your node is synced. And then create your validator:
 
 ```shell=
-mythos tx staking create-validator --amount 100000000000000000000amyt --from mykey --pubkey=$(mythos tendermint show-validator --home=testnet/node0/mythosd) --chain-id=mythos_7000-15 --moniker="myvalidator" --commission-rate="0.05" --commission-max-rate="0.20" --commission-max-change-rate="0.05" --min-self-delegation="1000000000000000000" --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4
+mythosd tx staking create-validator --amount 100000000000000000000amyt --from mykey --pubkey=$(mythosd tendermint show-validator --home=testnet/node0/mythosd) --chain-id=mythos_7000-15 --moniker="myvalidator" --commission-rate="0.05" --commission-max-rate="0.20" --commission-max-change-rate="0.05" --min-self-delegation="1000000000000000000" --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4
 ```
 
-If you have issues with syncing and get an apphash error, try resetting the state with `mythos tendermint unsafe-reset-all --home=testnet/node0/mythosd` and then resyncing from scratch.
+If you have issues with syncing and get an apphash error, try resetting the state with `mythosd tendermint unsafe-reset-all --home=testnet/node0/mythosd` and then resyncing from scratch.
 
 ## 7. Serving the Dokia Web Server
 
@@ -212,7 +214,7 @@ ExecStart=/usr/local/bin/cosmovisor run start
 Restart=always
 RestartSec=3
 LimitNOFILE=8192
-Environment="DAEMON_NAME=mythos"
+Environment="DAEMON_NAME=mythosd"
 Environment="DAEMON_HOME=/home/t-mythos/.mythos"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=true"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
