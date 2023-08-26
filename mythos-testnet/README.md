@@ -8,10 +8,14 @@
 
   * rpc (26657): https://mythos-testnet-rpc.provable.dev
   * rest (1317): https://mythos-testnet.provable.dev/rest
+  
+  * RPC endpoint: https://testnet-rpc.mythos.chaintools.tech
+  * API endpoint: https://testnet-api.mythos.chaintools.tech
 
 ## Explorers
 
   * https://testnet.explorer.provable.dev/mythos
+  * https://testnet.explorer.chaintools.tech/mythos
 
 ## 0. Install wasmedge library v0.11.2
 
@@ -179,3 +183,40 @@ If you would like to run your node as validator, you can do further steps by run
 
 ^ then run create key and validator commands inside newly created shell
 
+
+# Appendix A. - Setup Mythos node with Cosmovisor
+
+## Build Cosmovisor
+```bash
+cd ${HOME}
+git clone https://github.com/cosmos/cosmos-sdk && cd cosmos-sdk/tools/cosmovisor/
+make
+sudo cp cosmovisor /usr/local/bin
+```
+
+## Service file
+```
+[Unit]
+Description=Mythos Testnet Validator
+After=network-online.target
+
+[Service]
+User=t-mythos
+Group=t-mythos
+ExecStart=/usr/local/bin/cosmovisor run start
+Restart=always
+RestartSec=3
+LimitNOFILE=8192
+Environment="DAEMON_NAME=mythos"
+Environment="DAEMON_HOME=/home/t-mythos/.mythos"
+Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=true"
+Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+Environment="DAEMON_LOG_BUFFER_SIZE=512"
+Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/home/t-mythos/.wasmedge/bin"
+Environment="LD_LIBRARY_PATH=/home/t-mythos/.wasmedge/lib"
+
+[Install]
+WantedBy=multi-user.target
+```
+**NOTE:** Please notice that in service file example I use dedicated user account `t-mythos`. In case you running service under different account, please adjust it accordingly.
