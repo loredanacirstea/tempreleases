@@ -164,7 +164,20 @@ amyt
 10000000
 ```
 
+- for EVM contracts, you can use any Ethereum-like system, such as remix.ethereum.org and Metamask, to deploy contracts.
+- or, our general purpose dApp, that works with the Keplr wallet: https://marks.provable.dev/?ipfs=QmYZJAXCDojeeEPwXR7vvCQDqyxALkhsLAKEQE4acb38wH&rpc=https://mythos-testnet-rpc.provable.dev. This same dApp also works as a Remix plugin, if you want to deploy EVM contracts with Keplr.
+
+(_WIP republishing for new testnet :_)
+- Estonia ID dApp for registering account, for who wants to test: https://mark.provable.dev/?ipfs=QmPiruznHUeEFDxL9jiNVJMAg1h78jU8MQJLDG5HZjEFZP
+- Creating a website and registering with the webserver:
+https://mark.provable.dev/?ipfs=QmeRzxCtPNxUan39Pw5P6dUrvRZysgh96yp14Z2KDqGjz8&router=0x701028B38c9fe59ACE07331b545C46C34b75ed06&serverCodeId=14
+
+### Demos
+
 Demo video: https://youtu.be/0XEs9gltKH4
+- demo of how to use the Remix plugin: https://youtu.be/Xk2hmmb5orU
+- demo for the Estonia ID dApp: https://youtu.be/-OH_XMmucQI?t=230
+
 
 
 # How to create Mythos Testnet docker container and run it
