@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2023-08-26T20:16:12.37121721Z",
-  "chain_id": "mythos_7000-15",
+  "genesis_time": "2023-09-05T07:54:29.881635873Z",
+  "chain_id": "mythos_7000-16",
   "initial_height": "1",
   "consensus_params": {
     "block": {
@@ -33,7 +33,7 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mythos1yd6jqzvhp80rlqxh2pevwskmpc2w72zk9d6awt",
+          "address": "mythos1xfhnafm6zzwaehlktxse63cudgauwqjyqkekqn",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
@@ -50,7 +50,7 @@
       },
       "balances": [
         {
-          "address": "mythos1yd6jqzvhp80rlqxh2pevwskmpc2w72zk9d6awt",
+          "address": "mythos1xfhnafm6zzwaehlktxse63cudgauwqjyqkekqn",
           "coins": [
             {
               "denom": "amyt",
@@ -117,11 +117,11 @@
                   "max_change_rate": "1.000000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "mythos1yd6jqzvhp80rlqxh2pevwskmpc2w72zk9d6awt",
-                "validator_address": "mythos1yd6jqzvhp80rlqxh2pevwskmpc2w72zk9d6awt",
+                "delegator_address": "mythos1xfhnafm6zzwaehlktxse63cudgauwqjyqkekqn",
+                "validator_address": "mythos1xfhnafm6zzwaehlktxse63cudgauwqjyqkekqn",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "BOm2uCzLjPIbkNJ7EsOA3p3yroNmsd/hluzvYhul2PE="
+                  "key": "pvtzNv9BrxSlBWL3enOZnab1IIghrUiX1InTh2siNsw="
                 },
                 "value": {
                   "denom": "amyt",
@@ -129,7 +129,7 @@
                 }
               }
             ],
-            "memo": "53d636a08e1362924c646b9d8acf7d0e930fc288@192.168.0.1:26656",
+            "memo": "e15468827b74e473bf1fed592a2803fa25fd90f4@192.168.0.1:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -139,7 +139,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "A2qAHg+zu0Wy6PpdtbLnJxBD+H8QLJwZYchsP029DpF/"
+                  "key": "As8bDCOeCtFv1j474N9rBGN02mTnVREwC9YOz7aD7VCK"
                 },
                 "mode_info": {
                   "single": {
@@ -158,7 +158,7 @@
             "tip": null
           },
           "signatures": [
-            "6OQOfHafT9i1wySxsiXrSvkkNElqCbnGODStgg+umMcYWyOMIT6ODpM1hdqipqufhm4IDNyv3jkhf5Hd4nsF0g=="
+            "xhrofTGlZaS5At6TM0S4l9KBCHEd5MRXWCeX0QevqWFrZJFmw+ArYVjxeaQo99WMjPIQ6K8EZUH9qvdEL3BFcw=="
           ]
         }
       ]
@@ -305,7 +305,7 @@
     "vesting": {},
     "wasmx": {
       "params": {},
-      "bootstrap_account_address": "mythos148v2hw2ep3xlgumhpqlhmegzqelmgqxkqz3qs4r5vsm7t88z5ufst9qw6z",
+      "bootstrap_account_address": "mythos1e38j230yh2ufetc2kpcgpuy8uqx2zcsnnekthjmqrtazq3dthd6qwkd7va",
       "system_contracts": [
         {
           "address": "0x0000000000000000000000000000000000000001",
