@@ -45,7 +45,7 @@ rm -rf /root/mythos
 ```
 
 ```shell=
-mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=e2baf63bfe381ca7c8150fc050534fe5430e8316" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=28f6452b62ecf30a4d46a462bcd04d8a9e3ba5aa" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -62,7 +62,7 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version --long
 
-# commit `e2baf63bfe381ca7c8150fc050534fe5430e8316`
+# commit `28f6452b62ecf30a4d46a462bcd04d8a9e3ba5aa`
 ```
 
 Initialize the chain:
