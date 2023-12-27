@@ -1,8 +1,8 @@
-# Mythos Testnet 20
+# Mythos Testnet 21
 
 ## Changes!
 
-- chain id changed to `mythos_7000-20`
+- chain id changed to `mythos_7000-21`
 
 ## Public Endpoints
 
@@ -45,7 +45,7 @@ rm -rf /root/mythos
 ```
 
 ```shell=
-mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=cf21d2b5216749946e55d3733eb8660237284a5e" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=e2baf63bfe381ca7c8150fc050534fe5430e8316" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -62,13 +62,13 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version --long
 
-# commit `eaf6120ed7670b3e21b63da7244ab3ae2d5eab2c`
+# commit `e2baf63bfe381ca7c8150fc050534fe5430e8316`
 ```
 
 Initialize the chain:
 
 ```shell=
-mythosd testnet init-files --chain-id=mythos_7000-20 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
+mythosd testnet init-files --chain-id=mythos_7000-21 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
 
 ```
 * example service script for starting mythos as a service for Linux.
@@ -112,7 +112,7 @@ Check genesis checksum!
 
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
-# 2baf18a9af825e86cb045c1e401bc88e8411795de72f8b6805741aa1668ed188
+# 7a3821282df5bdfffaee9b7b7a4fcaed954b2f7f075c5f7383d5b65b94273179
 ```
 
 ## 3. Setup account
@@ -123,7 +123,7 @@ Create your own account and ask for tokens in Mythos Discord with your public ad
 mythosd keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 ```
 
-## 4. Persistent peers
+## 4. Node IDS (important!)
 
 * go to app.toml, under `Network Configuration` (bottom page) and replace `ips` with a comma separated list of your IP and the current RAFT leader IP
 
