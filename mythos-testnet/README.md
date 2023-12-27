@@ -82,7 +82,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=/root/mythos/bin/mythosd start --home=/root/mythos/testnet/node0/mythosd
+ExecStart=/root/mythos/bin/mythosd start --home=/root/mythos/testnet/node0/mythosd --p2p.laddr=tcp://127.0.0.1:8090
 Restart=always
 RestartSec=3
 LimitNOFILE=infinity
@@ -125,20 +125,20 @@ mythosd keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 
 ## 4. Persistent peers
 
-* go to config.toml, under `Network Configuration` (bottom page) and replace `ips` with a comma separated list of your IP and the current RAFT leader IP
+* go to app.toml, under `Network Configuration` (bottom page) and replace `ips` with a comma separated list of your IP and the current RAFT leader IP
 
 ```shell=
-vi testnet/node0/mythosd/config/config.toml
+vi testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "<your_IP>:8090,74.208.105.20:8090"
+ips = "<your_external_IP>:8090,74.208.105.20:8090"
 ```
 
 ## 5. Start
 
 ```shell=
-mythosd start --home=testnet/node0/mythosd
+mythosd start --home=testnet/node0/mythosd --p2p.laddr tcp://127.0.0.1:8090
 
 # or start your service
 systemctl start mythos && journalctl -u mythos.service -f -o cat
