@@ -1,8 +1,8 @@
 {
   "app_name": "mythosd",
   "app_version": "",
-  "genesis_time": "2023-12-27T22:47:10.102694641Z",
-  "chain_id": "mythos_7000-21",
+  "genesis_time": "2024-01-05T17:51:53.018068344Z",
+  "chain_id": "mythos_7000-22",
   "initial_height": 1,
   "app_hash": null,
   "app_state": {
@@ -17,7 +17,7 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mythos1ldcs4wv22qujeqd42uvms7tm0rqyykuy2l6y7q",
+          "address": "mythos19ssgthnpuqcmlqn78cqw6wgkkdupgcp55wpzmv",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
@@ -34,7 +34,7 @@
       },
       "balances": [
         {
-          "address": "mythos1ldcs4wv22qujeqd42uvms7tm0rqyykuy2l6y7q",
+          "address": "mythos19ssgthnpuqcmlqn78cqw6wgkkdupgcp55wpzmv",
           "coins": [
             {
               "denom": "amyt",
@@ -108,10 +108,10 @@
                 },
                 "min_self_delegation": "1",
                 "delegator_address": "",
-                "validator_address": "mythos1ldcs4wv22qujeqd42uvms7tm0rqyykuy2l6y7q",
+                "validator_address": "mythos19ssgthnpuqcmlqn78cqw6wgkkdupgcp55wpzmv",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "9CoI/5uxk1H3YmRUXDvG8XuC2vQneFWusZX5Nk5Ajrg="
+                  "key": "N5BlL1GMB4KWbAUgYfnt2csLkO/Ef0VpqCTk5wWt4Qs="
                 },
                 "value": {
                   "denom": "amyt",
@@ -119,7 +119,7 @@
                 }
               }
             ],
-            "memo": "672acc6195175f2297879240fa1315cc66a82873@192.168.0.1:8090",
+            "memo": "f44f498d2b621f878c2a8e2232182d22d4d59919@192.168.0.1:8090",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -129,7 +129,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "AkEqZjVN8cw5R2wAS3kLspX+QBcU9WHlThI/KjFgLvv9"
+                  "key": "AqACtWED8hph9a80nY4sdJUO+ZSb6vjtOuBb0clzj+XX"
                 },
                 "mode_info": {
                   "single": {
@@ -148,7 +148,7 @@
             "tip": null
           },
           "signatures": [
-            "1gme3FKeOzy3FG7kY511DL1e4J1LoV+jHIdPiQBN/MI+EFyKhc+D4HyZ5RzgJpKgYvikd9dsgXmk26ojQfQRaA=="
+            "bY325JoxquFYfARMBWQHvGsESaZ2AuYuS29nM4O6wZtguvUH4yy6L75pmEx6UJSnBhOVAu9mNzyjkEpoUPLI3A=="
           ]
         }
       ]
@@ -315,7 +315,7 @@
     "vesting": {},
     "wasmx": {
       "params": {},
-      "bootstrap_account_address": "mythos1w0z5pqu5uye52jk522693kp33z487k62pmyl6u9rkzh5l8gyepnq0apctr",
+      "bootstrap_account_address": "mythos1cz8tq0qgu9y7yhxr6z6wsgdy8x7augslws4cxrxk50jj3pxh24pq8r4uje",
       "system_contracts": [
         {
           "address": "0x0000000000000000000000000000000000000001",
@@ -737,8 +737,52 @@
         },
         {
           "address": "0x0000000000000000000000000000000000000029",
-          "label": "consensus_raft_0.0.1",
+          "label": "storage_chain",
           "storage_type": "MetaConsensus",
+          "init_message": {
+            "data": "eyJpbml0aWFsQmxvY2tJbmRleCI6MX0="
+          },
+          "pinned": false,
+          "native": false,
+          "role": "storage",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x000000000000000000000000000000000000002a",
+          "label": "raft_library",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "deplibrary",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x000000000000000000000000000000000000002b",
+          "label": "consensus_raft_0.0.1",
+          "storage_type": "SingleConsensus",
           "init_message": {
             "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5Ijoibm9kZUlQcyIsInZhbHVlIjoiW10ifSx7ImtleSI6InZvdGVkRm9yIiwidmFsdWUiOiIwIn0seyJrZXkiOiJuZXh0SW5kZXgiLCJ2YWx1ZSI6IltdIn0seyJrZXkiOiJtYXRjaEluZGV4IiwidmFsdWUiOiJbXSJ9LHsia2V5IjoiY29tbWl0SW5kZXgiLCJ2YWx1ZSI6IjAifSx7ImtleSI6ImN1cnJlbnRUZXJtIiwidmFsdWUiOiIwIn0seyJrZXkiOiJsYXN0QXBwbGllZCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4X3R4X2J5dGVzIiwidmFsdWUiOiI2NTUzNiJ9LHsia2V5IjoicHJldkxvZ0luZGV4IiwidmFsdWUiOiIwIn0seyJrZXkiOiJjdXJyZW50Tm9kZUlkIiwidmFsdWUiOiIwIn0seyJrZXkiOiJlbGVjdGlvblJlc2V0IiwidmFsdWUiOiIwIn0seyJrZXkiOiJtYXhfYmxvY2tfZ2FzIiwidmFsdWUiOiIyMDAwMDAwMCJ9LHsia2V5IjoiZWxlY3Rpb25UaW1lb3V0IiwidmFsdWUiOiIwIn0seyJrZXkiOiJtYXhFbGVjdGlvblRpbWUiLCJ2YWx1ZSI6IjIwMDAwIn0seyJrZXkiOiJtaW5FbGVjdGlvblRpbWUiLCJ2YWx1ZSI6IjEwMDAwIn0seyJrZXkiOiJoZWFydGJlYXRUaW1lb3V0IiwidmFsdWUiOiI1MDAwIn1dLCJpbml0aWFsU3RhdGUiOiJ1bmluaXRpYWxpemVkIn19"
           },
@@ -746,7 +790,8 @@
           "native": false,
           "role": "consensus",
           "deps": [
-            "interpreter_state_machine_bz_0.1.0"
+            "interpreter_state_machine_bz_0.1.0",
+            "0x000000000000000000000000000000000000002a:deplibrary"
           ],
           "metadata": {
             "name": "",
