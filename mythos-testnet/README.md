@@ -1,8 +1,8 @@
-# Mythos Testnet 21
+# Mythos Testnet 22 (Rouen 2024)
 
 ## Changes!
 
-- chain id changed to `mythos_7000-21`
+- chain id changed to `mythos_7000-22`
 
 ## Public Endpoints
 
@@ -45,7 +45,7 @@ rm -rf /root/mythos
 ```
 
 ```shell=
-mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=28f6452b62ecf30a4d46a462bcd04d8a9e3ba5aa" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=a7b3fc91200999d1eaf872e2afb6bc5324406ef2" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -62,13 +62,13 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version --long
 
-# commit `28f6452b62ecf30a4d46a462bcd04d8a9e3ba5aa`
+# commit `a7b3fc91200999d1eaf872e2afb6bc5324406ef2`
 ```
 
 Initialize the chain:
 
 ```shell=
-mythosd testnet init-files --chain-id=mythos_7000-21 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
+mythosd testnet init-files --chain-id=mythos_7000-22 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt"
 
 ```
 * example service script for starting mythos as a service for Linux.
@@ -112,7 +112,7 @@ Check genesis checksum!
 
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
-# 7a3821282df5bdfffaee9b7b7a4fcaed954b2f7f075c5f7383d5b65b94273179
+# acc7af43f6b96e4733763c8fd36489ebbf19aeb170f8cba6e22f59921b8d8f1e
 ```
 
 ## 3. Setup account
