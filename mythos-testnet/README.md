@@ -112,7 +112,7 @@ Check genesis checksum!
 
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
-# acc7af43f6b96e4733763c8fd36489ebbf19aeb170f8cba6e22f59921b8d8f1e
+# dc0a9028591ca3c6e80ba18b8c38e3f7e6ebee555d2e7fb6118c9747b20edd73
 ```
 
 ## 3. Setup account
@@ -144,6 +144,12 @@ mythosd start --home=testnet/node0/mythosd --p2p.laddr tcp://127.0.0.1:8090
 systemctl start mythos && journalctl -u mythos.service -f -o cat
 ```
 
+## 6. Reset Data
+
+If you need to reset the chain data and resync from scratch:
+```
+mythosd tendermint unsafe-reset-all --home=./testnet/node0/mythosd
+```
 
 
 # Appendix A. - Setup Mythos node with Cosmovisor
