@@ -1,51 +1,13 @@
 {
   "app_name": "mythosd",
   "app_version": "",
-  "genesis_time": "2024-01-05T17:51:53.018068344Z",
-  "chain_id": "mythos_7000-22",
+  "genesis_time": "2024-03-28T14:14:02.465822379Z",
+  "chain_id": "mythos_7000-23",
   "initial_height": 1,
   "app_hash": null,
   "app_state": {
-    "auth": {
-      "params": {
-        "max_memo_characters": "256",
-        "tx_sig_limit": "7",
-        "tx_size_cost_per_byte": "10",
-        "sig_verify_cost_ed25519": "590",
-        "sig_verify_cost_secp256k1": "1000"
-      },
-      "accounts": [
-        {
-          "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mythos19ssgthnpuqcmlqn78cqw6wgkkdupgcp55wpzmv",
-          "pub_key": null,
-          "account_number": "0",
-          "sequence": "0"
-        }
-      ]
-    },
     "authz": {
       "authorization": []
-    },
-    "bank": {
-      "params": {
-        "send_enabled": [],
-        "default_send_enabled": true
-      },
-      "balances": [
-        {
-          "address": "mythos19ssgthnpuqcmlqn78cqw6wgkkdupgcp55wpzmv",
-          "coins": [
-            {
-              "denom": "amyt",
-              "amount": "5000000000000000000000"
-            }
-          ]
-        }
-      ],
-      "supply": [],
-      "denom_metadata": [],
-      "send_enabled": []
     },
     "capability": {
       "index": "1",
@@ -56,6 +18,193 @@
       "disabled_type_urls": []
     },
     "consensus": null,
+    "cosmosmod": {
+      "staking": {
+        "params": {
+          "unbonding_time": "1814400s",
+          "max_validators": 100,
+          "max_entries": 7,
+          "historical_entries": 10000,
+          "bond_denom": "asmyt",
+          "min_commission_rate": "0.000000000000000000"
+        },
+        "last_total_power": "0",
+        "last_validator_powers": [],
+        "validators": [],
+        "delegations": [],
+        "unbonding_delegations": [],
+        "redelegations": [],
+        "exported": false
+      },
+      "bank": {
+        "params": {
+          "send_enabled": [],
+          "default_send_enabled": true
+        },
+        "balances": [
+          {
+            "address": "mythos1ylu8jv7wlv3jhkw0khg9vrpn8sfgax0m7p84nr",
+            "coins": [
+              {
+                "denom": "amyt",
+                "amount": "5000000000000000000000"
+              }
+            ]
+          }
+        ],
+        "supply": [],
+        "denom_info": [
+          {
+            "metadata": {
+              "description": "main gas token",
+              "denom_units": [
+                {
+                  "denom": "myt",
+                  "exponent": 18,
+                  "aliases": []
+                },
+                {
+                  "denom": "amyt",
+                  "exponent": 1,
+                  "aliases": []
+                }
+              ],
+              "base": "amyt",
+              "display": "MYT",
+              "name": "MYT",
+              "symbol": "myt",
+              "uri": "",
+              "uri_hash": ""
+            },
+            "code_id": "24",
+            "admins": [
+              "bank",
+              "gov"
+            ],
+            "minters": [
+              "bank",
+              "gov"
+            ],
+            "contract": ""
+          },
+          {
+            "metadata": {
+              "description": "staking token",
+              "denom_units": [
+                {
+                  "denom": "smyt",
+                  "exponent": 18,
+                  "aliases": []
+                },
+                {
+                  "denom": "asmyt",
+                  "exponent": 1,
+                  "aliases": []
+                }
+              ],
+              "base": "asmyt",
+              "display": "SMYT",
+              "name": "SMYT",
+              "symbol": "smyt",
+              "uri": "",
+              "uri_hash": ""
+            },
+            "code_id": "25",
+            "admins": [
+              "staking",
+              "bank"
+            ],
+            "minters": [
+              "staking",
+              "bank"
+            ],
+            "contract": ""
+          },
+          {
+            "metadata": {
+              "description": "arbitration token",
+              "denom_units": [
+                {
+                  "denom": "arb",
+                  "exponent": 18,
+                  "aliases": []
+                },
+                {
+                  "denom": "aarb",
+                  "exponent": 1,
+                  "aliases": []
+                }
+              ],
+              "base": "aarb",
+              "display": "ARBITRATION",
+              "name": "ARBITRATION",
+              "symbol": "arb",
+              "uri": "",
+              "uri_hash": ""
+            },
+            "code_id": "24",
+            "admins": [
+              "gov"
+            ],
+            "minters": [
+              "gov"
+            ],
+            "contract": ""
+          }
+        ],
+        "send_enabled": []
+      },
+      "gov": {
+        "starting_proposal_id": "1",
+        "deposits": [],
+        "votes": [],
+        "proposals": [],
+        "params": {
+          "min_deposit": [
+            {
+              "denom": "amyt",
+              "amount": "10000000"
+            }
+          ],
+          "max_deposit_period": "172800000",
+          "voting_period": "120000",
+          "quorum": "0.334000000000000000",
+          "threshold": "0.500000000000000000",
+          "veto_threshold": "0.334000000000000000",
+          "min_initial_deposit_ratio": "0.000000000000000000",
+          "proposal_cancel_ratio": "0.500000000000000000",
+          "proposal_cancel_dest": "",
+          "expedited_voting_period": "86400000",
+          "expedited_threshold": "0.667000000000000000",
+          "expedited_min_deposit": [
+            {
+              "denom": "amyt",
+              "amount": "50000000"
+            }
+          ],
+          "burn_vote_quorum": false,
+          "burn_proposal_deposit_prevote": false,
+          "burn_vote_veto": true,
+          "min_deposit_ratio": "0.010000000000000000"
+        },
+        "constitution": ""
+      },
+      "auth": {
+        "params": {
+          "max_memo_characters": "256",
+          "tx_sig_limit": "7",
+          "tx_size_cost_per_byte": "10",
+          "sig_verify_cost_ed25519": "590",
+          "sig_verify_cost_secp256k1": "1000"
+        },
+        "accounts": [
+          {
+            "type_url": "/cosmos.auth.v1beta1.BaseAccount",
+            "value": "eyJhZGRyZXNzIjoibXl0aG9zMXlsdThqdjd3bHYzamhrdzBraGc5dnJwbjhzZmdheDBtN3A4NG5yIiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
+          }
+        ]
+      }
+    },
     "crisis": {
       "constant_fee": {
         "denom": "amyt",
@@ -84,9 +233,6 @@
     "evidence": {
       "evidence": []
     },
-    "feegrant": {
-      "allowances": []
-    },
     "genutil": {
       "gen_txs": [
         {
@@ -108,10 +254,10 @@
                 },
                 "min_self_delegation": "1",
                 "delegator_address": "",
-                "validator_address": "mythos19ssgthnpuqcmlqn78cqw6wgkkdupgcp55wpzmv",
+                "validator_address": "mythos1ylu8jv7wlv3jhkw0khg9vrpn8sfgax0m7p84nr",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "N5BlL1GMB4KWbAUgYfnt2csLkO/Ef0VpqCTk5wWt4Qs="
+                  "key": "pe2AkPUUB3RNX+vQEOI/sZHTonIRTk6mcQ9ceV6vtCA="
                 },
                 "value": {
                   "denom": "amyt",
@@ -119,7 +265,7 @@
                 }
               }
             ],
-            "memo": "f44f498d2b621f878c2a8e2232182d22d4d59919@192.168.0.1:8090",
+            "memo": "ad60fc16de84faec10433b1c21c4911553324aa9@0.0.0.0:8090",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -129,7 +275,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "AqACtWED8hph9a80nY4sdJUO+ZSb6vjtOuBb0clzj+XX"
+                  "key": "AiTMsEgBsUWE/TjViVypfBM05d/DjKd6MztD4dQluGC5"
                 },
                 "mode_info": {
                   "single": {
@@ -148,48 +294,10 @@
             "tip": null
           },
           "signatures": [
-            "bY325JoxquFYfARMBWQHvGsESaZ2AuYuS29nM4O6wZtguvUH4yy6L75pmEx6UJSnBhOVAu9mNzyjkEpoUPLI3A=="
+            "U5aEh8++xd9qAL8VbnAezfYT9I8QltrafW/b+0G5A1lkooRbfJ4UBeb+UPD2kLGuC1vjxKxfmO8FI8fqxO/AOQ=="
           ]
         }
       ]
-    },
-    "gov": {
-      "starting_proposal_id": "1",
-      "deposits": [],
-      "votes": [],
-      "proposals": [],
-      "deposit_params": null,
-      "voting_params": null,
-      "tally_params": null,
-      "params": {
-        "min_deposit": [
-          {
-            "denom": "amyt",
-            "amount": "10000000"
-          }
-        ],
-        "max_deposit_period": "172800s",
-        "voting_period": "120s",
-        "quorum": "0.334000000000000000",
-        "threshold": "0.500000000000000000",
-        "veto_threshold": "0.334000000000000000",
-        "min_initial_deposit_ratio": "0.000000000000000000",
-        "proposal_cancel_ratio": "0.500000000000000000",
-        "proposal_cancel_dest": "",
-        "expedited_voting_period": "86400s",
-        "expedited_threshold": "0.667000000000000000",
-        "expedited_min_deposit": [
-          {
-            "denom": "stake",
-            "amount": "50000000"
-          }
-        ],
-        "burn_vote_quorum": false,
-        "burn_proposal_deposit_prevote": false,
-        "burn_vote_veto": true,
-        "min_deposit_ratio": "0.010000000000000000"
-      },
-      "constitution": ""
     },
     "group": {
       "group_seq": "0",
@@ -262,7 +370,7 @@
         "annual_provisions": "0.000000000000000000"
       },
       "params": {
-        "mint_denom": "stake",
+        "mint_denom": "amyt",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
@@ -285,23 +393,6 @@
       "signing_infos": [],
       "missed_blocks": []
     },
-    "staking": {
-      "params": {
-        "unbonding_time": "1814400s",
-        "max_validators": 100,
-        "max_entries": 7,
-        "historical_entries": 10000,
-        "bond_denom": "amyt",
-        "min_commission_rate": "0.000000000000000000"
-      },
-      "last_total_power": "0",
-      "last_validator_powers": [],
-      "validators": [],
-      "delegations": [],
-      "unbonding_delegations": [],
-      "redelegations": [],
-      "exported": false
-    },
     "transfer": {
       "port_id": "transfer",
       "denom_traces": [],
@@ -312,11 +403,32 @@
       "total_escrowed": []
     },
     "upgrade": {},
-    "vesting": {},
     "wasmx": {
       "params": {},
-      "bootstrap_account_address": "mythos1cz8tq0qgu9y7yhxr6z6wsgdy8x7augslws4cxrxk50jj3pxh24pq8r4uje",
+      "bootstrap_account_address": "mythos1jaspehtqjt93yvrpgh8uj6a8grsvrhpr5vlg7k3thq3nkxqqmvpqs0ul8y",
       "system_contracts": [
+        {
+          "address": "0x0000000000000000000000000000000000000039",
+          "label": "auth_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "auth",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
         {
           "address": "0x0000000000000000000000000000000000000001",
           "label": "ecrecover",
@@ -758,6 +870,182 @@
           }
         },
         {
+          "address": "0x0000000000000000000000000000000000000030",
+          "label": "staking_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "staking",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000031",
+          "label": "bank_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": "eyJhdXRob3JpdGllcyI6WyJzdGFraW5nIiwiZ292IiwiYmFuayIsIm15dGhvczE3eHBmdmFrbTJhbWc5NjJ5bHM2Zjg0ejNrZWxsOGM1bDBrc3JrZCIsIm15dGhvczFtM2gzMHdsdnNmOGxscnV4dHB1a2R2c3kwa20ya3VtOGg3NW02cyJdfQ=="
+          },
+          "pinned": false,
+          "native": false,
+          "role": "bank",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "",
+          "label": "erc20json",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "",
+          "label": "derc20json",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000034",
+          "label": "hooks_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": "eyJhdXRob3JpdGllcyI6WyJob29rcyIsImNvbnNlbnN1cyIsImdvdiJdLCJyZWdpc3RyYXRpb25zIjpbeyJob29rIjoiRW5kQmxvY2siLCJtb2R1bGVzIjpbImdvdiJdfSx7Imhvb2siOiJDcmVhdGVkVmFsaWRhdG9yIiwibW9kdWxlcyI6W119XX0="
+          },
+          "pinned": false,
+          "native": false,
+          "role": "hooks",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000043",
+          "label": "hooks_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": "eyJhdXRob3JpdGllcyI6WyJob29rc19ub25jb25zZW5zdXMiLCJjb25zZW5zdXMiXSwicmVnaXN0cmF0aW9ucyI6W3siaG9vayI6IlN0YXJ0Tm9kZSIsIm1vZHVsZXMiOlsiY29uc2Vuc3VzIiwiY2hhdCJdfV19"
+          },
+          "pinned": false,
+          "native": false,
+          "role": "hooks_nonconsensus",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000035",
+          "label": "gov_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "gov",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000038",
+          "label": "gov_cont_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": "eyJhcmJpdHJhdGlvbkRlbm9tIjoiYWFyYiIsImNvZWZzIjpbMTA0ODU3NiwgMywgMTAwLCAyMDAwLCAxNTAwLCAxMCwgNCwgOCwgMTAwMDAsIDE1MzEsIDEwMDBdLCJkZWZhdWx0WCI6MTUzMSwiZGVmYXVsdFkiOjEwMDB9"
+          },
+          "pinned": false,
+          "native": false,
+          "role": "gov",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
           "address": "0x000000000000000000000000000000000000002a",
           "label": "raft_library",
           "storage_type": "SingleConsensus",
@@ -780,19 +1068,251 @@
           }
         },
         {
+          "address": "0x0000000000000000000000000000000000000036",
+          "label": "raftp2p_library",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "deplibrary",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
           "address": "0x000000000000000000000000000000000000002b",
+          "label": "tendermint_library",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "deplibrary",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000040",
+          "label": "tendermintp2p_library",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "deplibrary",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x000000000000000000000000000000000000002c",
           "label": "consensus_raft_0.0.1",
           "storage_type": "SingleConsensus",
           "init_message": {
-            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5Ijoibm9kZUlQcyIsInZhbHVlIjoiW10ifSx7ImtleSI6InZvdGVkRm9yIiwidmFsdWUiOiIwIn0seyJrZXkiOiJuZXh0SW5kZXgiLCJ2YWx1ZSI6IltdIn0seyJrZXkiOiJtYXRjaEluZGV4IiwidmFsdWUiOiJbXSJ9LHsia2V5IjoiY29tbWl0SW5kZXgiLCJ2YWx1ZSI6IjAifSx7ImtleSI6ImN1cnJlbnRUZXJtIiwidmFsdWUiOiIwIn0seyJrZXkiOiJsYXN0QXBwbGllZCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4X3R4X2J5dGVzIiwidmFsdWUiOiI2NTUzNiJ9LHsia2V5IjoicHJldkxvZ0luZGV4IiwidmFsdWUiOiIwIn0seyJrZXkiOiJjdXJyZW50Tm9kZUlkIiwidmFsdWUiOiIwIn0seyJrZXkiOiJlbGVjdGlvblJlc2V0IiwidmFsdWUiOiIwIn0seyJrZXkiOiJtYXhfYmxvY2tfZ2FzIiwidmFsdWUiOiIyMDAwMDAwMCJ9LHsia2V5IjoiZWxlY3Rpb25UaW1lb3V0IiwidmFsdWUiOiIwIn0seyJrZXkiOiJtYXhFbGVjdGlvblRpbWUiLCJ2YWx1ZSI6IjIwMDAwIn0seyJrZXkiOiJtaW5FbGVjdGlvblRpbWUiLCJ2YWx1ZSI6IjEwMDAwIn0seyJrZXkiOiJoZWFydGJlYXRUaW1lb3V0IiwidmFsdWUiOiI1MDAwIn1dLCJpbml0aWFsU3RhdGUiOiJ1bmluaXRpYWxpemVkIn19"
+            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5IjoidmFsaWRhdG9yTm9kZXNJbmZvIiwidmFsdWUiOiJbXSJ9LHsia2V5Ijoidm90ZWRGb3IiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im5leHRJbmRleCIsInZhbHVlIjoiW10ifSx7ImtleSI6Im1hdGNoSW5kZXgiLCJ2YWx1ZSI6IltdIn0seyJrZXkiOiJjb21taXRJbmRleCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiY3VycmVudFRlcm0iLCJ2YWx1ZSI6IjAifSx7ImtleSI6Imxhc3RBcHBsaWVkIiwidmFsdWUiOiIwIn0seyJrZXkiOiJibG9ja1RpbWVvdXQiLCJ2YWx1ZSI6ImhlYXJ0YmVhdFRpbWVvdXQifSx7ImtleSI6Im1heF90eF9ieXRlcyIsInZhbHVlIjoiNjU1MzYifSx7ImtleSI6InByZXZMb2dJbmRleCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiY3VycmVudE5vZGVJZCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiZWxlY3Rpb25SZXNldCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4X2Jsb2NrX2dhcyIsInZhbHVlIjoiMjAwMDAwMDAifSx7ImtleSI6ImVsZWN0aW9uVGltZW91dCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4RWxlY3Rpb25UaW1lIiwidmFsdWUiOiIyMDAwMCJ9LHsia2V5IjoibWluRWxlY3Rpb25UaW1lIiwidmFsdWUiOiIxMDAwMCJ9LHsia2V5IjoiaGVhcnRiZWF0VGltZW91dCIsInZhbHVlIjoiNTAwMCJ9XSwiaW5pdGlhbFN0YXRlIjoidW5pbml0aWFsaXplZCJ9fQ=="
+          },
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [
+            "interpreter_state_machine_bz_0.1.0",
+            "0x000000000000000000000000000000000000002a:deplibrary"
+          ],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000037",
+          "label": "consensus_raftp2p_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5IjoidmFsaWRhdG9yTm9kZXNJbmZvIiwidmFsdWUiOiJbXSJ9LHsia2V5Ijoidm90ZWRGb3IiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im5leHRJbmRleCIsInZhbHVlIjoiW10ifSx7ImtleSI6Im1hdGNoSW5kZXgiLCJ2YWx1ZSI6IltdIn0seyJrZXkiOiJjb21taXRJbmRleCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiY3VycmVudFRlcm0iLCJ2YWx1ZSI6IjAifSx7ImtleSI6Imxhc3RBcHBsaWVkIiwidmFsdWUiOiIwIn0seyJrZXkiOiJibG9ja1RpbWVvdXQiLCJ2YWx1ZSI6ImhlYXJ0YmVhdFRpbWVvdXQifSx7ImtleSI6Im1heF90eF9ieXRlcyIsInZhbHVlIjoiNjU1MzYifSx7ImtleSI6InByZXZMb2dJbmRleCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiY3VycmVudE5vZGVJZCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiZWxlY3Rpb25SZXNldCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4X2Jsb2NrX2dhcyIsInZhbHVlIjoiMjAwMDAwMDAifSx7ImtleSI6ImVsZWN0aW9uVGltZW91dCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4RWxlY3Rpb25UaW1lIiwidmFsdWUiOiIyMDAwMCJ9LHsia2V5IjoibWluRWxlY3Rpb25UaW1lIiwidmFsdWUiOiIxMDAwMCJ9LHsia2V5IjoiaGVhcnRiZWF0VGltZW91dCIsInZhbHVlIjoiNTAwMCJ9XSwiaW5pdGlhbFN0YXRlIjoidW5pbml0aWFsaXplZCJ9fQ=="
+          },
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [
+            "interpreter_state_machine_bz_0.1.0",
+            "0x0000000000000000000000000000000000000036:deplibrary"
+          ],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x000000000000000000000000000000000000002d",
+          "label": "consensus_tendermint_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5Ijoidm90ZWRGb3IiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im5leHRJbmRleCIsInZhbHVlIjoiW10ifSx7ImtleSI6ImN1cnJlbnRUZXJtIiwidmFsdWUiOiIwIn0seyJrZXkiOiJibG9ja1RpbWVvdXQiLCJ2YWx1ZSI6InJvdW5kVGltZW91dCJ9LHsia2V5IjoibWF4X3R4X2J5dGVzIiwidmFsdWUiOiI2NTUzNiJ9LHsia2V5Ijoicm91bmRUaW1lb3V0IiwidmFsdWUiOjE1MDAwfSx7ImtleSI6ImN1cnJlbnROb2RlSWQiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im1heF9ibG9ja19nYXMiLCJ2YWx1ZSI6IjIwMDAwMDAwIn1dLCJpbml0aWFsU3RhdGUiOiJ1bmluaXRpYWxpemVkIn19"
+          },
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [
+            "interpreter_state_machine_bz_0.1.0",
+            "0x000000000000000000000000000000000000002b:deplibrary"
+          ],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000041",
+          "label": "consensus_tendermintp2p_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5Ijoidm90ZWRGb3IiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im5leHRJbmRleCIsInZhbHVlIjoiW10ifSx7ImtleSI6ImN1cnJlbnRUZXJtIiwidmFsdWUiOiIwIn0seyJrZXkiOiJibG9ja1RpbWVvdXQiLCJ2YWx1ZSI6InJvdW5kVGltZW91dCJ9LHsia2V5IjoibWF4X3R4X2J5dGVzIiwidmFsdWUiOiI2NTUzNiJ9LHsia2V5Ijoicm91bmRUaW1lb3V0IiwidmFsdWUiOiI1MDAwIn0seyJrZXkiOiJjdXJyZW50Tm9kZUlkIiwidmFsdWUiOiIwIn0seyJrZXkiOiJtYXhfYmxvY2tfZ2FzIiwidmFsdWUiOiIyMDAwMDAwMCJ9LHsia2V5IjoidGltZW91dFByb3Bvc2UiLCJ2YWx1ZSI6NTAwMH0seyJrZXkiOiJ0aW1lb3V0UHJldm90ZSIsInZhbHVlIjo1MDAwfSx7ImtleSI6InRpbWVvdXRQcmVjb21taXQiLCJ2YWx1ZSI6NTAwMH1dLCJpbml0aWFsU3RhdGUiOiJ1bmluaXRpYWxpemVkIn19"
           },
           "pinned": false,
           "native": false,
           "role": "consensus",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
-            "0x000000000000000000000000000000000000002a:deplibrary"
+            "0x0000000000000000000000000000000000000040:deplibrary"
           ],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x000000000000000000000000000000000000002e",
+          "label": "ava_snowman_library",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "deplibrary",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x000000000000000000000000000000000000002f",
+          "label": "consensus_ava_snowman_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJzYW1wbGVTaXplIiwidmFsdWUiOiIyIn0seyJrZXkiOiJiZXRhVGhyZXNob2xkIiwidmFsdWUiOjJ9LHsia2V5Ijoicm91bmRzQ291bnRlciIsInZhbHVlIjoiMCJ9LHsia2V5IjoiYWxwaGFUaHJlc2hvbGQiLCJ2YWx1ZSI6ODB9XSwiaW5pdGlhbFN0YXRlIjoidW5pbml0aWFsaXplZCJ9fQ=="
+          },
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [
+            "interpreter_state_machine_bz_0.1.0",
+            "0x000000000000000000000000000000000000002e:deplibrary"
+          ],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000042",
+          "label": "chat_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "chat",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          }
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000044",
+          "label": "chat_verifier_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": {
+            "data": ""
+          },
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [],
           "metadata": {
             "name": "",
             "categ": [],
