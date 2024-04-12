@@ -132,7 +132,7 @@ vi testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "<your_mythos_address>@<your_libp2p_EXTERNAL_IP_address>,mythos1drz0zullqalfvgsgu8dmx0w6vdq9mkq63wdepp@/ip4/74.208.105.20/tcp/5001/p2p/12D3KooWFzX5hTTtB842DfY6qXfAMD7dzixhpsksjNn6TSXnu7Eq"
+ips = "<your_mythos_address>@<your_libp2p_EXTERNAL_IP_address>,mythos1drz0zullqalfvgsgu8dmx0w6vdq9mkq63wdepp@/ip4/74.208.105.20/tcp/5011/p2p/12D3KooWFzX5hTTtB842DfY6qXfAMD7dzixhpsksjNn6TSXnu7Eq"
 ```
 
 ## 5. Allow 5001 as an external port
