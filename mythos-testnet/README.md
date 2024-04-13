@@ -120,7 +120,7 @@ sha256sum ./testnet/node0/mythosd/config/genesis.json
 Create your own account and ask for tokens in Mythos Discord with your public address. https://discord.gg/f5rbU2bkPz
 
 ```shell=
-mythosd keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
+mythosd keys add mykey --home=./testnet/node0/mythosd --keyring-backend=test
 ```
 
 ## 4. Node IDS (important!)
@@ -128,7 +128,7 @@ mythosd keys add mykey --home=testnet/node0/mythosd --keyring-backend=test
 * go to app.toml, under `Network Configuration` (bottom page) and update `ips` with your EXTERNAL IP and a bootstrap address and p2p id of a trusted peer node
 
 ```shell=
-vi testnet/node0/mythosd/config/app.toml
+vi ./testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
@@ -144,7 +144,7 @@ sudo ufw allow 5001
 ## 6. Start
 
 ```shell=
-mythosd start --home=testnet/node0/mythosd
+mythosd start --home=./testnet/node0/mythosd
 
 # or start your service
 systemctl start mythos && journalctl -u mythos.service -f -o cat
@@ -189,7 +189,7 @@ vi ./validator.json
 
 ```shell=
 
-mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-23 --keyring-backend=test --home=testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4 --node tcp://127.0.0.1:26657 --yes
+mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-23 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4 --node tcp://127.0.0.1:26657 --yes
 
 ```
 
