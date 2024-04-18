@@ -117,22 +117,23 @@ sha256sum ./testnet/node0/mythosd/config/genesis.json
 
 ## 3. Setup account
 
-Create your own account and ask for tokens in Mythos Discord with your public address. https://discord.gg/f5rbU2bkPz
+An account has been created for you with the name `node0`. Get the public address (starts with `mythos1`) and paste it in the Mythos Discord and ask for tokens. https://discord.gg/f5rbU2bkPz
 
 ```shell=
-mythosd keys add mykey --home=./testnet/node0/mythosd --keyring-backend=test
+mythosd keys list --keyring-backend test --home ./testnet/node0/mythosd
+
 ```
 
 ## 4. Node IDS (important!)
 
-* go to app.toml, under `Network Configuration` (bottom page) and update `ips` with your EXTERNAL IP and a bootstrap address and p2p id of a trusted peer node
+* go to app.toml, under `Network Configuration` (bottom page) and update `ips` with your EXTERNAL IP (replace localhost) and the URI of a trusted peer node.
 
 ```shell=
 vi ./testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "<your_mythos_address>@<your_libp2p_EXTERNAL_IP_address>,mythos1drz0zullqalfvgsgu8dmx0w6vdq9mkq63wdepp@/ip4/74.208.105.20/tcp/5011/p2p/12D3KooWFzX5hTTtB842DfY6qXfAMD7dzixhpsksjNn6TSXnu7Eq"
+ips = "YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1drz0zullqalfvgsgu8dmx0w6vdq9mkq63wdepp@/ip4/74.208.105.20/tcp/5011/p2p/12D3KooWFzX5hTTtB842DfY6qXfAMD7dzixhpsksjNn6TSXnu7Eq"
 ```
 
 ## 5. Allow 5001 as an external port
