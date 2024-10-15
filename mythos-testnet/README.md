@@ -111,8 +111,11 @@ Check genesis checksum!
 
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
-# 0d12fba769c1cd5dc9291edaa94023e468a924c65e88f7c87f56a14409fb0f00
+sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json
+# 80aa98905aee7082bad3b06b1a83fd0c34506fbac58ec6cca3fedb3cc0b7a5ec
 ```
+
+* for macOS `shasum -a 256 ./testnet/node0/mythosd/config/genesis.json`
 
 ## 3. Setup account
 
@@ -132,7 +135,13 @@ vi ./testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1xffspezxgs668l2xjq2cl5nrzl28atgm79vtav@/ip4/217.76.51.233/tcp/5001/p2p/12D3KooWKD1FjsbaWxn3k5SQg8LfFG4QxPPQFmLyax7sXetSLvHy;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
+ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos14ewqjyjphuhj97dtrfcewayfzyca9dn5g75ghy@/ip4/86.120.99.11/tcp/5001/p2p/12D3KooWRAAkjy3dV2YMMM2FvsCSJQzZEsyjT19exagzHe2gbUhB;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
+```
+
+* allow others to state sync, by keeping data snapshots
+
+```
+sed -i.bak -E "s|^(snapshot-interval[[:space:]]+=[[:space:]]+).*$|\1200|" ./testnet/node0/mythosd/config/app.toml
 ```
 
 ## 5. External ports
@@ -149,12 +158,12 @@ sudo ufw allow 1317
 
 ```shell=
 
-RPC="http://217.76.51.233:26657"
+RPC="http://86.120.99.11:26657"
+HOMEMAIN=/root/mythos/testnet/node0/mythosd
+
 RECENT_HEIGHT=$(curl -s $RPC/block | jq -r .result.block.header.height)
 TRUST_HEIGHT=$((RECENT_HEIGHT - 1))
 TRUST_HASH=$(curl -s "$RPC/block?height=$TRUST_HEIGHT" | jq -r .result.block_id.hash)
-
-HOMEMAIN=/root/mythos/testnet/node0/mythosd
 
 sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
 s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$RPC,$RPC\"| ; \
@@ -177,7 +186,7 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOMEMAIN/confi
 ```
 
 Troubleshooting:
-* if you get an error `post failed: Post \"http://217.76.51.233:26657\": EOF`, reset the state and restart the node:
+* if you get an error `post failed: Post \"http://86.120.99.11:26657\": EOF`, reset the state and restart the node:
 ```shell=
 
 systemctl stop mythos
