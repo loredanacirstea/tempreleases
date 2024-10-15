@@ -1,8 +1,8 @@
 {
   "app_name": "mythosd",
   "app_version": "",
-  "genesis_time": "2024-03-28T21:18:00.355938096Z",
-  "chain_id": "mythos_7000-23",
+  "genesis_time": "2024-10-15T11:48:34.237647133Z",
+  "chain_id": "mythos_7000-25",
   "initial_height": 1,
   "app_hash": null,
   "app_state": {
@@ -34,7 +34,8 @@
         "delegations": [],
         "unbonding_delegations": [],
         "redelegations": [],
-        "exported": false
+        "exported": false,
+        "base_denom": "amyt"
       },
       "bank": {
         "params": {
@@ -43,7 +44,7 @@
         },
         "balances": [
           {
-            "address": "mythos1drz0zullqalfvgsgu8dmx0w6vdq9mkq63wdepp",
+            "address": "mythos1nrlc358jxz5atl77kapkh0yvl6wfa2gfalrq43",
             "coins": [
               {
                 "denom": "amyt",
@@ -76,16 +77,18 @@
               "uri": "",
               "uri_hash": ""
             },
-            "code_id": "24",
+            "code_id": "28",
             "admins": [
               "bank",
               "gov"
             ],
             "minters": [
               "bank",
-              "gov"
+              "gov",
+              "distribution"
             ],
-            "contract": ""
+            "contract": "",
+            "base_denom": ""
           },
           {
             "metadata": {
@@ -109,7 +112,7 @@
               "uri": "",
               "uri_hash": ""
             },
-            "code_id": "25",
+            "code_id": "29",
             "admins": [
               "staking",
               "bank"
@@ -118,7 +121,42 @@
               "staking",
               "bank"
             ],
-            "contract": ""
+            "contract": "",
+            "base_denom": "amyt"
+          },
+          {
+            "metadata": {
+              "description": "rewards token",
+              "denom_units": [
+                {
+                  "denom": "rmyt",
+                  "exponent": 18,
+                  "aliases": []
+                },
+                {
+                  "denom": "armyt",
+                  "exponent": 1,
+                  "aliases": []
+                }
+              ],
+              "base": "armyt",
+              "display": "RMYT",
+              "name": "RMYT",
+              "symbol": "rmyt",
+              "uri": "",
+              "uri_hash": ""
+            },
+            "code_id": "28",
+            "admins": [
+              "bank",
+              "distribution"
+            ],
+            "minters": [
+              "bank",
+              "distribution"
+            ],
+            "contract": "",
+            "base_denom": "amyt"
           },
           {
             "metadata": {
@@ -142,14 +180,15 @@
               "uri": "",
               "uri_hash": ""
             },
-            "code_id": "24",
+            "code_id": "28",
             "admins": [
               "gov"
             ],
             "minters": [
               "gov"
             ],
-            "contract": ""
+            "contract": "",
+            "base_denom": ""
           }
         ],
         "send_enabled": []
@@ -199,10 +238,44 @@
         },
         "accounts": [
           {
-            "type_url": "/cosmos.auth.v1beta1.BaseAccount",
-            "value": "eyJhZGRyZXNzIjoibXl0aG9zMWRyejB6dWxscWFsZnZnc2d1OGRteDB3NnZkcTlta3E2M3dkZXBwIiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
+            "type_url": "/mythos.cosmosmod.v1.BaseAccount",
+            "value": "eyJhZGRyZXNzIjoibXl0aG9zMW5ybGMzNThqeHo1YXRsNzdrYXBraDB5dmw2d2ZhMmdmYWxycTQzIiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
           }
-        ]
+        ],
+        "base_account_typeurl": "",
+        "module_account_typeurl": ""
+      },
+      "slashing": {
+        "params": {
+          "signed_blocks_window": "0",
+          "min_signed_per_window": "0.000000000000000000",
+          "downtime_jail_duration": "0s",
+          "slash_fraction_double_sign": "0.000000000000000000",
+          "slash_fraction_downtime": "0.000000000000000000"
+        },
+        "signing_infos": [],
+        "missed_blocks": []
+      },
+      "distribution": {
+        "params": {
+          "community_tax": "0.000000000000000000",
+          "base_proposer_reward": "0.000000000000000000",
+          "bonus_proposer_reward": "0.000000000000000000",
+          "withdraw_addr_enabled": false
+        },
+        "fee_pool": {
+          "community_pool": []
+        },
+        "delegator_withdraw_infos": [],
+        "previous_proposer": "",
+        "outstanding_rewards": [],
+        "validator_accumulated_commissions": [],
+        "validator_historical_rewards": [],
+        "validator_current_rewards": [],
+        "delegator_starting_infos": [],
+        "validator_slash_events": [],
+        "base_denom": "amyt",
+        "rewards_denom": "armyt"
       }
     },
     "crisis": {
@@ -210,25 +283,6 @@
         "denom": "amyt",
         "amount": "1000"
       }
-    },
-    "distribution": {
-      "params": {
-        "community_tax": "0.020000000000000000",
-        "base_proposer_reward": "0.000000000000000000",
-        "bonus_proposer_reward": "0.000000000000000000",
-        "withdraw_addr_enabled": true
-      },
-      "fee_pool": {
-        "community_pool": []
-      },
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "outstanding_rewards": [],
-      "validator_accumulated_commissions": [],
-      "validator_historical_rewards": [],
-      "validator_current_rewards": [],
-      "delegator_starting_infos": [],
-      "validator_slash_events": []
     },
     "evidence": {
       "evidence": []
@@ -239,33 +293,11 @@
           "body": {
             "messages": [
               {
-                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
-                "description": {
-                  "moniker": "node0",
-                  "identity": "",
-                  "website": "",
-                  "security_contact": "",
-                  "details": ""
-                },
-                "commission": {
-                  "rate": "1.000000000000000000",
-                  "max_rate": "1.000000000000000000",
-                  "max_change_rate": "1.000000000000000000"
-                },
-                "min_self_delegation": "1",
-                "delegator_address": "",
-                "validator_address": "mythos1drz0zullqalfvgsgu8dmx0w6vdq9mkq63wdepp",
-                "pubkey": {
-                  "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "W8AB8pfZyR6CA1p6ZXjo6u7pYelQTEOohb8GZfZzfuo="
-                },
-                "value": {
-                  "denom": "amyt",
-                  "amount": "100000000000000000000"
-                }
+                "type_url": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "value": "eyJkZXNjcmlwdGlvbiI6eyJtb25pa2VyIjoibm9kZTAiLCJpZGVudGl0eSI6IiIsIndlYnNpdGUiOiIiLCJzZWN1cml0eV9jb250YWN0IjoiIiwiZGV0YWlscyI6IiJ9LCJjb21taXNzaW9uIjp7InJhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCIsIm1heF9yYXRlIjoiMS4wMDAwMDAwMDAwMDAwMDAwMDAiLCJtYXhfY2hhbmdlX3JhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJtaW5fc2VsZl9kZWxlZ2F0aW9uIjoiMSIsImRlbGVnYXRvcl9hZGRyZXNzIjoiIiwidmFsaWRhdG9yX2FkZHJlc3MiOiJteXRob3MxbnJsYzM1OGp4ejVhdGw3N2thcGtoMHl2bDZ3ZmEyZ2ZhbHJxNDMiLCJwdWJrZXkiOnsidHlwZV91cmwiOiIvY29zbW9zLmNyeXB0by5lZDI1NTE5LlB1YktleSIsInZhbHVlIjoiZXlKclpYa2lPaUp5YTNKTmFVdDJlWHBUVVVoQ1dUUkRURTVLWkdSdFlTOWFTbGhyUlVObVNrbFBjVE5NYzFkWE0yZEZQU0o5In0sInZhbHVlIjp7ImRlbm9tIjoiYW15dCIsImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
               }
             ],
-            "memo": "de6c72309efe6c3b507a23f4c078893dca94120e@0.0.0.0:8090",
+            "memo": "mythos1nrlc358jxz5atl77kapkh0yvl6wfa2gfalrq43@/ip4/127.0.0.1/tcp/5001/p2p/12D3KooWMYjG5az6tojZAhkRjnQE3o9a5azyRJDUTHbyvFeXVJnC",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -274,8 +306,8 @@
             "signer_infos": [
               {
                 "public_key": {
-                  "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "Atqn6qKBYgr24lMnhZKM+JA6JSgcOqX+8sWeFF7R4qe0"
+                  "type_url": "/cosmos.crypto.secp256k1.PubKey",
+                  "value": "eyJrZXkiOiJBcDNsODhhOE9hUHdaai96MG1kMGs4b29seGI5N1RFOWM0ZWtPSmsxMnAvNyJ9"
                 },
                 "mode_info": {
                   "single": {
@@ -294,7 +326,7 @@
             "tip": null
           },
           "signatures": [
-            "dJwrR5Br9+Sce8q+5fDDRDAFDWMMzAqGgU1wsPt16Wc0w1zhmHUs3sTcdApRTvYhF+e9IIvuhAX6i6P2nIsuYg=="
+            "eVmgg66TS5RPKWcXB3qGlsWBzuEV4lrNWIPY6Q78LZYU1zWs1qfYmEdcwgxSeSQTOuNsOaOU7RgAc0FXYBJEag=="
           ]
         }
       ]
@@ -378,21 +410,8 @@
         "blocks_per_year": "6311520"
       }
     },
-    "network": {
-      "params": {}
-    },
+    "network": {},
     "params": null,
-    "slashing": {
-      "params": {
-        "signed_blocks_window": "100",
-        "min_signed_per_window": "0.500000000000000000",
-        "downtime_jail_duration": "600s",
-        "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.010000000000000000"
-      },
-      "signing_infos": [],
-      "missed_blocks": []
-    },
     "transfer": {
       "port_id": "transfer",
       "denom_traces": [],
@@ -405,15 +424,13 @@
     "upgrade": {},
     "wasmx": {
       "params": {},
-      "bootstrap_account_address": "mythos1337ljamsk6ean3nn47k6gzyvafya5tnut6vy7eafqs6f88fq2zws2dfx96",
+      "bootstrap_account_address": "mythos15e29kskfnvcx4h2ec60q9mmlghhnhnxpwgeylwpv73ehlzjtnqjskhuw7q",
       "system_contracts": [
         {
           "address": "0x0000000000000000000000000000000000000039",
           "label": "auth_0.0.1",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "auth",
@@ -427,15 +444,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000001",
           "label": "ecrecover",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": true,
           "role": "",
@@ -449,15 +465,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x000000000000000000000000000000000000001f",
           "label": "ecrecovereth",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -471,15 +486,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000002",
           "label": "sha2-256",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -493,15 +507,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000003",
           "label": "ripmd160",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -515,15 +528,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000004",
           "label": "identity",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -537,15 +549,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000005",
           "label": "modexp",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -559,15 +570,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000006",
           "label": "ecadd",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -581,15 +591,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000007",
           "label": "ecmul",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -603,15 +612,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000008",
           "label": "ecpairings",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -625,15 +633,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000009",
           "label": "blake2f",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
           "role": "",
@@ -647,81 +654,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
-        },
-        {
-          "address": "0x0000000000000000000000000000000000000020",
-          "label": "secp384r1",
-          "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
           },
-          "pinned": false,
-          "native": false,
-          "role": "",
-          "deps": [],
-          "metadata": {
-            "name": "",
-            "categ": [],
-            "icon": "",
-            "author": "",
-            "site": "",
-            "abi": "",
-            "json_schema": "",
-            "origin": null
-          }
-        },
-        {
-          "address": "0x0000000000000000000000000000000000000021",
-          "label": "secp384r1_registry",
-          "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
-          "pinned": false,
-          "native": false,
-          "role": "",
-          "deps": [],
-          "metadata": {
-            "name": "",
-            "categ": [],
-            "icon": "",
-            "author": "",
-            "site": "",
-            "abi": "",
-            "json_schema": "",
-            "origin": null
-          }
-        },
-        {
-          "address": "0x0000000000000000000000000000000000000022",
-          "label": "secret_sharing",
-          "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
-          "pinned": false,
-          "native": true,
-          "role": "",
-          "deps": [],
-          "metadata": {
-            "name": "",
-            "categ": [],
-            "icon": "",
-            "author": "",
-            "site": "",
-            "abi": "",
-            "json_schema": "",
-            "origin": null
-          }
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000023",
           "label": "interpreter_evm_shanghai",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "interpreter",
@@ -735,59 +675,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
-        },
-        {
-          "address": "0x0000000000000000000000000000000000000024",
-          "label": "alias_eth",
-          "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
           },
-          "pinned": false,
-          "native": false,
-          "role": "alias",
-          "deps": [],
-          "metadata": {
-            "name": "",
-            "categ": [],
-            "icon": "",
-            "author": "",
-            "site": "",
-            "abi": "",
-            "json_schema": "",
-            "origin": null
-          }
-        },
-        {
-          "address": "0x0000000000000000000000000000000000000025",
-          "label": "proxy_interfaces",
-          "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
-          "pinned": false,
-          "native": true,
-          "role": "",
-          "deps": [],
-          "metadata": {
-            "name": "",
-            "categ": [],
-            "icon": "",
-            "author": "",
-            "site": "",
-            "abi": "",
-            "json_schema": "",
-            "origin": null
-          }
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000026",
           "label": "interpreter_python_utf8_0.2.0",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "interpreter",
@@ -801,15 +696,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000027",
           "label": "interpreter_javascript_utf8_0.1.0",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "interpreter",
@@ -823,15 +717,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000028",
           "label": "interpreter_state_machine_bz_0.1.0",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "interpreter",
@@ -845,15 +738,37 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000050",
+          "label": "tay_interpreter_v0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "interpreter",
+          "deps": [
+            "memory_taylor"
+          ],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000029",
           "label": "storage_chain",
           "storage_type": "MetaConsensus",
-          "init_message": {
-            "data": "eyJpbml0aWFsQmxvY2tJbmRleCI6MX0="
-          },
+          "init_message": "eyJkYXRhIjoiZXlKcGJtbDBhV0ZzUW14dlkydEpibVJsZUNJNk1YMD0ifQ==",
           "pinned": false,
           "native": false,
           "role": "storage",
@@ -867,18 +782,17 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
-          "address": "0x0000000000000000000000000000000000000030",
-          "label": "staking_0.0.1",
+          "address": "0x0000000000000000000000000000000000000024",
+          "label": "alias_eth",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
-          "role": "staking",
+          "role": "alias",
           "deps": [],
           "metadata": {
             "name": "",
@@ -889,18 +803,17 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
-          "address": "0x0000000000000000000000000000000000000031",
-          "label": "bank_0.0.1",
+          "address": "0x0000000000000000000000000000000000000025",
+          "label": "proxy_interfaces",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": "eyJhdXRob3JpdGllcyI6WyJzdGFraW5nIiwiZ292IiwiYmFuayIsIm15dGhvczE3eHBmdmFrbTJhbWc5NjJ5bHM2Zjg0ejNrZWxsOGM1bDBrc3JrZCIsIm15dGhvczFtM2gzMHdsdnNmOGxscnV4dHB1a2R2c3kwa20ya3VtOGg3NW02cyJdfQ=="
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
-          "native": false,
-          "role": "bank",
+          "native": true,
+          "role": "",
           "deps": [],
           "metadata": {
             "name": "",
@@ -911,15 +824,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
-          "address": "",
-          "label": "erc20json",
+          "address": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+          "label": "sys_proxy",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "",
@@ -933,15 +845,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
-          "address": "",
-          "label": "derc20json",
+          "address": "0x0000000000000000000000000000000000000020",
+          "label": "secp384r1",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "",
@@ -955,15 +866,56 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000021",
+          "label": "secp384r1_registry",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "eid_registry",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000022",
+          "label": "secret_sharing",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": true,
+          "role": "",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000034",
           "label": "hooks_0.0.1",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": "eyJhdXRob3JpdGllcyI6WyJob29rcyIsImNvbnNlbnN1cyIsImdvdiJdLCJyZWdpc3RyYXRpb25zIjpbeyJob29rIjoiRW5kQmxvY2siLCJtb2R1bGVzIjpbImdvdiJdfSx7Imhvb2siOiJDcmVhdGVkVmFsaWRhdG9yIiwibW9kdWxlcyI6W119XX0="
-          },
+          "init_message": "eyJkYXRhIjoiZXlKb2IyOXJjeUk2VzNzaWJtRnRaU0k2SWtKbFoybHVRbXh2WTJzaUxDSnpiM1Z5WTJWTmIyUjFiR1Z6SWpwYkltTnZibk5sYm5OMWN5SmRMQ0owWVhKblpYUk5iMlIxYkdWeklqcGJJbk5zWVhOb2FXNW5JbDE5TEhzaWJtRnRaU0k2SWtWdVpFSnNiMk5ySWl3aWMyOTFjbU5sVFc5a2RXeGxjeUk2V3lKamIyNXpaVzV6ZFhNaVhTd2lkR0Z5WjJWMFRXOWtkV3hsY3lJNld5Sm5iM1lpTENKa2FYTjBjbWxpZFhScGIyNGlYWDBzZXlKdVlXMWxJam9pUTNKbFlYUmxaRlpoYkdsa1lYUnZjaUlzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpWTI5dWMyVnVjM1Z6SWwwc0luUmhjbWRsZEUxdlpIVnNaWE1pT2x0ZGZTeDdJbTVoYldVaU9pSkJablJsY2xaaGJHbGtZWFJ2Y2tOeVpXRjBaV1FpTENKemIzVnlZMlZOYjJSMWJHVnpJanBiSW5OMFlXdHBibWNpWFN3aWRHRnlaMlYwVFc5a2RXeGxjeUk2V3lKemJHRnphR2x1WnlKZGZTeDdJbTVoYldVaU9pSkJablJsY2xaaGJHbGtZWFJ2Y2tKdmJtUmxaQ0lzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpYzNSaGEybHVaeUpkTENKMFlYSm5aWFJOYjJSMWJHVnpJanBiSW5Oc1lYTm9hVzVuSWwxOUxIc2libUZ0WlNJNklrRm1kR1Z5Vm1Gc2FXUmhkRzl5VW1WdGIzWmxaQ0lzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpYzNSaGEybHVaeUpkTENKMFlYSm5aWFJOYjJSMWJHVnpJanBiSW5Oc1lYTm9hVzVuSWwxOUxIc2libUZ0WlNJNklrRm1kR1Z5Vm1Gc2FXUmhkRzl5UW1WbmFXNVZibUp2Ym1ScGJtY2lMQ0p6YjNWeVkyVk5iMlIxYkdWeklqcGJJbk4wWVd0cGJtY2lYU3dpZEdGeVoyVjBUVzlrZFd4bGN5STZXeUp6YkdGemFHbHVaeUpkZlN4N0ltNWhiV1VpT2lKQlpuUmxja1JsYkdWbllYUnBiMjVOYjJScFptbGxaQ0lzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpYzNSaGEybHVaeUpkTENKMFlYSm5aWFJOYjJSMWJHVnpJanBiSW5Oc1lYTm9hVzVuSWwxOUxIc2libUZ0WlNJNklrRm1kR1Z5Vlc1aWIyNWthVzVuU1c1cGRHbGhkR1ZrSWl3aWMyOTFjbU5sVFc5a2RXeGxjeUk2V3lKemRHRnJhVzVuSWwwc0luUmhjbWRsZEUxdlpIVnNaWE1pT2xzaWMyeGhjMmhwYm1jaVhYMHNleUp1WVcxbElqb2lRbVZtYjNKbFZtRnNhV1JoZEc5eVRXOWthV1pwWldRaUxDSnpiM1Z5WTJWTmIyUjFiR1Z6SWpwYkluTjBZV3RwYm1jaVhTd2lkR0Z5WjJWMFRXOWtkV3hsY3lJNld5SnpiR0Z6YUdsdVp5SmRmU3g3SW01aGJXVWlPaUpDWldadmNtVkVaV3hsWjJGMGFXOXVRM0psWVhSbFpDSXNJbk52ZFhKalpVMXZaSFZzWlhNaU9sc2ljM1JoYTJsdVp5SmRMQ0owWVhKblpYUk5iMlIxYkdWeklqcGJJbk5zWVhOb2FXNW5JbDE5TEhzaWJtRnRaU0k2SWtKbFptOXlaVVJsYkdWbllYUnBiMjVUYUdGeVpYTk5iMlJwWm1sbFpDSXNJbk52ZFhKalpVMXZaSFZzWlhNaU9sc2ljM1JoYTJsdVp5SmRMQ0owWVhKblpYUk5iMlIxYkdWeklqcGJJbk5zWVhOb2FXNW5JbDE5TEhzaWJtRnRaU0k2SWtKbFptOXlaVVJsYkdWbllYUnBiMjVTWlcxdmRtVmtJaXdpYzI5MWNtTmxUVzlrZFd4bGN5STZXeUp6ZEdGcmFXNW5JbDBzSW5SaGNtZGxkRTF2WkhWc1pYTWlPbHNpYzJ4aGMyaHBibWNpWFgwc2V5SnVZVzFsSWpvaVFtVm1iM0psVm1Gc2FXUmhkRzl5VTJ4aGMyaGxaQ0lzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpYzNSaGEybHVaeUpkTENKMFlYSm5aWFJOYjJSMWJHVnpJanBiSW5Oc1lYTm9hVzVuSWwxOVhYMD0ifQ==",
           "pinned": false,
           "native": false,
           "role": "hooks",
@@ -977,15 +929,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000043",
           "label": "hooks_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": "eyJhdXRob3JpdGllcyI6WyJob29rc19ub25jb25zZW5zdXMiLCJjb25zZW5zdXMiXSwicmVnaXN0cmF0aW9ucyI6W3siaG9vayI6IlN0YXJ0Tm9kZSIsIm1vZHVsZXMiOlsiY29uc2Vuc3VzIiwiY2hhdCJdfV19"
-          },
+          "init_message": "eyJkYXRhIjoiZXlKb2IyOXJjeUk2VzNzaWJtRnRaU0k2SWxOMFlYSjBUbTlrWlNJc0luTnZkWEpqWlUxdlpIVnNaWE1pT2xzaWFHOXZhM05mYm05dVkyOXVjMlZ1YzNWeklsMHNJblJoY21kbGRFMXZaSFZzWlhNaU9sc2lZMjl1YzJWdWMzVnpJaXdpYlhWc2RHbGphR0ZwYmw5eVpXZHBjM1J5ZVY5c2IyTmhiQ0lzSW1Ob1lYUWlYWDBzZXlKdVlXMWxJam9pVTJWMGRYQk9iMlJsSWl3aWMyOTFjbU5sVFc5a2RXeGxjeUk2V3lKb2IyOXJjMTl1YjI1amIyNXpaVzV6ZFhNaVhTd2lkR0Z5WjJWMFRXOWtkV3hsY3lJNld5SmpiMjV6Wlc1emRYTWlMQ0pzYjJKaWVTSmRmU3g3SW01aGJXVWlPaUpPWlhkVGRXSkRhR0ZwYmlJc0luTnZkWEpqWlUxdlpIVnNaWE1pT2xzaWFHOXZhM05mYm05dVkyOXVjMlZ1YzNWeklsMHNJblJoY21kbGRFMXZaSFZzWlhNaU9sc2liV1YwWVhKbFoybHpkSEo1SWl3aWJYVnNkR2xqYUdGcGJsOXlaV2RwYzNSeWVWOXNiMk5oYkNKZGZWMTkifQ==",
           "pinned": false,
           "native": false,
           "role": "hooks_nonconsensus",
@@ -999,15 +950,140 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000030",
+          "label": "staking_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "staking",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000031",
+          "label": "bank_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKaGRYUm9iM0pwZEdsbGN5STZXeUp6ZEdGcmFXNW5JaXdpWjI5Mklpd2lZbUZ1YXlJc0ltMTVkR2h2Y3pFM2VIQm1kbUZyYlRKaGJXYzVOako1YkhNMlpqZzBlak5yWld4c09HTTFiREJyYzNKclpDSXNJbTE1ZEdodmN6RnRNMmd6TUhkc2RuTm1PR3hzY25WNGRIQjFhMlIyYzNrd2EyMHlhM1Z0T0dnM05XMDJjeUpkZlE9PSJ9",
+          "pinned": false,
+          "native": false,
+          "role": "bank",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "",
+          "label": "erc20json",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "",
+          "label": "derc20json",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000045",
+          "label": "slashing_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "slashing",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000046",
+          "label": "distribution_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "distribution",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000035",
           "label": "gov_0.0.1",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "gov",
@@ -1021,15 +1097,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000038",
           "label": "gov_cont_0.0.1",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": "eyJhcmJpdHJhdGlvbkRlbm9tIjoiYWFyYiIsImNvZWZzIjpbMTA0ODU3NiwgMywgMTAwLCAyMDAwLCAxNTAwLCAxMCwgNCwgOCwgMTAwMDAsIDE1MzEsIDEwMDBdLCJkZWZhdWx0WCI6MTUzMSwiZGVmYXVsdFkiOjEwMDB9"
-          },
+          "init_message": "eyJkYXRhIjoiZXlKaGNtSnBkSEpoZEdsdmJrUmxibTl0SWpvaVlXRnlZaUlzSW1OdlpXWnpJanBiTVRBME9EVTNOaXdnTXl3Z01UQXdMQ0F5TURBd0xDQXhOVEF3TENBeE1Dd2dOQ3dnT0N3Z01UQXdNREFzSURFMU16RXNJREV3TURCZExDSmtaV1poZFd4MFdDSTZNVFV6TVN3aVpHVm1ZWFZzZEZraU9qRXdNREI5In0=",
           "pinned": false,
           "native": false,
           "role": "gov",
@@ -1043,15 +1118,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x000000000000000000000000000000000000002a",
           "label": "raft_library",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "deplibrary",
@@ -1065,15 +1139,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000036",
           "label": "raftp2p_library",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "deplibrary",
@@ -1087,15 +1160,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x000000000000000000000000000000000000002b",
           "label": "tendermint_library",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "deplibrary",
@@ -1109,15 +1181,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000040",
           "label": "tendermintp2p_library",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "deplibrary",
@@ -1131,15 +1202,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x000000000000000000000000000000000000002c",
           "label": "consensus_raft_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5IjoidmFsaWRhdG9yTm9kZXNJbmZvIiwidmFsdWUiOiJbXSJ9LHsia2V5Ijoidm90ZWRGb3IiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im5leHRJbmRleCIsInZhbHVlIjoiW10ifSx7ImtleSI6Im1hdGNoSW5kZXgiLCJ2YWx1ZSI6IltdIn0seyJrZXkiOiJjb21taXRJbmRleCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiY3VycmVudFRlcm0iLCJ2YWx1ZSI6IjAifSx7ImtleSI6Imxhc3RBcHBsaWVkIiwidmFsdWUiOiIwIn0seyJrZXkiOiJibG9ja1RpbWVvdXQiLCJ2YWx1ZSI6ImhlYXJ0YmVhdFRpbWVvdXQifSx7ImtleSI6Im1heF90eF9ieXRlcyIsInZhbHVlIjoiNjU1MzYifSx7ImtleSI6InByZXZMb2dJbmRleCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiY3VycmVudE5vZGVJZCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiZWxlY3Rpb25SZXNldCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4X2Jsb2NrX2dhcyIsInZhbHVlIjoiMjAwMDAwMDAifSx7ImtleSI6ImVsZWN0aW9uVGltZW91dCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4RWxlY3Rpb25UaW1lIiwidmFsdWUiOiIyMDAwMCJ9LHsia2V5IjoibWluRWxlY3Rpb25UaW1lIiwidmFsdWUiOiIxMDAwMCJ9LHsia2V5IjoiaGVhcnRiZWF0VGltZW91dCIsInZhbHVlIjoiNTAwMCJ9XSwiaW5pdGlhbFN0YXRlIjoidW5pbml0aWFsaXplZCJ9fQ=="
-          },
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbUZzYVdSaGRHOXlUbTlrWlhOSmJtWnZJaXdpZG1Gc2RXVWlPaUpiWFNKOUxIc2lhMlY1SWpvaWRtOTBaV1JHYjNJaUxDSjJZV3gxWlNJNklqQWlmU3g3SW10bGVTSTZJbTVsZUhSSmJtUmxlQ0lzSW5aaGJIVmxJam9pVzEwaWZTeDdJbXRsZVNJNkltMWhkR05vU1c1a1pYZ2lMQ0oyWVd4MVpTSTZJbHRkSW4wc2V5SnJaWGtpT2lKamIyMXRhWFJKYm1SbGVDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pWTNWeWNtVnVkRlJsY20waUxDSjJZV3gxWlNJNklqQWlmU3g3SW10bGVTSTZJbXhoYzNSQmNIQnNhV1ZrSWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW1obFlYSjBZbVZoZEZScGJXVnZkWFFpZlN4N0ltdGxlU0k2SW0xaGVGOTBlRjlpZVhSbGN5SXNJblpoYkhWbElqb2lOalUxTXpZaWZTeDdJbXRsZVNJNkluQnlaWFpNYjJkSmJtUmxlQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVkzVnljbVZ1ZEU1dlpHVkpaQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVpXeGxZM1JwYjI1U1pYTmxkQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaWJXRjRYMkpzYjJOclgyZGhjeUlzSW5aaGJIVmxJam9pTWpBd01EQXdNREFpZlN4N0ltdGxlU0k2SW1Wc1pXTjBhVzl1VkdsdFpXOTFkQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaWJXRjRSV3hsWTNScGIyNVVhVzFsSWl3aWRtRnNkV1VpT2lJeU1EQXdNQ0o5TEhzaWEyVjVJam9pYldsdVJXeGxZM1JwYjI1VWFXMWxJaXdpZG1Gc2RXVWlPaUl4TURBd01DSjlMSHNpYTJWNUlqb2lhR1ZoY25SaVpXRjBWR2x0Wlc5MWRDSXNJblpoYkhWbElqb2lOVEF3TUNKOVhTd2lhVzVwZEdsaGJGTjBZWFJsSWpvaWRXNXBibWwwYVdGc2FYcGxaQ0o5ZlE9PSJ9",
           "pinned": false,
           "native": false,
           "role": "",
@@ -1156,15 +1226,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000037",
           "label": "consensus_raftp2p_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5IjoidmFsaWRhdG9yTm9kZXNJbmZvIiwidmFsdWUiOiJbXSJ9LHsia2V5Ijoidm90ZWRGb3IiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im5leHRJbmRleCIsInZhbHVlIjoiW10ifSx7ImtleSI6Im1hdGNoSW5kZXgiLCJ2YWx1ZSI6IltdIn0seyJrZXkiOiJjb21taXRJbmRleCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiY3VycmVudFRlcm0iLCJ2YWx1ZSI6IjAifSx7ImtleSI6Imxhc3RBcHBsaWVkIiwidmFsdWUiOiIwIn0seyJrZXkiOiJibG9ja1RpbWVvdXQiLCJ2YWx1ZSI6ImhlYXJ0YmVhdFRpbWVvdXQifSx7ImtleSI6Im1heF90eF9ieXRlcyIsInZhbHVlIjoiNjU1MzYifSx7ImtleSI6InByZXZMb2dJbmRleCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiY3VycmVudE5vZGVJZCIsInZhbHVlIjoiMCJ9LHsia2V5IjoiZWxlY3Rpb25SZXNldCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4X2Jsb2NrX2dhcyIsInZhbHVlIjoiMjAwMDAwMDAifSx7ImtleSI6ImVsZWN0aW9uVGltZW91dCIsInZhbHVlIjoiMCJ9LHsia2V5IjoibWF4RWxlY3Rpb25UaW1lIiwidmFsdWUiOiIyMDAwMCJ9LHsia2V5IjoibWluRWxlY3Rpb25UaW1lIiwidmFsdWUiOiIxMDAwMCJ9LHsia2V5IjoiaGVhcnRiZWF0VGltZW91dCIsInZhbHVlIjoiNTAwMCJ9XSwiaW5pdGlhbFN0YXRlIjoidW5pbml0aWFsaXplZCJ9fQ=="
-          },
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbUZzYVdSaGRHOXlUbTlrWlhOSmJtWnZJaXdpZG1Gc2RXVWlPaUpiWFNKOUxIc2lhMlY1SWpvaWRtOTBaV1JHYjNJaUxDSjJZV3gxWlNJNklqQWlmU3g3SW10bGVTSTZJbTVsZUhSSmJtUmxlQ0lzSW5aaGJIVmxJam9pVzEwaWZTeDdJbXRsZVNJNkltMWhkR05vU1c1a1pYZ2lMQ0oyWVd4MVpTSTZJbHRkSW4wc2V5SnJaWGtpT2lKamIyMXRhWFJKYm1SbGVDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pWTNWeWNtVnVkRlJsY20waUxDSjJZV3gxWlNJNklqQWlmU3g3SW10bGVTSTZJbXhoYzNSQmNIQnNhV1ZrSWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW1obFlYSjBZbVZoZEZScGJXVnZkWFFpZlN4N0ltdGxlU0k2SW0xaGVGOTBlRjlpZVhSbGN5SXNJblpoYkhWbElqb2lOalUxTXpZaWZTeDdJbXRsZVNJNkluQnlaWFpNYjJkSmJtUmxlQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVkzVnljbVZ1ZEU1dlpHVkpaQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVpXeGxZM1JwYjI1U1pYTmxkQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaWJXRjRYMkpzYjJOclgyZGhjeUlzSW5aaGJIVmxJam9pTWpBd01EQXdNREFpZlN4N0ltdGxlU0k2SW1Wc1pXTjBhVzl1VkdsdFpXOTFkQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaWJXRjRSV3hsWTNScGIyNVVhVzFsSWl3aWRtRnNkV1VpT2lJeU1EQXdNQ0o5TEhzaWEyVjVJam9pYldsdVJXeGxZM1JwYjI1VWFXMWxJaXdpZG1Gc2RXVWlPaUl4TURBd01DSjlMSHNpYTJWNUlqb2lhR1ZoY25SaVpXRjBWR2x0Wlc5MWRDSXNJblpoYkhWbElqb2lOVEF3TUNKOVhTd2lhVzVwZEdsaGJGTjBZWFJsSWpvaWRXNXBibWwwYVdGc2FYcGxaQ0o5ZlE9PSJ9",
           "pinned": false,
           "native": false,
           "role": "",
@@ -1181,15 +1250,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x000000000000000000000000000000000000002d",
           "label": "consensus_tendermint_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5Ijoidm90ZWRGb3IiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im5leHRJbmRleCIsInZhbHVlIjoiW10ifSx7ImtleSI6ImN1cnJlbnRUZXJtIiwidmFsdWUiOiIwIn0seyJrZXkiOiJibG9ja1RpbWVvdXQiLCJ2YWx1ZSI6InJvdW5kVGltZW91dCJ9LHsia2V5IjoibWF4X3R4X2J5dGVzIiwidmFsdWUiOiI2NTUzNiJ9LHsia2V5Ijoicm91bmRUaW1lb3V0IiwidmFsdWUiOjE1MDAwfSx7ImtleSI6ImN1cnJlbnROb2RlSWQiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im1heF9ibG9ja19nYXMiLCJ2YWx1ZSI6IjIwMDAwMDAwIn1dLCJpbml0aWFsU3RhdGUiOiJ1bmluaXRpYWxpemVkIn19"
-          },
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9qRTFNREF3ZlN4N0ltdGxlU0k2SW1OMWNuSmxiblJPYjJSbFNXUWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW0xaGVGOWliRzlqYTE5bllYTWlMQ0oyWVd4MVpTSTZJakl3TURBd01EQXdJbjFkTENKcGJtbDBhV0ZzVTNSaGRHVWlPaUoxYm1sdWFYUnBZV3hwZW1Wa0luMTkifQ==",
           "pinned": false,
           "native": false,
           "role": "",
@@ -1206,15 +1274,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000041",
           "label": "consensus_tendermintp2p_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJsb2ciLCJ2YWx1ZSI6IiJ9LHsia2V5Ijoidm90ZWRGb3IiLCJ2YWx1ZSI6IjAifSx7ImtleSI6Im5leHRJbmRleCIsInZhbHVlIjoiW10ifSx7ImtleSI6ImN1cnJlbnRUZXJtIiwidmFsdWUiOiIwIn0seyJrZXkiOiJibG9ja1RpbWVvdXQiLCJ2YWx1ZSI6InJvdW5kVGltZW91dCJ9LHsia2V5IjoibWF4X3R4X2J5dGVzIiwidmFsdWUiOiI2NTUzNiJ9LHsia2V5Ijoicm91bmRUaW1lb3V0IiwidmFsdWUiOiI1MDAwIn0seyJrZXkiOiJjdXJyZW50Tm9kZUlkIiwidmFsdWUiOiIwIn0seyJrZXkiOiJtYXhfYmxvY2tfZ2FzIiwidmFsdWUiOiIyMDAwMDAwMCJ9LHsia2V5IjoidGltZW91dFByb3Bvc2UiLCJ2YWx1ZSI6NTAwMH0seyJrZXkiOiJ0aW1lb3V0UHJldm90ZSIsInZhbHVlIjo1MDAwfSx7ImtleSI6InRpbWVvdXRQcmVjb21taXQiLCJ2YWx1ZSI6NTAwMH1dLCJpbml0aWFsU3RhdGUiOiJ1bmluaXRpYWxpemVkIn19"
-          },
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9pSTFNREF3SW4wc2V5SnJaWGtpT2lKamRYSnlaVzUwVG05a1pVbGtJaXdpZG1Gc2RXVWlPaUl3SW4wc2V5SnJaWGtpT2lKdFlYaGZZbXh2WTJ0ZloyRnpJaXdpZG1Gc2RXVWlPaUl5TURBd01EQXdNQ0o5TEhzaWEyVjVJam9pZEdsdFpXOTFkRkJ5YjNCdmMyVWlMQ0oyWVd4MVpTSTZNVEF3TURCOUxIc2lhMlY1SWpvaWRHbHRaVzkxZEZCeVpYWnZkR1VpTENKMllXeDFaU0k2TlRBd01IMHNleUpyWlhraU9pSjBhVzFsYjNWMFVISmxZMjl0YldsMElpd2lkbUZzZFdVaU9qRXdNREF3ZlYwc0ltbHVhWFJwWVd4VGRHRjBaU0k2SW5WdWFXNXBkR2xoYkdsNlpXUWlmWDA9In0=",
           "pinned": false,
           "native": false,
           "role": "consensus",
@@ -1231,15 +1298,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x000000000000000000000000000000000000002e",
           "label": "ava_snowman_library",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "deplibrary",
@@ -1253,15 +1319,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x000000000000000000000000000000000000002f",
           "label": "consensus_ava_snowman_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": "eyJpbnN0YW50aWF0ZSI6eyJjb250ZXh0IjpbeyJrZXkiOiJzYW1wbGVTaXplIiwidmFsdWUiOiIyIn0seyJrZXkiOiJiZXRhVGhyZXNob2xkIiwidmFsdWUiOjJ9LHsia2V5Ijoicm91bmRzQ291bnRlciIsInZhbHVlIjoiMCJ9LHsia2V5IjoiYWxwaGFUaHJlc2hvbGQiLCJ2YWx1ZSI6ODB9XSwiaW5pdGlhbFN0YXRlIjoidW5pbml0aWFsaXplZCJ9fQ=="
-          },
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUp6WVcxd2JHVlRhWHBsSWl3aWRtRnNkV1VpT2lJeUluMHNleUpyWlhraU9pSmlaWFJoVkdoeVpYTm9iMnhrSWl3aWRtRnNkV1VpT2pKOUxIc2lhMlY1SWpvaWNtOTFibVJ6UTI5MWJuUmxjaUlzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVlXeHdhR0ZVYUhKbGMyaHZiR1FpTENKMllXeDFaU0k2T0RCOVhTd2lhVzVwZEdsaGJGTjBZWFJsSWpvaWRXNXBibWwwYVdGc2FYcGxaQ0o5ZlE9PSJ9",
           "pinned": false,
           "native": false,
           "role": "",
@@ -1278,15 +1343,188 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000047",
+          "label": "time_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKd1lYSmhiWE1pT25zaVkyaGhhVzVmYVdRaU9pSjBhVzFsWHpZMk5pMHhJaXdpYVc1MFpYSjJZV3hmYlhNaU9qRXdNSDE5In0=",
+          "pinned": false,
+          "native": false,
+          "role": "time",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000049",
+          "label": "level0_library",
+          "storage_type": "SingleConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "deplibrary",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000048",
+          "label": "level0_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9qUXdNREI5TEhzaWEyVjVJam9pWTNWeWNtVnVkRTV2WkdWSlpDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pYldGNFgySnNiMk5yWDJkaGN5SXNJblpoYkhWbElqb2lNakF3TURBd01EQWlmU3g3SW10bGVTSTZJblJwYldWdmRYUlFjbTl3YjNObElpd2lkbUZzZFdVaU9qRXdNREF3ZlN4N0ltdGxlU0k2SW5ScGJXVnZkWFJRY21WamIyMXRhWFFpTENKMllXeDFaU0k2TVRBd01EQjlYU3dpYVc1cGRHbGhiRk4wWVhSbElqb2lkVzVwYm1sMGFXRnNhWHBsWkNKOWZRPT0ifQ==",
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [
+            "interpreter_state_machine_bz_0.1.0",
+            "0x0000000000000000000000000000000000000049:deplibrary"
+          ],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000004b",
+          "label": "multichain_registry_local_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKcFpITWlPbHRkTENKcGJtbDBhV0ZzVUc5eWRITWlPbnQ5ZlE9PSJ9",
+          "pinned": false,
+          "native": false,
+          "role": "multichain_registry_local",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000004e",
+          "label": "lobby_library",
+          "storage_type": "SingleConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "deplibrary",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000004d",
+          "label": "lobby_json_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpvWldGeWRHSmxZWFJVYVcxbGIzVjBJaXdpZG1Gc2RXVWlPalV3TURCOUxIc2lhMlY1SWpvaWJtVjNZMmhoYVc1VWFXMWxiM1YwSWl3aWRtRnNkV1VpT2pJd01EQXdmU3g3SW10bGVTSTZJbU4xY25KbGJuUmZiR1YyWld3aUxDSjJZV3gxWlNJNk1IMHNleUpyWlhraU9pSnRhVzVmZG1Gc2FXUmhkRzl5YzE5amIzVnVkQ0lzSW5aaGJIVmxJam95ZlN4N0ltdGxlU0k2SW1WdVlXSnNaVjlsYVdSZlkyaGxZMnNpTENKMllXeDFaU0k2Wm1Gc2MyVjlMSHNpYTJWNUlqb2laWEpqTWpCRGIyUmxTV1FpTENKMllXeDFaU0k2TWpkOUxIc2lhMlY1SWpvaVpHVnlZekl3UTI5a1pVbGtJaXdpZG1Gc2RXVWlPakk0ZlN4N0ltdGxlU0k2SW14bGRtVnNYMmx1YVhScFlXeGZZbUZzWVc1alpTSXNJblpoYkhWbElqb3hNREF3TURBd01EQXdNREF3TURBd01EQXdNSDFkTENKcGJtbDBhV0ZzVTNSaGRHVWlPaUoxYm1sdWFYUnBZV3hwZW1Wa0luMTkifQ==",
+          "pinned": false,
+          "native": false,
+          "role": "lobby",
+          "deps": [
+            "interpreter_state_machine_bz_0.1.0",
+            "0x000000000000000000000000000000000000004e:deplibrary"
+          ],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000004f",
+          "label": "metaregistry_json_0.0.1",
+          "storage_type": "MetaConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKd1lYSmhiWE1pT25zaVkzVnljbVZ1ZEY5c1pYWmxiQ0k2TUgxOSJ9",
+          "pinned": false,
+          "native": false,
+          "role": "metaregistry",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x000000000000000000000000000000000000004a",
+          "label": "multichain_registry_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKd1lYSmhiWE1pT25zaWJXbHVYM1poYkdsa1lYUnZjbk5mWTI5MWJuUWlPaklzSW1WdVlXSnNaVjlsYVdSZlkyaGxZMnNpT21aaGJITmxMQ0psY21NeU1FTnZaR1ZKWkNJNk1qY3NJbVJsY21NeU1FTnZaR1ZKWkNJNk1qZ3NJbXhsZG1Wc1gybHVhWFJwWVd4ZlltRnNZVzVqWlNJNklqRXdNREF3TURBd01EQXdNREF3TURBd01EQXdJbjE5In0=",
+          "pinned": false,
+          "native": false,
+          "role": "multichain_registry",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000042",
           "label": "chat_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "chat",
@@ -1300,15 +1538,14 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
+          },
+          "contract_state": []
         },
         {
           "address": "0x0000000000000000000000000000000000000044",
           "label": "chat_verifier_0.0.1",
           "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
-          },
+          "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
           "role": "",
@@ -1322,29 +1559,8 @@
             "abi": "",
             "json_schema": "",
             "origin": null
-          }
-        },
-        {
-          "address": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-          "label": "sys_proxy",
-          "storage_type": "CoreConsensus",
-          "init_message": {
-            "data": ""
           },
-          "pinned": false,
-          "native": false,
-          "role": "",
-          "deps": [],
-          "metadata": {
-            "name": "",
-            "categ": [],
-            "icon": "",
-            "author": "",
-            "site": "",
-            "abi": "",
-            "json_schema": "",
-            "origin": null
-          }
+          "contract_state": []
         }
       ],
       "codes": [],

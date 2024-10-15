@@ -1,8 +1,8 @@
-# Mythos Testnet 23
+# Mythos Testnet 25
 
 ## Changes!
 
-- chain id changed to `mythos_7000-23`
+- chain id changed to `mythos_7000-25`
 
 ## Public Endpoints
 
@@ -45,7 +45,7 @@ rm -rf /root/mythos
 ```
 
 ```shell=
-mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=faa91e36ea896a5f15d54cea2641818964ab6011" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=37ea86f283427f9522d4699262dffc1ab1e8754f" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -62,13 +62,13 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version --long
 
-# commit `46794933f75aa69077d0a725272e0272594b8b68`
+# commit `37ea86f283427f9522d4699262dffc1ab1e8754f`
 ```
 
 Initialize the chain:
 
 ```shell=
-rm -rf ./testnet && mythosd testnet init-files --chain-id=mythos_7000-23 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt" --same-machine=true --libp2p
+rm -rf ./testnet && mythosd testnet init-files --network.initial-chains=mythos,level0 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt" --same-machine=true --libp2p --min-level-validators=2 --enable-eid=false --chain-id=mythos_7000-25
 
 ```
 * example service script for starting mythos as a service for Linux.
@@ -104,15 +104,14 @@ systemctl enable mythos.service
 Replace `testnet/node0/mythosd/config/genesis.json`:
 
 ```shell=
-rm ./testnet/node0/mythosd/config/genesis.json
-wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json
+rm ./testnet/node0/mythosd/config/genesis.json && rm ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json && wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && cp ./testnet/node0/mythosd/config/genesis.json ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json
 ```
 
 Check genesis checksum!
 
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
-# 4a1cf3bda46e37e6f680cd361d947a89344abf6e921134a0a4c0277c370224e6
+# 0d12fba769c1cd5dc9291edaa94023e468a924c65e88f7c87f56a14409fb0f00
 ```
 
 ## 3. Setup account
@@ -133,25 +132,60 @@ vi ./testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1drz0zullqalfvgsgu8dmx0w6vdq9mkq63wdepp@/ip4/74.208.105.20/tcp/5011/p2p/12D3KooWFzX5hTTtB842DfY6qXfAMD7dzixhpsksjNn6TSXnu7Eq"
+ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1xffspezxgs668l2xjq2cl5nrzl28atgm79vtav@/ip4/217.76.51.233/tcp/5001/p2p/12D3KooWKD1FjsbaWxn3k5SQg8LfFG4QxPPQFmLyax7sXetSLvHy;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
 ```
 
-## 5. Allow 5001 as an external port
+## 5. External ports
+
+* 8090, 5001, 9900, 1317, 26657, 8545
 
 ```
 sudo ufw allow 5001
+sudo ufw allow 26657
+sudo ufw allow 1317
 ```
 
-## 6. Start
+# 6. Sync Node Settings
 
 ```shell=
-mythosd start --home=./testnet/node0/mythosd
 
-# or start your service
+RPC="http://217.76.51.233:26657"
+RECENT_HEIGHT=$(curl -s $RPC/block | jq -r .result.block.header.height)
+TRUST_HEIGHT=$((RECENT_HEIGHT - 1))
+TRUST_HASH=$(curl -s "$RPC/block?height=$TRUST_HEIGHT" | jq -r .result.block_id.hash)
+
+HOMEMAIN=/root/mythos/testnet/node0/mythosd
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$RPC,$RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$TRUST_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOMEMAIN/config/config.toml
+
+```
+
+## 7. Start Node
+
+```shell=
+# start your service
 systemctl start mythos && journalctl -u mythos.service -f -o cat
 ```
 
-## 7. Sync Node
+Start your node and let it sync. After your node is synced, disable the state sync:
+
+```shell=
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOMEMAIN/config/config.toml
+```
+
+Troubleshooting:
+* if you get an error `post failed: Post \"http://217.76.51.233:26657\": EOF`, reset the state and restart the node:
+```shell=
+
+systemctl stop mythos
+mythosd tendermint unsafe-reset-all --home=./testnet/node0/mythosd
+systemctl start mythos && journalctl -u mythos.service -f -o cat
+```
+
+## 8. Create your validator
 
 Start your node and let it sync. After your node is synced, send the create validator transaction.
 
@@ -167,7 +201,7 @@ and replace the information in the template below:
 
 ```json
 {
-	"pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"ScSHzXINHzfOGMI6XN/7CzfpfAwKlIAOwCHNHEFCw1g="},
+	"pubkey": {"type_url":"/cosmos.crypto.ed25519.PubKey","value":"eyJrZXkiOiJlRWJ5OTBPdnl5ZkMwYU5NaXI0MGZZWVVyQUxiKzhTcDNQY1ZBTDJTZ2tVPSJ9"},
 	"amount": "10000000000000000000amyt",
 	"moniker": "lore",
 	"identity": "optional identity signature (ex. UPort or Keybase)",
@@ -190,7 +224,7 @@ vi ./validator.json
 
 ```shell=
 
-mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-23 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4 --node tcp://127.0.0.1:26657 --yes
+mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-25 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4 --node tcp://127.0.0.1:26657 --yes
 
 ```
 
