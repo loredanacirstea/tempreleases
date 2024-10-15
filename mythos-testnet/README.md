@@ -231,9 +231,13 @@ vi ./validator.json
 # and paste the json configuration.
 ```
 
+* replace `--memo=""` value with your node ID - it is the first id for the mythos chain id from `ids=` in `./testnet/node0/mythosd/config/app.toml`
+
 ```shell=
 
-mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-25 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4 --node tcp://127.0.0.1:26657 --yes
+mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-25 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas auto --gas-adjustment 1.4 --memo="YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/GENERATED_libp2p_id" --node tcp://127.0.0.1:26657 --yes
+
+
 
 ```
 
