@@ -62,7 +62,7 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version --long
 
-# commit `37ea86f283427f9522d4699262dffc1ab1e8754f`
+# commit `47f01ee3852f0dbc51a30ba4cea94415e514cede`
 ```
 
 Initialize the chain:
@@ -112,7 +112,7 @@ Check genesis checksum!
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
 sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json
-# 80aa98905aee7082bad3b06b1a83fd0c34506fbac58ec6cca3fedb3cc0b7a5ec
+# d50b599d33bf2803576f6661c171df346e24e181959ae0f2c5ecb09ddb522adb
 ```
 
 * for macOS `shasum -a 256 ./testnet/node0/mythosd/config/genesis.json`
@@ -135,7 +135,7 @@ vi ./testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos14ewqjyjphuhj97dtrfcewayfzyca9dn5g75ghy@/ip4/86.120.99.11/tcp/5001/p2p/12D3KooWRAAkjy3dV2YMMM2FvsCSJQzZEsyjT19exagzHe2gbUhB;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
+ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1k675n6kqr6u5uh0j6etsgs2x0p8af6trg96pf6@/ip4/86.120.99.11/tcp/5001/p2p/12D3KooWKEXe6R1q9z8L2B4rWzonKkEvdsHtuDMq6Kyy8SyGDdf2;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
 ```
 
 * allow others to state sync, by keeping data snapshots
