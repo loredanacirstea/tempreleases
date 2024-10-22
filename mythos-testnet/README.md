@@ -62,7 +62,7 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version --long
 
-# commit `47f01ee3852f0dbc51a30ba4cea94415e514cede`
+# commit `de0a36aeedaa412e20537ba18eb26af8dc574f8d`
 ```
 
 Initialize the chain:
@@ -112,7 +112,7 @@ Check genesis checksum!
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
 sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json
-# d50b599d33bf2803576f6661c171df346e24e181959ae0f2c5ecb09ddb522adb
+# bdcec68a2cb3570c023ec0032681d395599be1a69ddaf7838d8beaeefaea4da2
 ```
 
 * for macOS `shasum -a 256 ./testnet/node0/mythosd/config/genesis.json`

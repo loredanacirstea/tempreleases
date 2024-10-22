@@ -1,7 +1,7 @@
 {
   "app_name": "mythosd",
   "app_version": "",
-  "genesis_time": "2024-10-16T15:41:38.560456Z",
+  "genesis_time": "2024-10-22T12:25:45.668678Z",
   "chain_id": "mythos_7000-25",
   "initial_height": 1,
   "app_hash": null,
@@ -44,7 +44,7 @@
         },
         "balances": [
           {
-            "address": "mythos1k675n6kqr6u5uh0j6etsgs2x0p8af6trg96pf6",
+            "address": "mythos14d5v5h36cwr2wdj2t8f874fxkusppt5gv79f4q",
             "coins": [
               {
                 "denom": "amyt",
@@ -239,7 +239,7 @@
         "accounts": [
           {
             "type_url": "/mythos.cosmosmod.v1.BaseAccount",
-            "value": "eyJhZGRyZXNzIjoibXl0aG9zMWs2NzVuNmtxcjZ1NXVoMGo2ZXRzZ3MyeDBwOGFmNnRyZzk2cGY2IiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
+            "value": "eyJhZGRyZXNzIjoibXl0aG9zMTRkNXY1aDM2Y3dyMndkajJ0OGY4NzRmeGt1c3BwdDVndjc5ZjRxIiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
           }
         ],
         "base_account_typeurl": "",
@@ -294,10 +294,10 @@
             "messages": [
               {
                 "type_url": "/cosmos.staking.v1beta1.MsgCreateValidator",
-                "value": "eyJkZXNjcmlwdGlvbiI6eyJtb25pa2VyIjoibm9kZTAiLCJpZGVudGl0eSI6IiIsIndlYnNpdGUiOiIiLCJzZWN1cml0eV9jb250YWN0IjoiIiwiZGV0YWlscyI6IiJ9LCJjb21taXNzaW9uIjp7InJhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCIsIm1heF9yYXRlIjoiMS4wMDAwMDAwMDAwMDAwMDAwMDAiLCJtYXhfY2hhbmdlX3JhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJtaW5fc2VsZl9kZWxlZ2F0aW9uIjoiMSIsImRlbGVnYXRvcl9hZGRyZXNzIjoiIiwidmFsaWRhdG9yX2FkZHJlc3MiOiJteXRob3MxazY3NW42a3FyNnU1dWgwajZldHNnczJ4MHA4YWY2dHJnOTZwZjYiLCJwdWJrZXkiOnsidHlwZV91cmwiOiIvY29zbW9zLmNyeXB0by5lZDI1NTE5LlB1YktleSIsInZhbHVlIjoiZXlKclpYa2lPaUpwSzI1VmVtVnlTa0l5SzFBMFZHcE5Wa0ppT0dONWQxRXpSa2hLWmtORVVITlFlRk5aYTB0QmJVUXdQU0o5In0sInZhbHVlIjp7ImRlbm9tIjoiYW15dCIsImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
+                "value": "eyJkZXNjcmlwdGlvbiI6eyJtb25pa2VyIjoibm9kZTAiLCJpZGVudGl0eSI6IiIsIndlYnNpdGUiOiIiLCJzZWN1cml0eV9jb250YWN0IjoiIiwiZGV0YWlscyI6IiJ9LCJjb21taXNzaW9uIjp7InJhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCIsIm1heF9yYXRlIjoiMS4wMDAwMDAwMDAwMDAwMDAwMDAiLCJtYXhfY2hhbmdlX3JhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJtaW5fc2VsZl9kZWxlZ2F0aW9uIjoiMSIsImRlbGVnYXRvcl9hZGRyZXNzIjoiIiwidmFsaWRhdG9yX2FkZHJlc3MiOiJteXRob3MxNGQ1djVoMzZjd3Iyd2RqMnQ4Zjg3NGZ4a3VzcHB0NWd2NzlmNHEiLCJwdWJrZXkiOnsidHlwZV91cmwiOiIvY29zbW9zLmNyeXB0by5lZDI1NTE5LlB1YktleSIsInZhbHVlIjoiZXlKclpYa2lPaUl4ZW1wMmNITnliemxJUVdSaE5TdEdURkJaTm00ME16WlVkMEZPTlhGdVdscFpRVXcxYUdwVlFrZEZQU0o5In0sInZhbHVlIjp7ImRlbm9tIjoiYW15dCIsImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
               }
             ],
-            "memo": "mythos1k675n6kqr6u5uh0j6etsgs2x0p8af6trg96pf6@/ip4/127.0.0.1/tcp/5001/p2p/12D3KooWKEXe6R1q9z8L2B4rWzonKkEvdsHtuDMq6Kyy8SyGDdf2",
+            "memo": "mythos14d5v5h36cwr2wdj2t8f874fxkusppt5gv79f4q@/ip4/127.0.0.1/tcp/5001/p2p/12D3KooWQJWBJXD76L18i4Y7QanoaWMRy1MGT4kLFMVH5pgfDrEk",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -307,7 +307,7 @@
               {
                 "public_key": {
                   "type_url": "/cosmos.crypto.secp256k1.PubKey",
-                  "value": "eyJrZXkiOiJBbENjWkEyOHNzbWlEUWdvY1RBODRZclRYTXl3bDNEM3loUUY5WWRYOUxPOSJ9"
+                  "value": "eyJrZXkiOiJBc1F6bkI5a2RhNEdUZXdLQzN4S0hyWm54bzdDWGRwMGtwWE9yRGIxS0hMMCJ9"
                 },
                 "mode_info": {
                   "single": {
@@ -326,7 +326,7 @@
             "tip": null
           },
           "signatures": [
-            "v90Kjp7ERgiBMZH91q4rSyH4bCeVyUj84g6gXB3cWOkK6jau7y22pAzJMF8OfXm6RQwtEjF/3dxP+c96oWgj5A=="
+            "3igCzeiQJ4guF4nTSrevkb8/BAFCLgpLTdvadMsqxBAykxthAhrB4/qz46ElWe6cIngq2BdGH1K2xLEbVLKs5w=="
           ]
         }
       ]
@@ -424,7 +424,7 @@
     "upgrade": {},
     "wasmx": {
       "params": {},
-      "bootstrap_account_address": "mythos1fud76k3xnwu5s95utstv3sc6aul8c7d3l2zcpuzmwavqrqswjlaqneqw9s",
+      "bootstrap_account_address": "mythos1ktj64lrhhe4q6u23qh9ayf9uhnec22knhjpllx7m29y4v6u6yceshj65l7",
       "system_contracts": [
         {
           "address": "0x0000000000000000000000000000000000000039",
@@ -1487,6 +1487,51 @@
           "native": false,
           "role": "metaregistry",
           "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000052",
+          "label": "level0_ondemand_library",
+          "storage_type": "SingleConsensus",
+          "init_message": "eyJkYXRhIjoiIn0=",
+          "pinned": false,
+          "native": false,
+          "role": "deplibrary",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000051",
+          "label": "level0_ondemand_0.0.1",
+          "storage_type": "SingleConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9qVXdNREI5TEhzaWEyVjVJam9pWTNWeWNtVnVkRTV2WkdWSlpDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pYldGNFgySnNiMk5yWDJkaGN5SXNJblpoYkhWbElqb2lNakF3TURBd01EQWlmU3g3SW10bGVTSTZJblJwYldWdmRYUlFjbTl3YjNObElpd2lkbUZzZFdVaU9qSXdNREF3ZlN4N0ltdGxlU0k2SW5ScGJXVnZkWFJRY21WamIyMXRhWFFpTENKMllXeDFaU0k2TWpBd01EQjlMSHNpYTJWNUlqb2lZbUYwWTJoVWFXMWxiM1YwSWl3aWRtRnNkV1VpT2pFd01EQjlYU3dpYVc1cGRHbGhiRk4wWVhSbElqb2lkVzVwYm1sMGFXRnNhWHBsWkNKOWZRPT0ifQ==",
+          "pinned": false,
+          "native": false,
+          "role": "",
+          "deps": [
+            "interpreter_state_machine_bz_0.1.0",
+            "0x0000000000000000000000000000000000000052:deplibrary"
+          ],
           "metadata": {
             "name": "",
             "categ": [],
