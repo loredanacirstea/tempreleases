@@ -1,7 +1,7 @@
 {
   "app_name": "mythosd",
   "app_version": "",
-  "genesis_time": "2024-10-22T12:25:45.668678Z",
+  "genesis_time": "2024-10-23T11:32:34.330236Z",
   "chain_id": "mythos_7000-25",
   "initial_height": 1,
   "app_hash": null,
@@ -44,7 +44,7 @@
         },
         "balances": [
           {
-            "address": "mythos14d5v5h36cwr2wdj2t8f874fxkusppt5gv79f4q",
+            "address": "mythos184ksw9xx7jwqrx2v0kqasww9c4gwh3e07cq6p8",
             "coins": [
               {
                 "denom": "amyt",
@@ -239,7 +239,7 @@
         "accounts": [
           {
             "type_url": "/mythos.cosmosmod.v1.BaseAccount",
-            "value": "eyJhZGRyZXNzIjoibXl0aG9zMTRkNXY1aDM2Y3dyMndkajJ0OGY4NzRmeGt1c3BwdDVndjc5ZjRxIiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
+            "value": "eyJhZGRyZXNzIjoibXl0aG9zMTg0a3N3OXh4N2p3cXJ4MnYwa3Fhc3d3OWM0Z3doM2UwN2NxNnA4IiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
           }
         ],
         "base_account_typeurl": "",
@@ -294,10 +294,10 @@
             "messages": [
               {
                 "type_url": "/cosmos.staking.v1beta1.MsgCreateValidator",
-                "value": "eyJkZXNjcmlwdGlvbiI6eyJtb25pa2VyIjoibm9kZTAiLCJpZGVudGl0eSI6IiIsIndlYnNpdGUiOiIiLCJzZWN1cml0eV9jb250YWN0IjoiIiwiZGV0YWlscyI6IiJ9LCJjb21taXNzaW9uIjp7InJhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCIsIm1heF9yYXRlIjoiMS4wMDAwMDAwMDAwMDAwMDAwMDAiLCJtYXhfY2hhbmdlX3JhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJtaW5fc2VsZl9kZWxlZ2F0aW9uIjoiMSIsImRlbGVnYXRvcl9hZGRyZXNzIjoiIiwidmFsaWRhdG9yX2FkZHJlc3MiOiJteXRob3MxNGQ1djVoMzZjd3Iyd2RqMnQ4Zjg3NGZ4a3VzcHB0NWd2NzlmNHEiLCJwdWJrZXkiOnsidHlwZV91cmwiOiIvY29zbW9zLmNyeXB0by5lZDI1NTE5LlB1YktleSIsInZhbHVlIjoiZXlKclpYa2lPaUl4ZW1wMmNITnliemxJUVdSaE5TdEdURkJaTm00ME16WlVkMEZPTlhGdVdscFpRVXcxYUdwVlFrZEZQU0o5In0sInZhbHVlIjp7ImRlbm9tIjoiYW15dCIsImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
+                "value": "eyJkZXNjcmlwdGlvbiI6eyJtb25pa2VyIjoibm9kZTAiLCJpZGVudGl0eSI6IiIsIndlYnNpdGUiOiIiLCJzZWN1cml0eV9jb250YWN0IjoiIiwiZGV0YWlscyI6IiJ9LCJjb21taXNzaW9uIjp7InJhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCIsIm1heF9yYXRlIjoiMS4wMDAwMDAwMDAwMDAwMDAwMDAiLCJtYXhfY2hhbmdlX3JhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJtaW5fc2VsZl9kZWxlZ2F0aW9uIjoiMSIsImRlbGVnYXRvcl9hZGRyZXNzIjoiIiwidmFsaWRhdG9yX2FkZHJlc3MiOiJteXRob3MxODRrc3c5eHg3andxcngydjBrcWFzd3c5YzRnd2gzZTA3Y3E2cDgiLCJwdWJrZXkiOnsidHlwZV91cmwiOiIvY29zbW9zLmNyeXB0by5lZDI1NTE5LlB1YktleSIsInZhbHVlIjoiZXlKclpYa2lPaUphUkV0RFppOXpWbkV3TlRGMVF6bEJMMEkxUW5kelNqUkhjbk5yTjFSSlp6QlFiVWhsWkdSVlNpOXJQU0o5In0sInZhbHVlIjp7ImRlbm9tIjoiYW15dCIsImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
               }
             ],
-            "memo": "mythos14d5v5h36cwr2wdj2t8f874fxkusppt5gv79f4q@/ip4/127.0.0.1/tcp/5001/p2p/12D3KooWQJWBJXD76L18i4Y7QanoaWMRy1MGT4kLFMVH5pgfDrEk",
+            "memo": "mythos184ksw9xx7jwqrx2v0kqasww9c4gwh3e07cq6p8@/ip4/127.0.0.1/tcp/5001/p2p/12D3KooWGZVcKDLtJx6kjKK9HrtwVVidmVQ8TbzSLEjGzB2KvNP2",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -307,7 +307,7 @@
               {
                 "public_key": {
                   "type_url": "/cosmos.crypto.secp256k1.PubKey",
-                  "value": "eyJrZXkiOiJBc1F6bkI5a2RhNEdUZXdLQzN4S0hyWm54bzdDWGRwMGtwWE9yRGIxS0hMMCJ9"
+                  "value": "eyJrZXkiOiJBeGlHcFBUWStzY0d2TWFEa0s3ZFBzRVAzeXhydVJFa3JiYVZHSkxyejZ5eiJ9"
                 },
                 "mode_info": {
                   "single": {
@@ -326,7 +326,7 @@
             "tip": null
           },
           "signatures": [
-            "3igCzeiQJ4guF4nTSrevkb8/BAFCLgpLTdvadMsqxBAykxthAhrB4/qz46ElWe6cIngq2BdGH1K2xLEbVLKs5w=="
+            "eYyxOs13QObaQVAJaNVWX6MpzUVM0cBpBNPYaN0TY1F0JympKBC4exjMbyos6ru4gIxu2dHIq/N2pY4a+SddAQ=="
           ]
         }
       ]
@@ -424,7 +424,7 @@
     "upgrade": {},
     "wasmx": {
       "params": {},
-      "bootstrap_account_address": "mythos1ktj64lrhhe4q6u23qh9ayf9uhnec22knhjpllx7m29y4v6u6yceshj65l7",
+      "bootstrap_account_address": "mythos1crf6r9zlekx5l047cqs3cv3tw7y32wt47f3wpc5damnmhxk4kuwsmhuyl7",
       "system_contracts": [
         {
           "address": "0x0000000000000000000000000000000000000039",
