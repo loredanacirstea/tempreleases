@@ -1,7 +1,7 @@
 {
   "app_name": "mythosd",
-  "app_version": "",
-  "genesis_time": "2024-10-23T11:32:34.330236Z",
+  "app_version": "0.1.1",
+  "genesis_time": "2024-12-31T18:27:45.126956Z",
   "chain_id": "mythos_7000-25",
   "initial_height": 1,
   "app_hash": null,
@@ -44,11 +44,20 @@
         },
         "balances": [
           {
-            "address": "mythos184ksw9xx7jwqrx2v0kqasww9c4gwh3e07cq6p8",
+            "address": "mythos1faug22gsn2ga23fpjtfqhs6vlec5paya25k90g",
             "coins": [
               {
                 "denom": "amyt",
-                "amount": "5000000000000000000000"
+                "amount": "520000000000000000000"
+              }
+            ]
+          },
+          {
+            "address": "mythos1fp20e74y6ems7jh4qs6fxeyjaystd2lgjxaajp",
+            "coins": [
+              {
+                "denom": "amyt",
+                "amount": "510000000000000000000"
               }
             ]
           }
@@ -77,7 +86,7 @@
               "uri": "",
               "uri_hash": ""
             },
-            "code_id": "28",
+            "code_id": "29",
             "admins": [
               "bank",
               "gov"
@@ -112,7 +121,7 @@
               "uri": "",
               "uri_hash": ""
             },
-            "code_id": "29",
+            "code_id": "30",
             "admins": [
               "staking",
               "bank"
@@ -146,7 +155,7 @@
               "uri": "",
               "uri_hash": ""
             },
-            "code_id": "28",
+            "code_id": "29",
             "admins": [
               "bank",
               "distribution"
@@ -180,7 +189,7 @@
               "uri": "",
               "uri_hash": ""
             },
-            "code_id": "28",
+            "code_id": "29",
             "admins": [
               "gov"
             ],
@@ -239,7 +248,11 @@
         "accounts": [
           {
             "type_url": "/mythos.cosmosmod.v1.BaseAccount",
-            "value": "eyJhZGRyZXNzIjoibXl0aG9zMTg0a3N3OXh4N2p3cXJ4MnYwa3Fhc3d3OWM0Z3doM2UwN2NxNnA4IiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
+            "value": "eyJhZGRyZXNzIjoibXl0aG9zMWZhdWcyMmdzbjJnYTIzZnBqdGZxaHM2dmxlYzVwYXlhMjVrOTBnIiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
+          },
+          {
+            "type_url": "/mythos.cosmosmod.v1.BaseAccount",
+            "value": "eyJhZGRyZXNzIjoibXl0aG9zMWZwMjBlNzR5NmVtczdqaDRxczZmeGV5amF5c3RkMmxnanhhYWpwIiwicHViX2tleSI6bnVsbCwiYWNjb3VudF9udW1iZXIiOiIwIiwic2VxdWVuY2UiOiIwIn0="
           }
         ],
         "base_account_typeurl": "",
@@ -294,10 +307,10 @@
             "messages": [
               {
                 "type_url": "/cosmos.staking.v1beta1.MsgCreateValidator",
-                "value": "eyJkZXNjcmlwdGlvbiI6eyJtb25pa2VyIjoibm9kZTAiLCJpZGVudGl0eSI6IiIsIndlYnNpdGUiOiIiLCJzZWN1cml0eV9jb250YWN0IjoiIiwiZGV0YWlscyI6IiJ9LCJjb21taXNzaW9uIjp7InJhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCIsIm1heF9yYXRlIjoiMS4wMDAwMDAwMDAwMDAwMDAwMDAiLCJtYXhfY2hhbmdlX3JhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJtaW5fc2VsZl9kZWxlZ2F0aW9uIjoiMSIsImRlbGVnYXRvcl9hZGRyZXNzIjoiIiwidmFsaWRhdG9yX2FkZHJlc3MiOiJteXRob3MxODRrc3c5eHg3andxcngydjBrcWFzd3c5YzRnd2gzZTA3Y3E2cDgiLCJwdWJrZXkiOnsidHlwZV91cmwiOiIvY29zbW9zLmNyeXB0by5lZDI1NTE5LlB1YktleSIsInZhbHVlIjoiZXlKclpYa2lPaUphUkV0RFppOXpWbkV3TlRGMVF6bEJMMEkxUW5kelNqUkhjbk5yTjFSSlp6QlFiVWhsWkdSVlNpOXJQU0o5In0sInZhbHVlIjp7ImRlbm9tIjoiYW15dCIsImFtb3VudCI6IjEwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
+                "value": "eyJkZXNjcmlwdGlvbiI6eyJtb25pa2VyIjoibm9kZTAiLCJpZGVudGl0eSI6IiIsIndlYnNpdGUiOiIiLCJzZWN1cml0eV9jb250YWN0IjoiIiwiZGV0YWlscyI6IiJ9LCJjb21taXNzaW9uIjp7InJhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCIsIm1heF9yYXRlIjoiMS4wMDAwMDAwMDAwMDAwMDAwMDAiLCJtYXhfY2hhbmdlX3JhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJtaW5fc2VsZl9kZWxlZ2F0aW9uIjoiMSIsImRlbGVnYXRvcl9hZGRyZXNzIjoiIiwidmFsaWRhdG9yX2FkZHJlc3MiOiJteXRob3MxZmF1ZzIyZ3NuMmdhMjNmcGp0ZnFoczZ2bGVjNXBheWEyNWs5MGciLCJwdWJrZXkiOnsidHlwZV91cmwiOiIvY29zbW9zLmNyeXB0by5lZDI1NTE5LlB1YktleSIsInZhbHVlIjoiZXlKclpYa2lPaUpQVTFsRFZFRkVVakpVTldZM1MwSTJkREpPY25wcmQzWk5iMXAxYURVMmEzTlpSbTlIT1RJMWREVkZQU0o5In0sInZhbHVlIjp7ImRlbm9tIjoiYW15dCIsImFtb3VudCI6IjEyMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
               }
             ],
-            "memo": "mythos184ksw9xx7jwqrx2v0kqasww9c4gwh3e07cq6p8@/ip4/127.0.0.1/tcp/5001/p2p/12D3KooWGZVcKDLtJx6kjKK9HrtwVVidmVQ8TbzSLEjGzB2KvNP2",
+            "memo": "mythos1faug22gsn2ga23fpjtfqhs6vlec5paya25k90g@/ip4/127.0.0.1/tcp/5001/p2p/12D3KooWDfT2HKm6SgdZTrMWL8UpMrZkGzB5W5ACNWXJXwqoM76Q",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -307,7 +320,7 @@
               {
                 "public_key": {
                   "type_url": "/cosmos.crypto.secp256k1.PubKey",
-                  "value": "eyJrZXkiOiJBeGlHcFBUWStzY0d2TWFEa0s3ZFBzRVAzeXhydVJFa3JiYVZHSkxyejZ5eiJ9"
+                  "value": "eyJrZXkiOiJBOHpCdDY3SFMzRStrR3diVExENG85TnNFYjFRRlBOWTJubUVzYmg5cTVOZSJ9"
                 },
                 "mode_info": {
                   "single": {
@@ -326,7 +339,47 @@
             "tip": null
           },
           "signatures": [
-            "eYyxOs13QObaQVAJaNVWX6MpzUVM0cBpBNPYaN0TY1F0JympKBC4exjMbyos6ru4gIxu2dHIq/N2pY4a+SddAQ=="
+            "3zHAugKRUKFWnNmH58Sn0PPKD0SLQkWqutS6465TpJFmwkAQln6hqSxVLkWjN7sPK+bkvBuBsnN6xJpd1p+jeA=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "type_url": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "value": "eyJkZXNjcmlwdGlvbiI6eyJtb25pa2VyIjoibm9kZTEiLCJpZGVudGl0eSI6IiIsIndlYnNpdGUiOiIiLCJzZWN1cml0eV9jb250YWN0IjoiIiwiZGV0YWlscyI6IiJ9LCJjb21taXNzaW9uIjp7InJhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCIsIm1heF9yYXRlIjoiMS4wMDAwMDAwMDAwMDAwMDAwMDAiLCJtYXhfY2hhbmdlX3JhdGUiOiIxLjAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJtaW5fc2VsZl9kZWxlZ2F0aW9uIjoiMSIsImRlbGVnYXRvcl9hZGRyZXNzIjoiIiwidmFsaWRhdG9yX2FkZHJlc3MiOiJteXRob3MxZnAyMGU3NHk2ZW1zN2poNHFzNmZ4ZXlqYXlzdGQybGdqeGFhanAiLCJwdWJrZXkiOnsidHlwZV91cmwiOiIvY29zbW9zLmNyeXB0by5lZDI1NTE5LlB1YktleSIsInZhbHVlIjoiZXlKclpYa2lPaUl2TkVobWNIcHZWa0Z3Y3psUmNVVXJRMVE0WjFkd1RVUnJRamh4YUVNMGRsbE1Wa0pCYjJVMllYWkZQU0o5In0sInZhbHVlIjp7ImRlbm9tIjoiYW15dCIsImFtb3VudCI6IjExMDAwMDAwMDAwMDAwMDAwMDAwMCJ9fQ=="
+              }
+            ],
+            "memo": "mythos1fp20e74y6ems7jh4qs6fxeyjaystd2lgjxaajp@/ip4/127.0.0.1/tcp/5003/p2p/12D3KooWT1kzXXZHjhm5i318iauzhGZ4CsXVo7FSsd8bdfnBEVb6",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "type_url": "/cosmos.crypto.secp256k1.PubKey",
+                  "value": "eyJrZXkiOiJBNklqNGh3eEdHYVV5T0R6dUtwdGlZVzJKSXVVeksxcUlPWUNweldITlZqZyJ9"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "0",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "D/U3TJpEGkwhuTwaEM+z2CDW4rNrlVODXfqJYoZnUAgZggB/XQehQPOLyqH9ZCLCPLLBNJynvWBXQHWM8K3mMw=="
           ]
         }
       ]
@@ -424,16 +477,39 @@
     "upgrade": {},
     "wasmx": {
       "params": {},
-      "bootstrap_account_address": "mythos1crf6r9zlekx5l047cqs3cv3tw7y32wt47f3wpc5damnmhxk4kuwsmhuyl7",
+      "bootstrap_account_address": "mythos1jsucec6u0xzuqhd0a880x0ztcf7h59ecnlgngsfvp4329vlr06csgv23v7",
       "system_contracts": [
         {
           "address": "0x0000000000000000000000000000000000000039",
           "label": "auth_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "auth",
+          "deps": [],
+          "metadata": {
+            "name": "",
+            "categ": [],
+            "icon": "",
+            "author": "",
+            "site": "",
+            "abi": "",
+            "json_schema": "",
+            "origin": null
+          },
+          "contract_state": []
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000060",
+          "label": "roles_0.0.1",
+          "storage_type": "CoreConsensus",
+          "init_message": "eyJkYXRhIjoiZXlKeWIyeGxjeUk2VzNzaWNtOXNaU0k2SW1GMWRHZ2lMQ0pzWVdKbGJDSTZJbUYxZEdoZk1DNHdMakVpTENKamIyNTBjbUZqZEY5aFpHUnlaWE56SWpvaWJYbDBhRzl6TVhGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYQmxOR3A1T0Rob0luMHNleUp5YjJ4bElqb2ljbTlzWlhNaUxDSnNZV0psYkNJNkluSnZiR1Z6WHpBdU1DNHhJaXdpWTI5dWRISmhZM1JmWVdSa2NtVnpjeUk2SW0xNWRHaHZjekZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeWNXRjZlbTA0T0NKOUxIc2ljbTlzWlNJNkltbHVkR1Z5Y0hKbGRHVnlJaXdpYkdGaVpXd2lPaUpwYm5SbGNuQnlaWFJsY2w5bGRtMWZjMmhoYm1kb1lXa2lMQ0pqYjI1MGNtRmpkRjloWkdSeVpYTnpJam9pYlhsMGFHOXpNWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hCeVpIcG1jMncxSW4wc2V5SnliMnhsSWpvaWFXNTBaWEp3Y21WMFpYSWlMQ0pzWVdKbGJDSTZJbWx1ZEdWeWNISmxkR1Z5WDNCNWRHaHZibDkxZEdZNFh6QXVNaTR3SWl3aVkyOXVkSEpoWTNSZllXUmtjbVZ6Y3lJNkltMTVkR2h2Y3pGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRndlR3czYkhKa2RTSjlMSHNpY205c1pTSTZJbWx1ZEdWeWNISmxkR1Z5SWl3aWJHRmlaV3dpT2lKcGJuUmxjbkJ5WlhSbGNsOXFZWFpoYzJOeWFYQjBYM1YwWmpoZk1DNHhMakFpTENKamIyNTBjbUZqZEY5aFpHUnlaWE56SWpvaWJYbDBhRzl6TVhGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYQTRlbWQwYTNOM0luMHNleUp5YjJ4bElqb2lhVzUwWlhKd2NtVjBaWElpTENKc1lXSmxiQ0k2SW1sdWRHVnljSEpsZEdWeVgzTjBZWFJsWDIxaFkyaHBibVZmWW5wZk1DNHhMakFpTENKamIyNTBjbUZqZEY5aFpHUnlaWE56SWpvaWJYbDBhRzl6TVhGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYQm5ZVGxqTWpCckluMHNleUp5YjJ4bElqb2lhVzUwWlhKd2NtVjBaWElpTENKc1lXSmxiQ0k2SW5SaGVWOXBiblJsY25CeVpYUmxjbDkyTUM0d0xqRWlMQ0pqYjI1MGNtRmpkRjloWkdSeVpYTnpJam9pYlhsMGFHOXpNWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hwek9EYzVaV1ZxSW4wc2V5SnliMnhsSWpvaWMzUnZjbUZuWlNJc0lteGhZbVZzSWpvaWMzUnZjbUZuWlY5amFHRnBiaUlzSW1OdmJuUnlZV04wWDJGa1pISmxjM01pT2lKdGVYUm9iM014Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNHWnhiblpzYW5raWZTeDdJbkp2YkdVaU9pSmhiR2xoY3lJc0lteGhZbVZzSWpvaVlXeHBZWE5mWlhSb0lpd2lZMjl1ZEhKaFkzUmZZV1JrY21WemN5STZJbTE1ZEdodmN6RnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ3ZVhadE4zRTNNeUo5TEhzaWNtOXNaU0k2SW1WcFpGOXlaV2RwYzNSeWVTSXNJbXhoWW1Wc0lqb2ljMlZqY0RNNE5ISXhYM0psWjJsemRISjVJaXdpWTI5dWRISmhZM1JmWVdSa2NtVnpjeUk2SW0xNWRHaHZjekZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGd2NEYzRaMjUyWlNKOUxIc2ljbTlzWlNJNkltaHZiMnR6SWl3aWJHRmlaV3dpT2lKb2IyOXJjMTh3TGpBdU1TSXNJbU52Ym5SeVlXTjBYMkZrWkhKbGMzTWlPaUp0ZVhSb2IzTXhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y0RWbE5tdGpkSG9pZlN4N0luSnZiR1VpT2lKb2IyOXJjMTl1YjI1amIyNXpaVzV6ZFhNaUxDSnNZV0psYkNJNkltaHZiMnR6WHpBdU1DNHhJaXdpWTI5dWRISmhZM1JmWVdSa2NtVnpjeUk2SW0xNWRHaHZjekZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGNmNuVjJZMmg2TnlKOUxIc2ljbTlzWlNJNkluTjBZV3RwYm1jaUxDSnNZV0psYkNJNkluTjBZV3RwYm1kZk1DNHdMakVpTENKamIyNTBjbUZqZEY5aFpHUnlaWE56SWpvaWJYbDBhRzl6TVhGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYQnphM00xTjNsakluMHNleUp5YjJ4bElqb2lZbUZ1YXlJc0lteGhZbVZzSWpvaVltRnVhMTh3TGpBdU1TSXNJbU52Ym5SeVlXTjBYMkZrWkhKbGMzTWlPaUp0ZVhSb2IzTXhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y0ROMGVIRjBaVElpZlN4N0luSnZiR1VpT2lKemJHRnphR2x1WnlJc0lteGhZbVZzSWpvaWMyeGhjMmhwYm1kZk1DNHdMakVpTENKamIyNTBjbUZqZEY5aFpHUnlaWE56SWpvaWJYbDBhRzl6TVhGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYbzVjWEp0YWpkbUluMHNleUp5YjJ4bElqb2laR2x6ZEhKcFluVjBhVzl1SWl3aWJHRmlaV3dpT2lKa2FYTjBjbWxpZFhScGIyNWZNQzR3TGpFaUxDSmpiMjUwY21GamRGOWhaR1J5WlhOeklqb2liWGwwYUc5ek1YRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWHA0ZDNOM2VYTnJJbjBzZXlKeWIyeGxJam9pWjI5Mklpd2liR0ZpWld3aU9pSm5iM1pmTUM0d0xqRWlMQ0pqYjI1MGNtRmpkRjloWkdSeVpYTnpJam9pYlhsMGFHOXpNWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hBMGVYWjZaR3R6SW4wc2V5SnliMnhsSWpvaVoyOTJJaXdpYkdGaVpXd2lPaUpuYjNaZlkyOXVkRjh3TGpBdU1TSXNJbU52Ym5SeVlXTjBYMkZrWkhKbGMzTWlPaUp0ZVhSb2IzTXhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y0dObmVYTnFOamtpZlN4N0luSnZiR1VpT2lKa1pYQnNhV0p5WVhKNUlpd2liR0ZpWld3aU9pSnlZV1owWDJ4cFluSmhjbmtpTENKamIyNTBjbUZqZEY5aFpHUnlaWE56SWpvaWJYbDBhRzl6TVhGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYQXlkM0ZsWm5WdEluMHNleUp5YjJ4bElqb2laR1Z3YkdsaWNtRnllU0lzSW14aFltVnNJam9pY21GbWRIQXljRjlzYVdKeVlYSjVJaXdpWTI5dWRISmhZM1JmWVdSa2NtVnpjeUk2SW0xNWRHaHZjekZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGd2F6SnNhRzFqTUNKOUxIc2ljbTlzWlNJNkltUmxjR3hwWW5KaGNua2lMQ0pzWVdKbGJDSTZJblJsYm1SbGNtMXBiblJmYkdsaWNtRnllU0lzSW1OdmJuUnlZV04wWDJGa1pISmxjM01pT2lKdGVYUm9iM014Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNIUnVhMlIxY0dZaWZTeDdJbkp2YkdVaU9pSmtaWEJzYVdKeVlYSjVJaXdpYkdGaVpXd2lPaUowWlc1a1pYSnRhVzUwY0RKd1gyeHBZbkpoY25raUxDSmpiMjUwY21GamRGOWhaR1J5WlhOeklqb2liWGwwYUc5ek1YRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWHB4YW14a2NIWndJbjBzZXlKeWIyeGxJam9pWTI5dWMyVnVjM1Z6SWl3aWJHRmlaV3dpT2lKamIyNXpaVzV6ZFhOZmRHVnVaR1Z5YldsdWRIQXljRjh3TGpBdU1TSXNJbU52Ym5SeVlXTjBYMkZrWkhKbGMzTWlPaUp0ZVhSb2IzTXhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4ZW5Bd1ptVTFNMjRpZlN4N0luSnZiR1VpT2lKa1pYQnNhV0p5WVhKNUlpd2liR0ZpWld3aU9pSmhkbUZmYzI1dmQyMWhibDlzYVdKeVlYSjVJaXdpWTI5dWRISmhZM1JmWVdSa2NtVnpjeUk2SW0xNWRHaHZjekZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGd2QzQXliVEJ1Y0NKOUxIc2ljbTlzWlNJNkluUnBiV1VpTENKc1lXSmxiQ0k2SW5ScGJXVmZNQzR3TGpFaUxDSmpiMjUwY21GamRGOWhaR1J5WlhOeklqb2liWGwwYUc5ek1YRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWG80Ym5nMk0yUjVJbjBzZXlKeWIyeGxJam9pWkdWd2JHbGljbUZ5ZVNJc0lteGhZbVZzSWpvaWJHVjJaV3d3WDJ4cFluSmhjbmtpTENKamIyNTBjbUZqZEY5aFpHUnlaWE56SWpvaWJYbDBhRzl6TVhGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYcG1NMkZoWXpCM0luMHNleUp5YjJ4bElqb2liWFZzZEdsamFHRnBibDl5WldkcGMzUnllVjlzYjJOaGJDSXNJbXhoWW1Wc0lqb2liWFZzZEdsamFHRnBibDl5WldkcGMzUnllVjlzYjJOaGJGOHdMakF1TVNJc0ltTnZiblJ5WVdOMFgyRmtaSEpsYzNNaU9pSnRlWFJvYjNNeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhlblI2WTNWdGRYSWlmU3g3SW5KdmJHVWlPaUprWlhCc2FXSnlZWEo1SWl3aWJHRmlaV3dpT2lKc2IySmllVjlzYVdKeVlYSjVJaXdpWTI5dWRISmhZM1JmWVdSa2NtVnpjeUk2SW0xNWRHaHZjekZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGNmQzTjVNbWQzZENKOUxIc2ljbTlzWlNJNklteHZZbUo1SWl3aWJHRmlaV3dpT2lKc2IySmllVjlxYzI5dVh6QXVNQzR4SWl3aVkyOXVkSEpoWTNSZllXUmtjbVZ6Y3lJNkltMTVkR2h2Y3pGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRjZaRGRvYkRkeE5TSjlMSHNpY205c1pTSTZJbTFsZEdGeVpXZHBjM1J5ZVNJc0lteGhZbVZzSWpvaWJXVjBZWEpsWjJsemRISjVYMnB6YjI1Zk1DNHdMakVpTENKamIyNTBjbUZqZEY5aFpHUnlaWE56SWpvaWJYbDBhRzl6TVhGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYb3daR28zWVc1bEluMHNleUp5YjJ4bElqb2laR1Z3YkdsaWNtRnllU0lzSW14aFltVnNJam9pYkdWMlpXd3dYMjl1WkdWdFlXNWtYMnhwWW5KaGNua2lMQ0pqYjI1MGNtRmpkRjloWkdSeVpYTnpJam9pYlhsMGFHOXpNWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hwcU5XMTVOakpzSW4wc2V5SnliMnhsSWpvaWJYVnNkR2xqYUdGcGJsOXlaV2RwYzNSeWVTSXNJbXhoWW1Wc0lqb2liWFZzZEdsamFHRnBibDl5WldkcGMzUnllVjh3TGpBdU1TSXNJbU52Ym5SeVlXTjBYMkZrWkhKbGMzTWlPaUp0ZVhSb2IzTXhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4ZWpKc2QyZDNjRE1pZlN4N0luSnZiR1VpT2lKamFHRjBJaXdpYkdGaVpXd2lPaUpqYUdGMFh6QXVNQzR4SWl3aVkyOXVkSEpoWTNSZllXUmtjbVZ6Y3lJNkltMTVkR2h2Y3pGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRnhjWEZ4Y1hGeGNYRjZlbkEyZG5wc2RpSjlYWDA9In0=",
+          "pinned": true,
+          "native": false,
+          "metering_off": true,
+          "role": "roles",
           "deps": [],
           "metadata": {
             "name": "",
@@ -454,6 +530,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": true,
+          "metering_off": false,
           "role": "",
           "deps": [],
           "metadata": {
@@ -475,6 +552,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -496,6 +574,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -517,6 +596,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -538,6 +618,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -559,6 +640,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -580,6 +662,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -601,6 +684,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -622,6 +706,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -643,6 +728,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -662,8 +748,9 @@
           "label": "interpreter_evm_shanghai",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "interpreter",
           "deps": [],
           "metadata": {
@@ -683,8 +770,9 @@
           "label": "interpreter_python_utf8_0.2.0",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "interpreter",
           "deps": [],
           "metadata": {
@@ -704,8 +792,9 @@
           "label": "interpreter_javascript_utf8_0.1.0",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "interpreter",
           "deps": [],
           "metadata": {
@@ -725,8 +814,9 @@
           "label": "interpreter_state_machine_bz_0.1.0",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "interpreter",
           "deps": [],
           "metadata": {
@@ -746,8 +836,9 @@
           "label": "tay_interpreter_v0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "interpreter",
           "deps": [
             "memory_taylor"
@@ -769,8 +860,9 @@
           "label": "storage_chain",
           "storage_type": "MetaConsensus",
           "init_message": "eyJkYXRhIjoiZXlKcGJtbDBhV0ZzUW14dlkydEpibVJsZUNJNk1YMD0ifQ==",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "storage",
           "deps": [],
           "metadata": {
@@ -792,6 +884,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "alias",
           "deps": [],
           "metadata": {
@@ -813,6 +906,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": true,
+          "metering_off": false,
           "role": "",
           "deps": [],
           "metadata": {
@@ -834,6 +928,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "",
           "deps": [],
           "metadata": {
@@ -853,8 +948,9 @@
           "label": "secp384r1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -874,8 +970,9 @@
           "label": "secp384r1_registry",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "eid_registry",
           "deps": [],
           "metadata": {
@@ -897,6 +994,7 @@
           "init_message": "eyJkYXRhIjoiIn0=",
           "pinned": false,
           "native": true,
+          "metering_off": false,
           "role": "",
           "deps": [],
           "metadata": {
@@ -916,8 +1014,9 @@
           "label": "hooks_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiZXlKb2IyOXJjeUk2VzNzaWJtRnRaU0k2SWtKbFoybHVRbXh2WTJzaUxDSnpiM1Z5WTJWTmIyUjFiR1Z6SWpwYkltTnZibk5sYm5OMWN5SmRMQ0owWVhKblpYUk5iMlIxYkdWeklqcGJJbk5zWVhOb2FXNW5JbDE5TEhzaWJtRnRaU0k2SWtWdVpFSnNiMk5ySWl3aWMyOTFjbU5sVFc5a2RXeGxjeUk2V3lKamIyNXpaVzV6ZFhNaVhTd2lkR0Z5WjJWMFRXOWtkV3hsY3lJNld5Sm5iM1lpTENKa2FYTjBjbWxpZFhScGIyNGlYWDBzZXlKdVlXMWxJam9pUTNKbFlYUmxaRlpoYkdsa1lYUnZjaUlzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpWTI5dWMyVnVjM1Z6SWwwc0luUmhjbWRsZEUxdlpIVnNaWE1pT2x0ZGZTeDdJbTVoYldVaU9pSkJablJsY2xaaGJHbGtZWFJ2Y2tOeVpXRjBaV1FpTENKemIzVnlZMlZOYjJSMWJHVnpJanBiSW5OMFlXdHBibWNpWFN3aWRHRnlaMlYwVFc5a2RXeGxjeUk2V3lKemJHRnphR2x1WnlKZGZTeDdJbTVoYldVaU9pSkJablJsY2xaaGJHbGtZWFJ2Y2tKdmJtUmxaQ0lzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpYzNSaGEybHVaeUpkTENKMFlYSm5aWFJOYjJSMWJHVnpJanBiSW5Oc1lYTm9hVzVuSWwxOUxIc2libUZ0WlNJNklrRm1kR1Z5Vm1Gc2FXUmhkRzl5VW1WdGIzWmxaQ0lzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpYzNSaGEybHVaeUpkTENKMFlYSm5aWFJOYjJSMWJHVnpJanBiSW5Oc1lYTm9hVzVuSWwxOUxIc2libUZ0WlNJNklrRm1kR1Z5Vm1Gc2FXUmhkRzl5UW1WbmFXNVZibUp2Ym1ScGJtY2lMQ0p6YjNWeVkyVk5iMlIxYkdWeklqcGJJbk4wWVd0cGJtY2lYU3dpZEdGeVoyVjBUVzlrZFd4bGN5STZXeUp6YkdGemFHbHVaeUpkZlN4N0ltNWhiV1VpT2lKQlpuUmxja1JsYkdWbllYUnBiMjVOYjJScFptbGxaQ0lzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpYzNSaGEybHVaeUpkTENKMFlYSm5aWFJOYjJSMWJHVnpJanBiSW5Oc1lYTm9hVzVuSWwxOUxIc2libUZ0WlNJNklrRm1kR1Z5Vlc1aWIyNWthVzVuU1c1cGRHbGhkR1ZrSWl3aWMyOTFjbU5sVFc5a2RXeGxjeUk2V3lKemRHRnJhVzVuSWwwc0luUmhjbWRsZEUxdlpIVnNaWE1pT2xzaWMyeGhjMmhwYm1jaVhYMHNleUp1WVcxbElqb2lRbVZtYjNKbFZtRnNhV1JoZEc5eVRXOWthV1pwWldRaUxDSnpiM1Z5WTJWTmIyUjFiR1Z6SWpwYkluTjBZV3RwYm1jaVhTd2lkR0Z5WjJWMFRXOWtkV3hsY3lJNld5SnpiR0Z6YUdsdVp5SmRmU3g3SW01aGJXVWlPaUpDWldadmNtVkVaV3hsWjJGMGFXOXVRM0psWVhSbFpDSXNJbk52ZFhKalpVMXZaSFZzWlhNaU9sc2ljM1JoYTJsdVp5SmRMQ0owWVhKblpYUk5iMlIxYkdWeklqcGJJbk5zWVhOb2FXNW5JbDE5TEhzaWJtRnRaU0k2SWtKbFptOXlaVVJsYkdWbllYUnBiMjVUYUdGeVpYTk5iMlJwWm1sbFpDSXNJbk52ZFhKalpVMXZaSFZzWlhNaU9sc2ljM1JoYTJsdVp5SmRMQ0owWVhKblpYUk5iMlIxYkdWeklqcGJJbk5zWVhOb2FXNW5JbDE5TEhzaWJtRnRaU0k2SWtKbFptOXlaVVJsYkdWbllYUnBiMjVTWlcxdmRtVmtJaXdpYzI5MWNtTmxUVzlrZFd4bGN5STZXeUp6ZEdGcmFXNW5JbDBzSW5SaGNtZGxkRTF2WkhWc1pYTWlPbHNpYzJ4aGMyaHBibWNpWFgwc2V5SnVZVzFsSWpvaVFtVm1iM0psVm1Gc2FXUmhkRzl5VTJ4aGMyaGxaQ0lzSW5OdmRYSmpaVTF2WkhWc1pYTWlPbHNpYzNSaGEybHVaeUpkTENKMFlYSm5aWFJOYjJSMWJHVnpJanBiSW5Oc1lYTm9hVzVuSWwxOVhYMD0ifQ==",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "hooks",
           "deps": [],
           "metadata": {
@@ -937,8 +1036,9 @@
           "label": "hooks_0.0.1",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiZXlKb2IyOXJjeUk2VzNzaWJtRnRaU0k2SWxOMFlYSjBUbTlrWlNJc0luTnZkWEpqWlUxdlpIVnNaWE1pT2xzaWFHOXZhM05mYm05dVkyOXVjMlZ1YzNWeklsMHNJblJoY21kbGRFMXZaSFZzWlhNaU9sc2lZMjl1YzJWdWMzVnpJaXdpYlhWc2RHbGphR0ZwYmw5eVpXZHBjM1J5ZVY5c2IyTmhiQ0lzSW1Ob1lYUWlYWDBzZXlKdVlXMWxJam9pVTJWMGRYQk9iMlJsSWl3aWMyOTFjbU5sVFc5a2RXeGxjeUk2V3lKb2IyOXJjMTl1YjI1amIyNXpaVzV6ZFhNaVhTd2lkR0Z5WjJWMFRXOWtkV3hsY3lJNld5SmpiMjV6Wlc1emRYTWlMQ0pzYjJKaWVTSmRmU3g3SW01aGJXVWlPaUpPWlhkVGRXSkRhR0ZwYmlJc0luTnZkWEpqWlUxdlpIVnNaWE1pT2xzaWFHOXZhM05mYm05dVkyOXVjMlZ1YzNWeklsMHNJblJoY21kbGRFMXZaSFZzWlhNaU9sc2liV1YwWVhKbFoybHpkSEo1SWl3aWJYVnNkR2xqYUdGcGJsOXlaV2RwYzNSeWVWOXNiMk5oYkNKZGZWMTkifQ==",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "hooks_nonconsensus",
           "deps": [],
           "metadata": {
@@ -958,8 +1058,9 @@
           "label": "staking_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "staking",
           "deps": [],
           "metadata": {
@@ -979,8 +1080,9 @@
           "label": "bank_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiZXlKaGRYUm9iM0pwZEdsbGN5STZXeUp6ZEdGcmFXNW5JaXdpWjI5Mklpd2lZbUZ1YXlJc0ltMTVkR2h2Y3pFM2VIQm1kbUZyYlRKaGJXYzVOako1YkhNMlpqZzBlak5yWld4c09HTTFiREJyYzNKclpDSXNJbTE1ZEdodmN6RnRNMmd6TUhkc2RuTm1PR3hzY25WNGRIQjFhMlIyYzNrd2EyMHlhM1Z0T0dnM05XMDJjeUpkZlE9PSJ9",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "bank",
           "deps": [],
           "metadata": {
@@ -1000,8 +1102,9 @@
           "label": "erc20json",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -1021,8 +1124,9 @@
           "label": "derc20json",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
@@ -1042,8 +1146,9 @@
           "label": "slashing_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "slashing",
           "deps": [],
           "metadata": {
@@ -1063,8 +1168,9 @@
           "label": "distribution_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "distribution",
           "deps": [],
           "metadata": {
@@ -1084,8 +1190,9 @@
           "label": "gov_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "gov",
           "deps": [],
           "metadata": {
@@ -1105,8 +1212,9 @@
           "label": "gov_cont_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiZXlKaGNtSnBkSEpoZEdsdmJrUmxibTl0SWpvaVlXRnlZaUlzSW1OdlpXWnpJanBiTVRBME9EVTNOaXdnTXl3Z01UQXdMQ0F5TURBd0xDQXhOVEF3TENBeE1Dd2dOQ3dnT0N3Z01UQXdNREFzSURFMU16RXNJREV3TURCZExDSmtaV1poZFd4MFdDSTZNVFV6TVN3aVpHVm1ZWFZzZEZraU9qRXdNREI5In0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "gov",
           "deps": [],
           "metadata": {
@@ -1126,8 +1234,9 @@
           "label": "raft_library",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "deplibrary",
           "deps": [],
           "metadata": {
@@ -1147,8 +1256,9 @@
           "label": "raftp2p_library",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "deplibrary",
           "deps": [],
           "metadata": {
@@ -1168,8 +1278,9 @@
           "label": "tendermint_library",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "deplibrary",
           "deps": [],
           "metadata": {
@@ -1189,8 +1300,9 @@
           "label": "tendermintp2p_library",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "deplibrary",
           "deps": [],
           "metadata": {
@@ -1212,6 +1324,7 @@
           "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbUZzYVdSaGRHOXlUbTlrWlhOSmJtWnZJaXdpZG1Gc2RXVWlPaUpiWFNKOUxIc2lhMlY1SWpvaWRtOTBaV1JHYjNJaUxDSjJZV3gxWlNJNklqQWlmU3g3SW10bGVTSTZJbTVsZUhSSmJtUmxlQ0lzSW5aaGJIVmxJam9pVzEwaWZTeDdJbXRsZVNJNkltMWhkR05vU1c1a1pYZ2lMQ0oyWVd4MVpTSTZJbHRkSW4wc2V5SnJaWGtpT2lKamIyMXRhWFJKYm1SbGVDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pWTNWeWNtVnVkRlJsY20waUxDSjJZV3gxWlNJNklqQWlmU3g3SW10bGVTSTZJbXhoYzNSQmNIQnNhV1ZrSWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW1obFlYSjBZbVZoZEZScGJXVnZkWFFpZlN4N0ltdGxlU0k2SW0xaGVGOTBlRjlpZVhSbGN5SXNJblpoYkhWbElqb2lOalUxTXpZaWZTeDdJbXRsZVNJNkluQnlaWFpNYjJkSmJtUmxlQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVkzVnljbVZ1ZEU1dlpHVkpaQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVpXeGxZM1JwYjI1U1pYTmxkQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaWJXRjRYMkpzYjJOclgyZGhjeUlzSW5aaGJIVmxJam9pTWpBd01EQXdNREFpZlN4N0ltdGxlU0k2SW1Wc1pXTjBhVzl1VkdsdFpXOTFkQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaWJXRjRSV3hsWTNScGIyNVVhVzFsSWl3aWRtRnNkV1VpT2lJeU1EQXdNQ0o5TEhzaWEyVjVJam9pYldsdVJXeGxZM1JwYjI1VWFXMWxJaXdpZG1Gc2RXVWlPaUl4TURBd01DSjlMSHNpYTJWNUlqb2lhR1ZoY25SaVpXRjBWR2x0Wlc5MWRDSXNJblpoYkhWbElqb2lOVEF3TUNKOVhTd2lhVzVwZEdsaGJGTjBZWFJsSWpvaWRXNXBibWwwYVdGc2FYcGxaQ0o5ZlE9PSJ9",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
@@ -1236,6 +1349,7 @@
           "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbUZzYVdSaGRHOXlUbTlrWlhOSmJtWnZJaXdpZG1Gc2RXVWlPaUpiWFNKOUxIc2lhMlY1SWpvaWRtOTBaV1JHYjNJaUxDSjJZV3gxWlNJNklqQWlmU3g3SW10bGVTSTZJbTVsZUhSSmJtUmxlQ0lzSW5aaGJIVmxJam9pVzEwaWZTeDdJbXRsZVNJNkltMWhkR05vU1c1a1pYZ2lMQ0oyWVd4MVpTSTZJbHRkSW4wc2V5SnJaWGtpT2lKamIyMXRhWFJKYm1SbGVDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pWTNWeWNtVnVkRlJsY20waUxDSjJZV3gxWlNJNklqQWlmU3g3SW10bGVTSTZJbXhoYzNSQmNIQnNhV1ZrSWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW1obFlYSjBZbVZoZEZScGJXVnZkWFFpZlN4N0ltdGxlU0k2SW0xaGVGOTBlRjlpZVhSbGN5SXNJblpoYkhWbElqb2lOalUxTXpZaWZTeDdJbXRsZVNJNkluQnlaWFpNYjJkSmJtUmxlQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVkzVnljbVZ1ZEU1dlpHVkpaQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVpXeGxZM1JwYjI1U1pYTmxkQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaWJXRjRYMkpzYjJOclgyZGhjeUlzSW5aaGJIVmxJam9pTWpBd01EQXdNREFpZlN4N0ltdGxlU0k2SW1Wc1pXTjBhVzl1VkdsdFpXOTFkQ0lzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaWJXRjRSV3hsWTNScGIyNVVhVzFsSWl3aWRtRnNkV1VpT2lJeU1EQXdNQ0o5TEhzaWEyVjVJam9pYldsdVJXeGxZM1JwYjI1VWFXMWxJaXdpZG1Gc2RXVWlPaUl4TURBd01DSjlMSHNpYTJWNUlqb2lhR1ZoY25SaVpXRjBWR2x0Wlc5MWRDSXNJblpoYkhWbElqb2lOVEF3TUNKOVhTd2lhVzVwZEdsaGJGTjBZWFJsSWpvaWRXNXBibWwwYVdGc2FYcGxaQ0o5ZlE9PSJ9",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
@@ -1260,6 +1374,7 @@
           "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9qRTFNREF3ZlN4N0ltdGxlU0k2SW1OMWNuSmxiblJPYjJSbFNXUWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW0xaGVGOWliRzlqYTE5bllYTWlMQ0oyWVd4MVpTSTZJakl3TURBd01EQXdJbjFkTENKcGJtbDBhV0ZzVTNSaGRHVWlPaUoxYm1sdWFYUnBZV3hwZW1Wa0luMTkifQ==",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
@@ -1281,9 +1396,10 @@
           "address": "0x0000000000000000000000000000000000000041",
           "label": "consensus_tendermintp2p_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9pSTFNREF3SW4wc2V5SnJaWGtpT2lKamRYSnlaVzUwVG05a1pVbGtJaXdpZG1Gc2RXVWlPaUl3SW4wc2V5SnJaWGtpT2lKdFlYaGZZbXh2WTJ0ZloyRnpJaXdpZG1Gc2RXVWlPaUl5TURBd01EQXdNQ0o5TEhzaWEyVjVJam9pZEdsdFpXOTFkRkJ5YjNCdmMyVWlMQ0oyWVd4MVpTSTZNakF3TURCOUxIc2lhMlY1SWpvaWRHbHRaVzkxZEZCeVpYWnZkR1VpTENKMllXeDFaU0k2TWpBd01EQjlMSHNpYTJWNUlqb2lkR2x0Wlc5MWRGQnlaV052YlcxcGRDSXNJblpoYkhWbElqb3lNREF3TUgxZExDSnBibWwwYVdGc1UzUmhkR1VpT2lKMWJtbHVhWFJwWVd4cGVtVmtJbjE5In0=",
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9pSXlNREF3SW4wc2V5SnJaWGtpT2lKamRYSnlaVzUwVG05a1pVbGtJaXdpZG1Gc2RXVWlPaUl3SW4wc2V5SnJaWGtpT2lKdFlYaGZZbXh2WTJ0ZloyRnpJaXdpZG1Gc2RXVWlPaUkyTURBd01EQXdNQ0o5TEhzaWEyVjVJam9pZEdsdFpXOTFkRkJ5YjNCdmMyVWlMQ0oyWVd4MVpTSTZNVFV3TURCOUxIc2lhMlY1SWpvaWRHbHRaVzkxZEZCeVpYWnZkR1VpTENKMllXeDFaU0k2TVRVd01EQjlMSHNpYTJWNUlqb2lkR2x0Wlc5MWRGQnlaV052YlcxcGRDSXNJblpoYkhWbElqb3lNREF3TUgxZExDSnBibWwwYVdGc1UzUmhkR1VpT2lKMWJtbHVhWFJwWVd4cGVtVmtJbjE5In0=",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "consensus",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
@@ -1306,8 +1422,9 @@
           "label": "ava_snowman_library",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "deplibrary",
           "deps": [],
           "metadata": {
@@ -1329,6 +1446,7 @@
           "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUp6WVcxd2JHVlRhWHBsSWl3aWRtRnNkV1VpT2lJeUluMHNleUpyWlhraU9pSmlaWFJoVkdoeVpYTm9iMnhrSWl3aWRtRnNkV1VpT2pKOUxIc2lhMlY1SWpvaWNtOTFibVJ6UTI5MWJuUmxjaUlzSW5aaGJIVmxJam9pTUNKOUxIc2lhMlY1SWpvaVlXeHdhR0ZVYUhKbGMyaHZiR1FpTENKMllXeDFaU0k2T0RCOVhTd2lhVzVwZEdsaGJGTjBZWFJsSWpvaWRXNXBibWwwYVdGc2FYcGxaQ0o5ZlE9PSJ9",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
@@ -1351,8 +1469,9 @@
           "label": "time_0.0.1",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiZXlKd1lYSmhiWE1pT25zaVkyaGhhVzVmYVdRaU9pSjBhVzFsWHpZMk5pMHhJaXdpYVc1MFpYSjJZV3hmYlhNaU9qRXdNSDE5In0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "time",
           "deps": [],
           "metadata": {
@@ -1372,8 +1491,9 @@
           "label": "level0_library",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "deplibrary",
           "deps": [],
           "metadata": {
@@ -1392,9 +1512,10 @@
           "address": "0x0000000000000000000000000000000000000048",
           "label": "level0_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9qVXdNREI5TEhzaWEyVjVJam9pWTNWeWNtVnVkRTV2WkdWSlpDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pYldGNFgySnNiMk5yWDJkaGN5SXNJblpoYkhWbElqb2lNakF3TURBd01EQWlmU3g3SW10bGVTSTZJblJwYldWdmRYUlFjbTl3YjNObElpd2lkbUZzZFdVaU9qSXdNREF3ZlN4N0ltdGxlU0k2SW5ScGJXVnZkWFJRY21WamIyMXRhWFFpTENKMllXeDFaU0k2TWpBd01EQjlYU3dpYVc1cGRHbGhiRk4wWVhSbElqb2lkVzVwYm1sMGFXRnNhWHBsWkNKOWZRPT0ifQ==",
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9qTXdNREI5TEhzaWEyVjVJam9pWTNWeWNtVnVkRTV2WkdWSlpDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pYldGNFgySnNiMk5yWDJkaGN5SXNJblpoYkhWbElqb2lOakF3TURBd01EQWlmU3g3SW10bGVTSTZJblJwYldWdmRYUlFjbTl3YjNObElpd2lkbUZzZFdVaU9qSXdNREF3ZlN4N0ltdGxlU0k2SW5ScGJXVnZkWFJRY21WamIyMXRhWFFpTENKMllXeDFaU0k2TWpBd01EQjlYU3dpYVc1cGRHbGhiRk4wWVhSbElqb2lkVzVwYm1sMGFXRnNhWHBsWkNKOWZRPT0ifQ==",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
@@ -1417,8 +1538,9 @@
           "label": "multichain_registry_local_0.0.1",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiZXlKcFpITWlPbHRkTENKcGJtbDBhV0ZzVUc5eWRITWlPbnQ5ZlE9PSJ9",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "multichain_registry_local",
           "deps": [],
           "metadata": {
@@ -1438,8 +1560,9 @@
           "label": "lobby_library",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "deplibrary",
           "deps": [],
           "metadata": {
@@ -1458,9 +1581,10 @@
           "address": "0x000000000000000000000000000000000000004d",
           "label": "lobby_json_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpvWldGeWRHSmxZWFJVYVcxbGIzVjBJaXdpZG1Gc2RXVWlPalV3TURCOUxIc2lhMlY1SWpvaWJtVjNZMmhoYVc1VWFXMWxiM1YwSWl3aWRtRnNkV1VpT2pJd01EQXdmU3g3SW10bGVTSTZJbU4xY25KbGJuUmZiR1YyWld3aUxDSjJZV3gxWlNJNk1IMHNleUpyWlhraU9pSnRhVzVmZG1Gc2FXUmhkRzl5YzE5amIzVnVkQ0lzSW5aaGJIVmxJam95ZlN4N0ltdGxlU0k2SW1WdVlXSnNaVjlsYVdSZlkyaGxZMnNpTENKMllXeDFaU0k2Wm1Gc2MyVjlMSHNpYTJWNUlqb2laWEpqTWpCRGIyUmxTV1FpTENKMllXeDFaU0k2TWpkOUxIc2lhMlY1SWpvaVpHVnlZekl3UTI5a1pVbGtJaXdpZG1Gc2RXVWlPakk0ZlN4N0ltdGxlU0k2SW14bGRtVnNYMmx1YVhScFlXeGZZbUZzWVc1alpTSXNJblpoYkhWbElqb3hNREF3TURBd01EQXdNREF3TURBd01EQXdNSDFkTENKcGJtbDBhV0ZzVTNSaGRHVWlPaUoxYm1sdWFYUnBZV3hwZW1Wa0luMTkifQ==",
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpvWldGeWRHSmxZWFJVYVcxbGIzVjBJaXdpZG1Gc2RXVWlPalV3TURCOUxIc2lhMlY1SWpvaWJtVjNZMmhoYVc1VWFXMWxiM1YwSWl3aWRtRnNkV1VpT2pJd01EQXdmU3g3SW10bGVTSTZJbU4xY25KbGJuUmZiR1YyWld3aUxDSjJZV3gxWlNJNk1IMHNleUpyWlhraU9pSnRhVzVmZG1Gc2FXUmhkRzl5YzE5amIzVnVkQ0lzSW5aaGJIVmxJam95ZlN4N0ltdGxlU0k2SW1WdVlXSnNaVjlsYVdSZlkyaGxZMnNpTENKMllXeDFaU0k2Wm1Gc2MyVjlMSHNpYTJWNUlqb2laWEpqTWpCRGIyUmxTV1FpTENKMllXeDFaU0k2TWpoOUxIc2lhMlY1SWpvaVpHVnlZekl3UTI5a1pVbGtJaXdpZG1Gc2RXVWlPakk1ZlN4N0ltdGxlU0k2SW14bGRtVnNYMmx1YVhScFlXeGZZbUZzWVc1alpTSXNJblpoYkhWbElqb3hNREF3TURBd01EQXdNREF3TURBd01EQXdNSDFkTENKcGJtbDBhV0ZzVTNSaGRHVWlPaUoxYm1sdWFYUnBZV3hwZW1Wa0luMTkifQ==",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "lobby",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
@@ -1483,8 +1607,9 @@
           "label": "metaregistry_json_0.0.1",
           "storage_type": "MetaConsensus",
           "init_message": "eyJkYXRhIjoiZXlKd1lYSmhiWE1pT25zaVkzVnljbVZ1ZEY5c1pYWmxiQ0k2TUgxOSJ9",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "metaregistry",
           "deps": [],
           "metadata": {
@@ -1504,8 +1629,9 @@
           "label": "level0_ondemand_library",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "deplibrary",
           "deps": [],
           "metadata": {
@@ -1524,9 +1650,10 @@
           "address": "0x0000000000000000000000000000000000000051",
           "label": "level0_ondemand_0.0.1",
           "storage_type": "SingleConsensus",
-          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9qVXdNREI5TEhzaWEyVjVJam9pWTNWeWNtVnVkRTV2WkdWSlpDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pYldGNFgySnNiMk5yWDJkaGN5SXNJblpoYkhWbElqb2lNakF3TURBd01EQWlmU3g3SW10bGVTSTZJblJwYldWdmRYUlFjbTl3YjNObElpd2lkbUZzZFdVaU9qSXdNREF3ZlN4N0ltdGxlU0k2SW5ScGJXVnZkWFJRY21WamIyMXRhWFFpTENKMllXeDFaU0k2TWpBd01EQjlMSHNpYTJWNUlqb2lZbUYwWTJoVWFXMWxiM1YwSWl3aWRtRnNkV1VpT2pFd01EQjlYU3dpYVc1cGRHbGhiRk4wWVhSbElqb2lkVzVwYm1sMGFXRnNhWHBsWkNKOWZRPT0ifQ==",
+          "init_message": "eyJkYXRhIjoiZXlKcGJuTjBZVzUwYVdGMFpTSTZleUpqYjI1MFpYaDBJanBiZXlKclpYa2lPaUpzYjJjaUxDSjJZV3gxWlNJNklpSjlMSHNpYTJWNUlqb2lkbTkwWldSR2IzSWlMQ0oyWVd4MVpTSTZJakFpZlN4N0ltdGxlU0k2SW01bGVIUkpibVJsZUNJc0luWmhiSFZsSWpvaVcxMGlmU3g3SW10bGVTSTZJbU4xY25KbGJuUlVaWEp0SWl3aWRtRnNkV1VpT2lJd0luMHNleUpyWlhraU9pSmliRzlqYTFScGJXVnZkWFFpTENKMllXeDFaU0k2SW5KdmRXNWtWR2x0Wlc5MWRDSjlMSHNpYTJWNUlqb2liV0Y0WDNSNFgySjVkR1Z6SWl3aWRtRnNkV1VpT2lJMk5UVXpOaUo5TEhzaWEyVjVJam9pY205MWJtUlVhVzFsYjNWMElpd2lkbUZzZFdVaU9qSXdNREI5TEhzaWEyVjVJam9pWTNWeWNtVnVkRTV2WkdWSlpDSXNJblpoYkhWbElqb2lNQ0o5TEhzaWEyVjVJam9pYldGNFgySnNiMk5yWDJkaGN5SXNJblpoYkhWbElqb2lOakF3TURBd01EQWlmU3g3SW10bGVTSTZJblJwYldWdmRYUlFjbTl3YjNObElpd2lkbUZzZFdVaU9qSXdNREF3ZlN4N0ltdGxlU0k2SW5ScGJXVnZkWFJRY21WamIyMXRhWFFpTENKMllXeDFaU0k2TWpBd01EQjlMSHNpYTJWNUlqb2lZbUYwWTJoVWFXMWxiM1YwSWl3aWRtRnNkV1VpT2pFd01EQjlYU3dpYVc1cGRHbGhiRk4wWVhSbElqb2lkVzVwYm1sMGFXRnNhWHBsWkNKOWZRPT0ifQ==",
           "pinned": false,
           "native": false,
+          "metering_off": false,
           "role": "",
           "deps": [
             "interpreter_state_machine_bz_0.1.0",
@@ -1548,9 +1675,10 @@
           "address": "0x000000000000000000000000000000000000004a",
           "label": "multichain_registry_0.0.1",
           "storage_type": "CoreConsensus",
-          "init_message": "eyJkYXRhIjoiZXlKd1lYSmhiWE1pT25zaWJXbHVYM1poYkdsa1lYUnZjbk5mWTI5MWJuUWlPaklzSW1WdVlXSnNaVjlsYVdSZlkyaGxZMnNpT21aaGJITmxMQ0psY21NeU1FTnZaR1ZKWkNJNk1qY3NJbVJsY21NeU1FTnZaR1ZKWkNJNk1qZ3NJbXhsZG1Wc1gybHVhWFJwWVd4ZlltRnNZVzVqWlNJNklqRXdNREF3TURBd01EQXdNREF3TURBd01EQXdJbjE5In0=",
-          "pinned": false,
+          "init_message": "eyJkYXRhIjoiZXlKd1lYSmhiWE1pT25zaWJXbHVYM1poYkdsa1lYUnZjbk5mWTI5MWJuUWlPaklzSW1WdVlXSnNaVjlsYVdSZlkyaGxZMnNpT21aaGJITmxMQ0psY21NeU1FTnZaR1ZKWkNJNk1qZ3NJbVJsY21NeU1FTnZaR1ZKWkNJNk1qa3NJbXhsZG1Wc1gybHVhWFJwWVd4ZlltRnNZVzVqWlNJNklqRXdNREF3TURBd01EQXdNREF3TURBd01EQXdJbjE5In0=",
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "multichain_registry",
           "deps": [],
           "metadata": {
@@ -1570,8 +1698,9 @@
           "label": "chat_0.0.1",
           "storage_type": "SingleConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "chat",
           "deps": [],
           "metadata": {
@@ -1591,8 +1720,9 @@
           "label": "chat_verifier_0.0.1",
           "storage_type": "CoreConsensus",
           "init_message": "eyJkYXRhIjoiIn0=",
-          "pinned": false,
+          "pinned": true,
           "native": false,
+          "metering_off": true,
           "role": "",
           "deps": [],
           "metadata": {
