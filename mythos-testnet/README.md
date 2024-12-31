@@ -1,36 +1,13 @@
 # Mythos Testnet 25
 
-## Changes!
-
-- chain id changed to `mythos_7000-25`
-
 ## Public Endpoints
 
   * rpc (26657): https://mythos-testnet-rpc.provable.dev
   * rest (1317): https://mythos-testnet.provable.dev/rest
 
-  * RPC endpoint: https://testnet-rpc.mythos.chaintools.tech
-  * API endpoint: https://testnet-api.mythos.chaintools.tech
-
 ## Explorers
 
   * https://testnet.explorer.provable.dev/mythos
-  * https://testnet.explorer.chaintools.tech/mythos
-
-## 0. Install wasmedge library v0.13.4
-
-```
-curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | bash -s -- -v 0.13.4
-
-# run the command shown, to apply the env file, e.g.:
-source /root/.bashrc
-# or:
-source $HOME/.wasmedge/env
-
-```
-
-- for installation prerequisites & troubleshooting: https://wasmedge.org/docs/start/install/
-
 
 ## 1. Download binaries & genesis.json
 
@@ -44,8 +21,10 @@ sudo -S systemctl stop mythos
 rm -rf /root/mythos
 ```
 
+* install latest binary published at https://github.com/loredanacirstea/tempreleases/releases
+
 ```shell=
-mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip?commit=37ea86f283427f9522d4699262dffc1ab1e8754f" -O linux_x86_64.zip && unzip linux_x86_64.zip && mv linux_x86_64 ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && wget "https://github.com/loredanacirstea/tempreleases/releases/download/v0.1.1/mythos-wz-v0.1.1-linux-amd64.tar.gz" -O mythos-wz-v0.1.1-linux-amd64.tar.gz && tar -xzvf mythos-wz-v0.1.1-linux-amd64.tar.gz && mv mythos-wz-v0.1.1-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -60,9 +39,9 @@ source ~/.bashrc
 Check the mythos version to be the same as below.
 
 ```sh
-mythosd version --long
+mythosd version
 
-# commit `de0a36aeedaa412e20537ba18eb26af8dc574f8d`
+# v0.1.1
 ```
 
 Initialize the chain:
@@ -86,7 +65,6 @@ ExecStart=/root/mythos/bin/mythosd start --home=/root/mythos/testnet/node0/mytho
 Restart=always
 RestartSec=3
 LimitNOFILE=infinity
-Environment="LD_LIBRARY_PATH=/root/.wasmedge/lib"
 
 [Install]
 WantedBy=multi-user.target
@@ -112,7 +90,7 @@ Check genesis checksum!
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
 sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json
-# bdcec68a2cb3570c023ec0032681d395599be1a69ddaf7838d8beaeefaea4da2
+# e086507d89a69f4b5449e3cd8ba33e82571aed447e9c8fd0a9b38329d5508701
 ```
 
 * for macOS `shasum -a 256 ./testnet/node0/mythosd/config/genesis.json`
@@ -278,8 +256,6 @@ Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=true"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="DAEMON_LOG_BUFFER_SIZE=512"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/home/t-mythos/.wasmedge/bin"
-Environment="LD_LIBRARY_PATH=/home/t-mythos/.wasmedge/lib"
 
 [Install]
 WantedBy=multi-user.target
