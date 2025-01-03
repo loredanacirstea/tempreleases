@@ -1,4 +1,4 @@
-# Mythos Testnet 25
+# Mythos Testnet 26
 
 ## Public Endpoints
 
@@ -24,7 +24,7 @@ rm -rf /root/mythos
 * install latest binary published at https://github.com/loredanacirstea/tempreleases/releases
 
 ```shell=
-mkdir mythos && cd mythos && curl -OL "https://github.com/loredanacirstea/tempreleases/releases/download/v0.1.1/mythos-wz-v0.1.1-linux-amd64.tar.gz" && tar -xzvf mythos-wz-v0.1.1-linux-amd64.tar.gz && mv mythos-wz-v0.1.1-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && curl -OL "https://github.com/loredanacirstea/tempreleases/releases/download/v0.1.2/mythos-wz-v0.1.2-linux-amd64.tar.gz" && tar -xzvf mythos-wz-v0.1.2-linux-amd64.tar.gz && mv mythos-wz-v0.1.2-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -41,13 +41,13 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version
 
-# v0.1.1
+# v0.1.2
 ```
 
 Initialize the chain:
 
 ```shell=
-rm -rf ./testnet && mythosd testnet init-files --network.initial-chains=mythos,level0 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt" --same-machine=true --libp2p --min-level-validators=2 --enable-eid=false --chain-id=mythos_7000-25
+rm -rf ./testnet && mythosd testnet init-files --network.initial-chains=mythos,level0 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt" --same-machine=true --libp2p --min-level-validators=2 --enable-eid=false --chain-id=mythos_7000-26
 
 ```
 * example service script for starting mythos as a service for Linux.
@@ -82,15 +82,15 @@ systemctl enable mythos.service
 Replace `testnet/node0/mythosd/config/genesis.json`:
 
 ```shell=
-rm ./testnet/node0/mythosd/config/genesis.json && rm ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json && wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && cp ./testnet/node0/mythosd/config/genesis.json ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json
+rm ./testnet/node0/mythosd/config/genesis.json && rm ./testnet/node0/mythosd/config/genesis_mythos_7000-26.json && wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && cp ./testnet/node0/mythosd/config/genesis.json ./testnet/node0/mythosd/config/genesis_mythos_7000-26.json
 ```
 
 Check genesis checksum!
 
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
-sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-25.json
-# d7fd46643ae50d2bd6ed6f8deacbc3d20180f17f9257737bdd80d377427957ec
+sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-26.json
+# fdb0c02c9052fc9f98e2a7b9f41f7b90a814cb20482e68fe12a2accdfbeabaa7
 ```
 
 * for macOS `shasum -a 256 ./testnet/node0/mythosd/config/genesis.json`
@@ -113,7 +113,7 @@ vi ./testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1faug22gsn2ga23fpjtfqhs6vlec5paya25k90g@/ip4/86.124.245.52/tcp/5001/p2p/12D3KooWDfT2HKm6SgdZTrMWL8UpMrZkGzB5W5ACNWXJXwqoM76Q;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
+ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1t4mccmwzs3zp7cslwryfzf64qwwnc9qavuewh2@/ip4/86.124.245.52/tcp/5001/p2p/12D3KooWErv9aiTwgVWuEiPccHvwjErwFbSDobuTQLnJ9fcGFe9G;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
 ```
 
 * allow others to state sync, by keeping data snapshots
@@ -164,7 +164,7 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOMEMAIN/confi
 ```
 
 Troubleshooting:
-* if you get an error `post failed: Post \"http://86.120.99.11:26657\": EOF`, reset the state and restart the node:
+* if you get an error `post failed: Post \"http://localhost:26657\": EOF`, reset the state and restart the node:
 ```shell=
 
 systemctl stop mythos
@@ -213,7 +213,7 @@ vi ./validator.json
 
 ```shell=
 
-mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-25 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas=20000000 --memo="YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/GENERATED_libp2p_id" --node tcp://127.0.0.1:26657 --yes
+mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-26 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas=20000000 --memo="YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/GENERATED_libp2p_id" --node tcp://127.0.0.1:26657 --yes
 
 ```
 
