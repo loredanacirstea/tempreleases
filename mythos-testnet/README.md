@@ -104,16 +104,19 @@ mythosd keys list --keyring-backend test --home ./testnet/node0/mythosd
 
 ```
 
+* the address needs to be converted from `cosmos` to `mythos` prefixes https://www.bech32converter.com/. Or you can take it from `ips` in `./testnet/node0/mythosd/config/app.toml` (usually first address in the mapping)
+
 ## 4. Node IDS (important!)
 
 * go to app.toml, under `Network Configuration` (bottom page) and update `ips` with your EXTERNAL IP (replace localhost) and the URI of a trusted peer node.
+* your node should be first (default index for your node is 0 in the `id` mapping)
 
 ```shell=
 vi ./testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1t4mccmwzs3zp7cslwryfzf64qwwnc9qavuewh2@/ip4/86.124.245.52/tcp/5001/p2p/12D3KooWErv9aiTwgVWuEiPccHvwjErwFbSDobuTQLnJ9fcGFe9G;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
+ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1t4mccmwzs3zp7cslwryfzf64qwwnc9qavuewh2@/ip4/84.232.220.167/tcp/5001/p2p/12D3KooWErv9aiTwgVWuEiPccHvwjErwFbSDobuTQLnJ9fcGFe9G;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
 ```
 
 * allow others to state sync, by keeping data snapshots
@@ -136,7 +139,7 @@ sudo ufw allow 1317
 
 ```shell=
 
-RPC="http://86.124.245.52:26657"
+RPC="http://84.232.220.167:26657"
 HOMEMAIN=/root/mythos/testnet/node0/mythosd
 
 RECENT_HEIGHT=$(curl -s $RPC/block | jq -r .result.block.header.height)
