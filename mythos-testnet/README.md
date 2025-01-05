@@ -2,8 +2,8 @@
 
 ## Public Endpoints
 
-  * rpc (26657): https://mythos-testnet-rpc.provable.dev
-  * rest (1317): https://mythos-testnet.provable.dev/rest
+  * rpc (26657): https://joan-mythos-rpc.provable.dev
+  * rest (1317): https://joan-mythos-rest.provable.dev
 
 ## Explorers
 
@@ -139,7 +139,7 @@ sudo ufw allow 1317
 
 ```shell=
 
-RPC="http://84.232.220.167:26657"
+RPC="https://joan-mythos-rpc.provable.dev"
 HOMEMAIN=/root/mythos/testnet/node0/mythosd
 
 RECENT_HEIGHT=$(curl -s $RPC/block | jq -r .result.block.header.height)
@@ -169,7 +169,6 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOMEMAIN/confi
 Troubleshooting:
 * if you get an error `post failed: Post \"http://localhost:26657\": EOF`, reset the state and restart the node:
 ```shell=
-
 systemctl stop mythos
 mythosd tendermint unsafe-reset-all --home=./testnet/node0/mythosd
 systemctl start mythos && journalctl -u mythos.service -f -o cat
@@ -192,7 +191,7 @@ and replace the information in the template below:
 ```json
 {
 	"pubkey": {"type_url":"/cosmos.crypto.ed25519.PubKey","value":"eyJrZXkiOiJlRWJ5OTBPdnl5ZkMwYU5NaXI0MGZZWVVyQUxiKzhTcDNQY1ZBTDJTZ2tVPSJ9"},
-	"amount": "10000000000000000000amyt",
+	"amount": "100000000000000000000amyt",
 	"moniker": "lore",
 	"identity": "optional identity signature (ex. UPort or Keybase)",
 	"website": "validator's (optional) website",
@@ -203,6 +202,7 @@ and replace the information in the template below:
 	"commission-max-change-rate": "0.05",
 	"min-self-delegation": "1000000000000"
 }
+
 ```
 
 
