@@ -1,4 +1,4 @@
-# Mythos Testnet 26
+# Mythos Testnet 27
 
 ## Public Endpoints
 
@@ -11,7 +11,7 @@
 
 ## 1. Download binaries & genesis.json
 
-* for ubuntu, you need >= 22.04
+* for ubuntu: >= 22.04
 
 
 Stop and remove previous mythos testnet (if installed)
@@ -21,10 +21,10 @@ sudo -S systemctl stop mythos
 rm -rf /root/mythos
 ```
 
-* install latest binary published at https://github.com/loredanacirstea/tempreleases/releases
+* install latest binary published at https://github.com/ark-us/wasmx/releases
 
 ```shell=
-mkdir mythos && cd mythos && curl -OL "https://github.com/loredanacirstea/tempreleases/releases/download/v0.1.2/mythos-wz-v0.1.2-linux-amd64.tar.gz" && tar -xzvf mythos-wz-v0.1.2-linux-amd64.tar.gz && mv mythos-wz-v0.1.2-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && curl -OL "https://github.com/ark-us/wasmx/releases/download/v0.3.0/mythos-wz-v0.3.0-linux-amd64.tar.gz" && tar -xzvf mythos-wz-v0.3.0-linux-amd64.tar.gz && mv mythos-wz-v0.3.0-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -41,13 +41,13 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version
 
-# v0.1.2
+# v0.3.0
 ```
 
 Initialize the chain:
 
 ```shell=
-rm -rf ./testnet && mythosd testnet init-files --network.initial-chains=mythos,level0 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt" --same-machine=true --libp2p --min-level-validators=2 --enable-eid=false --chain-id=mythos_7000-26
+rm -rf ./testnet && mythosd testnet init-files --network.initial-chains=mythos,level0 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt" --same-machine=true --libp2p --min-level-validators=2 --enable-eid=false --chain-id=mythos_7000-27
 
 ```
 * example service script for starting mythos as a service for Linux.
@@ -82,15 +82,15 @@ systemctl enable mythos.service
 Replace `testnet/node0/mythosd/config/genesis.json`:
 
 ```shell=
-rm ./testnet/node0/mythosd/config/genesis.json && rm ./testnet/node0/mythosd/config/genesis_mythos_7000-26.json && wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && cp ./testnet/node0/mythosd/config/genesis.json ./testnet/node0/mythosd/config/genesis_mythos_7000-26.json
+rm ./testnet/node0/mythosd/config/genesis.json && rm ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json && wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && cp ./testnet/node0/mythosd/config/genesis.json ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json
 ```
 
 Check genesis checksum!
 
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
-sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-26.json
-# fdb0c02c9052fc9f98e2a7b9f41f7b90a814cb20482e68fe12a2accdfbeabaa7
+sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json
+# dc47131d2e695d5940fe97f3f6da09594f372b5de2104477f5a65c3ce0f0d61c
 ```
 
 * for macOS `shasum -a 256 ./testnet/node0/mythosd/config/genesis.json`
@@ -106,7 +106,7 @@ mythosd keys list --keyring-backend test --home ./testnet/node0/mythosd
 
 * the address needs to be converted from `cosmos` to `mythos` prefixes https://www.bech32converter.com/. Or you can take it from `ips` in `./testnet/node0/mythosd/config/app.toml` (usually first address in the mapping)
 
-## 4. Node IDS (important!)
+## 4. Node IP (important!)
 
 * go to app.toml, under `Network Configuration` (bottom page) and update `ips` with your EXTERNAL IP (replace localhost) and the URI of a trusted peer node.
 * your node should be first (default index for your node is 0 in the `id` mapping)
@@ -122,7 +122,7 @@ ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/ge
 * allow others to state sync, by keeping data snapshots
 
 ```
-sed -i.bak -E "s|^(snapshot-interval[[:space:]]+=[[:space:]]+).*$|\1300|" ./testnet/node0/mythosd/config/app.toml
+sed -i.bak -E "s|^(snapshot-interval[[:space:]]+=[[:space:]]+).*$|\1600|" ./testnet/node0/mythosd/config/app.toml
 ```
 
 ## 5. External ports
@@ -216,7 +216,7 @@ vi ./validator.json
 
 ```shell=
 
-mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-26 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas=20000000 --memo="YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/GENERATED_libp2p_id" --node tcp://127.0.0.1:26657 --yes
+mythosd tx cosmosmod staking create-validator ./validator.json --from node0 --chain-id=mythos_7000-27 --keyring-backend=test --home=./testnet/node0/mythosd --fees 200000000000000amyt --gas=20000000 --memo="YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/GENERATED_libp2p_id" --node tcp://127.0.0.1:26657 --yes
 
 ```
 
