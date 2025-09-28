@@ -6,7 +6,7 @@ WORKDIR $APP_PATH
 # set up the environment variables
 ENV PATH="$PATH:$APP_PATH"
 ENV LD_LIBRARY_PATH=$APP_PATH
-ENV CHAIN_ID=mythos_7000-26
+ENV CHAIN_ID=mythos_7000-27
 
 # install necessary dependencies
 RUN apt-get update -y && \
@@ -17,9 +17,9 @@ RUN apt-get update -y && \
 
 # download the binaries and the genesis file
 RUN wget https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && \
-    wget https://github.com/loredanacirstea/tempreleases/raw/main/mythos-testnet/linux_x86_64.zip && \
-    unzip -j linux_x86_64.zip && \
-    rm linux_x86_64.zip
+    wget https://github.com/ark-us/wasmx/releases/download/v0.3.4/mythos-wz-v0.3.4-linux-amd64.tar.gz && \
+    tar -xzvf mythos-wz-v0.3.4-linux-amd64.tar.gz && \
+    rm mythos-wz-v0.3.4-linux-amd64.tar.gz
 
 # init mythos and put the genesis file
 RUN chmod +x mythos && \

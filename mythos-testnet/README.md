@@ -2,12 +2,12 @@
 
 ## Public Endpoints
 
-  * rpc (26657): https://joan-mythos-rpc.provable.dev
-  * rest (1317): https://joan-mythos-rest.provable.dev
+  * rpc (26657): https://mythos.testnet.rpc.provable.dev
+  * rest (1317): https://mythos.testnet.rest.provable.dev
 
 ## Explorers
 
-  * https://testnet.explorer.provable.dev/mythos
+  * https://mythos.explorer.provable.dev/mythos
 
 ## 1. Download binaries & genesis.json
 
@@ -24,7 +24,7 @@ rm -rf /root/mythos
 * install latest binary published at https://github.com/ark-us/wasmx/releases
 
 ```shell=
-mkdir mythos && cd mythos && curl -OL "https://github.com/ark-us/wasmx/releases/download/v0.3.0/mythos-wz-v0.3.0-linux-amd64.tar.gz" && tar -xzvf mythos-wz-v0.3.0-linux-amd64.tar.gz && mv mythos-wz-v0.3.0-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && mkdir bin && curl -OL "https://github.com/ark-us/wasmx/releases/download/v0.3.4/mythos-wz-v0.3.4-linux-amd64.tar.gz" && tar -xzvf mythos-wz-v0.3.4-linux-amd64.tar.gz && mv mythos-wz-v0.3.4-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -41,7 +41,7 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version
 
-# v0.3.0
+# v0.3.4
 ```
 
 Initialize the chain:
@@ -90,7 +90,7 @@ Check genesis checksum!
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
 sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json
-# dc47131d2e695d5940fe97f3f6da09594f372b5de2104477f5a65c3ce0f0d61c
+# b8bbe879293bd7a12c7336e7afa843f20f29ed9e6d5c211eaf1268f96501def6
 ```
 
 * for macOS `shasum -a 256 ./testnet/node0/mythosd/config/genesis.json`
@@ -139,9 +139,8 @@ sudo ufw allow 1317
 
 ```shell=
 
-RPC="https://joan-mythos-rpc.provable.dev"
+RPC="https://mythos.testnet.rpc.provable.dev"
 HOMEMAIN=/root/mythos/testnet/node0/mythosd
-
 RECENT_HEIGHT=$(curl -s $RPC/block | jq -r .result.block.header.height)
 TRUST_HEIGHT=$((RECENT_HEIGHT - 1))
 TRUST_HASH=$(curl -s "$RPC/block?height=$TRUST_HEIGHT" | jq -r .result.block_id.hash)
@@ -204,7 +203,6 @@ and replace the information in the template below:
 }
 
 ```
-
 
 ```shell=
 touch ./validator.json
