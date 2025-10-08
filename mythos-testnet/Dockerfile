@@ -17,9 +17,9 @@ RUN apt-get update -y && \
 
 # download the binaries and the genesis file
 RUN wget https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && \
-    wget https://github.com/ark-us/wasmx/releases/download/v0.3.4/mythos-wz-v0.3.4-linux-amd64.tar.gz && \
-    tar -xzvf mythos-wz-v0.3.4-linux-amd64.tar.gz && \
-    rm mythos-wz-v0.3.4-linux-amd64.tar.gz
+    wget https://github.com/ark-us/wasmx/releases/download/v0.3.6/mythos-wz-v0.3.6-linux-amd64.tar.gz && \
+    tar -xzvf mythos-wz-v0.3.6-linux-amd64.tar.gz && \
+    rm mythos-wz-v0.3.6-linux-amd64.tar.gz
 
 # init mythos and put the genesis file
 RUN chmod +x mythos && \

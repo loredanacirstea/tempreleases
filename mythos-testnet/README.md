@@ -24,7 +24,7 @@ rm -rf /root/mythos
 * install latest binary published at https://github.com/ark-us/wasmx/releases
 
 ```shell=
-mkdir mythos && cd mythos && mkdir bin && curl -OL "https://github.com/ark-us/wasmx/releases/download/v0.3.4/mythos-wz-v0.3.4-linux-amd64.tar.gz" && tar -xzvf mythos-wz-v0.3.4-linux-amd64.tar.gz && mv mythos-wz-v0.3.4-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
+mkdir mythos && cd mythos && mkdir bin && curl -OL "https://github.com/ark-us/wasmx/releases/download/v0.3.6/mythos-wz-v0.3.6-linux-amd64.tar.gz" && tar -xzvf mythos-wz-v0.3.6-linux-amd64.tar.gz && mv mythos-wz-v0.3.6-linux-amd64/mythosd ./bin && cd bin && chmod +x ./mythosd && cd ..
 ```
 
 Set up the path for the mythosd executable. E.g.
@@ -41,13 +41,15 @@ Check the mythos version to be the same as below.
 ```sh
 mythosd version
 
-# v0.3.4
+# v0.3.6
 ```
 
 Initialize the chain:
 
 ```shell=
-rm -rf ./testnet && mythosd testnet init-files --network.initial-chains=mythos,level0 --output-dir=$(pwd)/testnet --v=1 --keyring-backend=test --minimum-gas-prices="1000amyt" --same-machine=true --libp2p --min-level-validators=2 --enable-eid=false --chain-id=mythos_7000-27
+rm -rf ./testnet
+mythosd testnet add-node 0 "mythos1z5j5q20z6uphh9erlds4yksjgf4pa94xpevjvt@/ip4/217.76.51.233/tcp/5001/p2p/12D3KooWG171aBYjKA8SoBTyijCFE7CvJoJMBhLqvxrEMjdxuQHd" --network.initial-chains=mythos,level0 --chain-id=mythos_7000-27 --output-dir=$(pwd)/testnet --keyring-backend=test --minimum-gas-prices="1000amyt" --same-machine=true --libp2p
+
 
 ```
 * example service script for starting mythos as a service for Linux.
@@ -82,7 +84,7 @@ systemctl enable mythos.service
 Replace `testnet/node0/mythosd/config/genesis.json`:
 
 ```shell=
-rm ./testnet/node0/mythosd/config/genesis.json && rm ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json && wget -P ./testnet/node0/mythosd/config https://raw.githubusercontent.com/loredanacirstea/tempreleases/main/mythos-testnet/genesis.json && cp ./testnet/node0/mythosd/config/genesis.json ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json
+rm ./testnet/node0/mythosd/config/genesis.json && rm ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json && wget -O ./testnet/node0/mythosd/config/genesis.json https://raw.githubusercontent.com/loredanacirstea/tempreleases/01c913902eab0437685fd797a9a29becf1c9c5ab/mythos-testnet/genesis.json && cp ./testnet/node0/mythosd/config/genesis.json ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json
 ```
 
 Check genesis checksum!
@@ -90,7 +92,7 @@ Check genesis checksum!
 ```
 sha256sum ./testnet/node0/mythosd/config/genesis.json
 sha256sum ./testnet/node0/mythosd/config/genesis_mythos_7000-27.json
-# b8bbe879293bd7a12c7336e7afa843f20f29ed9e6d5c211eaf1268f96501def6
+# 01b42835184748c7515da3743f365d0e7580800f87591e693eec6dc4ef4dd085
 ```
 
 * for macOS `shasum -a 256 ./testnet/node0/mythosd/config/genesis.json`
@@ -116,7 +118,7 @@ vi ./testnet/node0/mythosd/config/app.toml
 ```
 ```
 # Comma separated list of node ips
-ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1t4mccmwzs3zp7cslwryfzf64qwwnc9qavuewh2@/ip4/84.232.220.167/tcp/5001/p2p/12D3KooWErv9aiTwgVWuEiPccHvwjErwFbSDobuTQLnJ9fcGFe9G;level0_1000-1:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id"
+ips = "mythos_7000-14:YOUR_mythos1_ADDRESS@/ip4/YOUR_EXTERNAL_IP/tcp/5001/p2p/generated_libp2p_id,mythos1z5j5q20z6uphh9erlds4yksjgf4pa94xpevjvt@/ip4/217.76.51.233/tcp/5001/p2p/12D3KooWG171aBYjKA8SoBTyijCFE7CvJoJMBhLqvxrEMjdxuQHd;level0_1000-1:<...don't need to change this>"
 ```
 
 * allow others to state sync, by keeping data snapshots
